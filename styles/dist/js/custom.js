@@ -15,7 +15,7 @@ $(function () {
 
 /*
 Template Name: Admin Template
-Author: Adminmart.com
+Author: WrapPixel.com
 
 File: js
 */
