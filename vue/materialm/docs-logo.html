@@ -339,7 +339,7 @@
               <h4 class="card-title">Change light Logo</h4>
               <h5 class="card-subtitle mt-2 text-muted mb-4">
                 To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoLight.vue</span>
+                <span class="text-dark font-medium">packages/main/src/layouts/full/logo/LogoLight.vue</span>
               </h5>
               <div class="border-2 border-start border-primary bg-light rounded p-3">
                 Put the logo image into the /images/logos folder.
@@ -348,12 +348,12 @@
                     <code class="language-js py-0">
 &lt;script setup lang=&quot;ts&quot;>
 import { RouterLink } from 'vue-router';
-import Darklogo from '@/assets/images/logos/logo-white.svg';
+import LightLogo from '@/assets/images/logos/light-logo.svg';
 &lt;/script>
 &lt;template&gt;
-  &lt;div class="logo"&gt;
+  &lt;div class="logo lh-normal"&gt;
       &lt;RouterLink to="/"&gt;
-          &lt;img :src="Darklogo" alt="home" /&gt;
+          &lt;img :src="LightLogo" alt="home" /&gt;
       &lt;/RouterLink&gt;
   &lt;/div&gt;
 &lt;/template&gt;
@@ -366,7 +366,7 @@ import Darklogo from '@/assets/images/logos/logo-white.svg';
               <h4 class="card-title">Change Dark Logo</h4>
               <h5 class="card-subtitle mt-2 text-muted mb-4">
                 To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoDark.vue</span>
+                <span class="text-dark font-medium">packages/main/src/layouts/full/logo/LogoDark.vue</span>
               </h5>
               <div class="border-2 border-start border-primary bg-light rounded p-3">
                 Put the logo image into the /images/logos folder.
@@ -375,12 +375,12 @@ import Darklogo from '@/assets/images/logos/logo-white.svg';
                     <code class="language-js py-0">
 &lt;script setup lang="ts"&gt;
   import { RouterLink } from 'vue-router';
-  import logo from '@/assets/images/logos/logo-dark.svg';
+  import DarkLogo  from '@/assets/images/logos/dark-logo.svg';
 &lt;/script&gt;
 &lt;template&gt;
-    &lt;div class="logo"&gt;
+    &lt;div class="logo lh-normal"&gt;
       &lt;RouterLink to="/"&gt;
-          &lt;img :src="logo" alt="home" /&gt;
+          &lt;img :src="DarkLogo" alt="home" /&gt;
       &lt;/RouterLink&gt;
     &lt;/div&gt;
 &lt;/template&lt;
@@ -388,61 +388,6 @@ import Darklogo from '@/assets/images/logos/logo-white.svg';
                         </pre>
             </div>
           </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">Change Light RTL Logo</h4>
-              <h5 class="card-subtitle mt-2 text-muted mb-4">
-                To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoLightRtl.vue</span>
-              </h5>
-              <div class="border-2 border-start border-primary bg-light rounded p-3">
-                Put the logo image into the /images/logos folder.
-              </div>
-              <pre>
-                    <code class="language-js py-0">
-&lt;script setup lang=&quot;ts&quot;&gt;
-  import { RouterLink } from 'vue-router';
-  import RtlLightlogo from '/images/logos/dark-rtl-logo.svg';
-&lt;/script&gt;
-&lt;template&gt;
-    &lt;div class=&quot;logo&quot;&gt;
-        &lt;RouterLink to="/"&gt;
-            &lt;img :src=&quot;RtlLightlogo&quot; alt=&quot;home&quot;/&gt;
-        &lt;/RouterLink&gt;
-    &lt;/div&gt;
-&lt;/template&gt;
-      </code>
-                        </pre>
-            </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">Change Dark RTL Logo</h4>
-              <h5 class="card-subtitle mt-2 text-muted mb-4">
-                To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoDarkRtl.vue</span>
-              </h5>
-              <div class="border-2 border-start border-primary bg-light rounded p-3">
-                Put the logo image into the /images/logos folder.
-              </div>
-              <pre>
-                    <code class="language-js py-0">
-&lt;script setup lang=&quot;ts&quot;&gt;
-  import { RouterLink } from 'vue-router';
-  import RtlDarklogo from '/images/logos/light-logo-rtl.svg';
-&lt;/script&gt;
-&lt;template&gt;
-    &lt;div class=&quot;logo&quot;&gt;
-        &lt;RouterLink to=&quot;/&quot;&gt;
-            &lt;img :src=&quot;RtlDarklogo&quot; alt=&quot;home&quot;/&gt;
-        &lt;/RouterLink&gt;
-    &lt;/div&gt;
-&lt;/template&gt;
-      </code>
-                        </pre>
-            </div>
-          </div>
-
           <!-- ============================================================== -->
           <!-- End Of Page Content -->
           <!-- ============================================================== -->
