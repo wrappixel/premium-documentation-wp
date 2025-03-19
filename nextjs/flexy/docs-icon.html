@@ -55,7 +55,7 @@
                         <a href="index.html">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="../../styles/dist/images/flexy/logo-dark.svg" alt="homepage"
+                                <img src="../../styles/dist/images/flexy/logo-blue.svg" alt="homepage"
                                     class="dark-logo" />
                             </b>
                             <!--End Logo icon -->
@@ -191,7 +191,7 @@
                             <a href="index.html">
                                 <b class="logo-icon">
                                     <!-- Dark Logo icon -->
-                                    <img src="../../styles/dist/images/flexy/logo-dark.svg" alt="homepage"
+                                    <img src="../../styles/dist/images/flexy/logo-blue.svg" alt="homepage"
                                         class="dark-logo" />
                                 </b>
                                 <!--End Logo icon -->
@@ -339,7 +339,7 @@
                     <a href="index.html">
                         <b class="logo-icon d-lg-none d-block">
                             <!-- Dark Logo icon -->
-                            <img src="../../styles/dist/images/flexy/logo-dark.svg" alt="homepage" class="dark-logo" />
+                            <img src="../../styles/dist/images/flexy/logo-blue.svg" alt="homepage" class="dark-logo" />
                         </b>
                         <!--End Logo icon -->
                     </a>
@@ -360,13 +360,13 @@
                     <!-- ============================================================== -->
                     <!-- Start Page Content -->
                     <!-- ============================================================== -->
-                    <h4 class="mb-4 pb-2">Icons</h3>
-                        <div class="mt-4 card">
-                            <div class="card-body">
-                                <h4 class="card-title">1. Material Icons</h4>
-                                <a href="https://material-ui.com/components/material-icons"
-                                    class="font-16">https://material-ui.com/components/material-icons</a>
-                                <pre>
+                    <h4 class="mb-4 pb-2">Icons</h4>
+                    <div class="mt-4 card">
+                        <div class="card-body">
+                            <h4 class="card-title">1. Material Icons</h4>
+                            <a href="https://material-ui.com/components/material-icons"
+                                class="font-16">https://material-ui.com/components/material-icons</a>
+                            <pre>
                                     <code class="language-js py-0">
 <span class="hljs-keyword">import</span> <span class="hljs-title class_">AccessAlarmIcon</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/icons/AccessAlarm'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-title class_">AccessibilityNewIcon</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/icons/AccessibilityNew'</span>;
@@ -385,11 +385,32 @@
 }
                                                                     </code>
                     </pre>
-                            </div>
                         </div>
-                        <!-- ============================================================== -->
-                        <!-- End Of Page Content -->
-                        <!-- ============================================================== -->
+                    </div>
+                    <div class="mt-4 card">
+                        <div class="card-body">
+                            <h4 class="card-title">2. Tabler Icons</h4>
+                            <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                            <pre>                        <code class="language-js py-0 hljs javascript">
+<span class="hljs-keyword">import</span> { IconGridDots,IconAward,IconCalendar,IconMail } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tabler/icons-react'</span>;
+
+<span class="hljs-comment">// ----------------------------------------------------------------------</span>
+
+<span class="hljs-keyword">const</span> TablerIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span>(
+        &lt;IconGridDots width={22} /&gt;
+        &lt;IconAward width={25} /&gt;
+        &lt;IconCalendar width={30}/&gt;
+        &lt;IconMail width={40}/&gt;
+    );
+}
+                                    </code>
+                                </pre>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Of Page Content -->
+                    <!-- ============================================================== -->
 
                 </div>
             </div>
