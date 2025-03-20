@@ -353,7 +353,7 @@ import { fakeBackend } from '@/utils/helpers/fake-backend';
 fakeBackend();
 
 // -----------------------------------------------------------------------------------------
-// File : src/router/MainRoutes.ts
+// File : src/router/index.ts
 // -----------------------------------------------------------------------------------------
 router.beforeEach(async (to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
