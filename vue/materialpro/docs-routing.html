@@ -144,12 +144,11 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-auth.html">
-                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                    <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                    Authentication
                   </a>
-              </li>
+                </li>
                 <li class="sidebar-item">
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                       class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -269,12 +268,11 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center"
-                        href="docs-auth.html">
-                        <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                        Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                      Authentication
                     </a>
-                </li>
+                  </li>
                   <li class="sidebar-item">
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                         class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -369,21 +367,39 @@ const MainRoutes = {
 // ------------------------------------------------------------
 
 const sidebarItem: menu[] = [
-{ header: 'Home' },
-    {
-        title: 'Modern',
-        icon: ApertureIcon,
-        chip: 'New',
-        chipColor: 'surface',
-        chipBgColor: 'secondary',
-        to: '/dashboards/modern'
-    },
-    {
-        title: 'eCommerce',
-        icon: ShoppingCartIcon,
-        to: '/dashboards/ecommerce'
-    },
+  { header: 'Personal' },
+  {
+      title: 'General',
+      icon: 'screencast-2-linear',
+      to: '/dashboards/general'
+  },
+  {
+      title: 'Classic',
+      icon: 'atom-linear',
+      to: '/dashboards/classic'
+  },
+  {
+      title: 'Analytical',
+      icon: 'box-minimalistic-linear',
+      to: '/dashboards/analytical'
+  },
+  {
+      title: 'Campaign',
+      icon: 'buildings-2-linear',
+      to: '/dashboards/campaign'
+  },
+  {
+      title: 'Modern',
+      icon: 'basketball-linear',
+      to: '/dashboards/modern'
+  },
+  {
+      title: 'eCommerce',
+      icon: 'cart-large-2-linear',
+      to: '/dashboards/ecommerce'
+  },
 ]
+
                             </code>
                         </pre>
             </div>
@@ -400,22 +416,43 @@ const sidebarItem: menu[] = [
 const horizontalItems: menu[] = [
     {
         title: 'Dashboard',
-        icon: HomeIcon,
+        icon: 'layers-line-duotone',
         to: '#',
         children: [
             {
+                title: 'General',
+                icon: CircleDotIcon,
+                to: '/dashboards/general'
+            },
+            {
+                title: 'Classic',
+                icon: CircleDotIcon,
+                to: '/dashboards/classic'
+            },
+            {
+                title: 'Analytical',
+                icon: CircleDotIcon,
+                to: '/dashboards/analytical'
+            },
+            {
+                title: 'Campaign',
+                icon: CircleDotIcon,
+                to: '/dashboards/campaign'
+            },
+            {
                 title: 'Modern',
-                icon: CircleIcon,
+                icon: CircleDotIcon,
                 to: '/dashboards/modern'
             },
             {
-                title: 'Ecommerce',
-                icon: CircleIcon,
+                title: 'eCommerce',
+                icon: CircleDotIcon,
                 to: '/dashboards/ecommerce'
-            }
+            },
         ]
     },
 ]
+
                             </code>
                         </pre>
             </div>

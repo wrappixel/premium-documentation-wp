@@ -144,12 +144,11 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-auth.html">
-                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                    <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                    Authentication
                   </a>
-              </li>
+                </li>
                 <li class="sidebar-item">
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                       class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -269,12 +268,11 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center"
-                        href="docs-auth.html">
-                        <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                        Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                      Authentication
                     </a>
-                </li>
+                  </li>
                   <li class="sidebar-item">
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                         class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -369,21 +367,21 @@ const MainRoutes = {
 // ------------------------------------------------------------
 
 const sidebarItem: menu[] = [
-{ header: 'Home' },
+    { header: 'Home' },
     {
-        title: 'Modern',
-        icon: ApertureIcon,
-        chip: 'New',
-        chipColor: 'surface',
-        chipBgColor: 'secondary',
-        to: '/dashboards/modern'
+        title: 'Dashboard',
+        icon: 'screencast-2-linear',
+        BgColor: 'primary',
+        to: '/dashboard1'
     },
     {
-        title: 'eCommerce',
-        icon: ShoppingCartIcon,
-        to: '/dashboards/ecommerce'
+        title: 'Dashboard 2',
+        icon: 'chart-line-duotone',
+        BgColor: 'success',
+        to: '/dashboard2'
     },
 ]
+
                             </code>
                         </pre>
             </div>
@@ -400,22 +398,22 @@ const sidebarItem: menu[] = [
 const horizontalItems: menu[] = [
     {
         title: 'Dashboard',
-        icon: HomeIcon,
+        icon: 'screencast-2-linear',
+        BgColor: 'primary',
         to: '#',
         children: [
             {
-                title: 'Modern',
-                icon: CircleIcon,
-                to: '/dashboards/modern'
+                title: 'Dashboard',
+                to: '/dashboard1'
             },
             {
-                title: 'Ecommerce',
-                icon: CircleIcon,
-                to: '/dashboards/ecommerce'
+                title: 'Dashboard 2',
+                to: '/dashboard2'
             }
         ]
     },
 ]
+
                             </code>
                         </pre>
             </div>

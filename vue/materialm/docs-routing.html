@@ -144,12 +144,11 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-auth.html">
-                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                    <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                    Authentication
                   </a>
-              </li>
+                </li>
                 <li class="sidebar-item">
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                       class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -269,12 +268,11 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center"
-                        href="docs-auth.html">
-                        <i class="ti ti-brand-firebase me-3 fs-4"></i>
-                        Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html">
+                      <i class="ti ti-brand-firebase me-3 fs-4"></i>
+                      Authentication
                     </a>
-                </li>
+                  </li>
                   <li class="sidebar-item">
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                         class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -369,21 +367,28 @@ const MainRoutes = {
 // ------------------------------------------------------------
 
 const sidebarItem: menu[] = [
-{ header: 'Home' },
     {
-        title: 'Modern',
-        icon: ApertureIcon,
-        chip: 'New',
-        chipColor: 'surface',
-        chipBgColor: 'secondary',
-        to: '/dashboards/modern'
-    },
-    {
-        title: 'eCommerce',
-        icon: ShoppingCartIcon,
-        to: '/dashboards/ecommerce'
-    },
+        header: 'Dashboards',
+        id: 1,
+        children: [
+            {
+                title: 'eCommerce',
+                icon: 'widget-add-line-duotone',
+                to: '/dashboards/ecommerce'
+            },
+            {
+                title: 'Analytics',
+                icon: 'chart-line-duotone',
+                to: '/dashboards/analytics'
+            },
+            {
+                title: 'CRM',
+                icon: 'layers-line-duotone',
+                to: '/dashboards/crm'
+            },
+       }
 ]
+
                             </code>
                         </pre>
             </div>
@@ -400,22 +405,28 @@ const sidebarItem: menu[] = [
 const horizontalItems: menu[] = [
     {
         title: 'Dashboard',
-        icon: HomeIcon,
+        icon: 'layers-line-duotone',
         to: '#',
         children: [
             {
-                title: 'Modern',
-                icon: CircleIcon,
-                to: '/dashboards/modern'
-            },
-            {
-                title: 'Ecommerce',
+                title: 'eCommerce',
                 icon: CircleIcon,
                 to: '/dashboards/ecommerce'
+            },
+            {
+                title: 'Analytics',
+                icon: CircleIcon,
+                to: '/dashboards/analytics'
+            },
+            {
+                title: 'CRM',
+                icon: CircleIcon,
+                to: '/dashboards/crm'
             }
         ]
     },
 ]
+
                             </code>
                         </pre>
             </div>
