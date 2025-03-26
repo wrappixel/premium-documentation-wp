@@ -428,40 +428,53 @@ GITHUB_SECRET=<span class="hljs-string">"your GITHUB_SECRET"</span>
           <div class="mt-4 card">
             <div class="card-body">
               <h4 class="card-title">2. Firebase Method</h4>
-              <h5 class="card-subtitle text-muted mt-2 mb-4">For firebase, incipiently change in index.tsx file as per
+              <h5 class="card-subtitle text-muted mt-2 mb-4">For firebase, incipiently change in app.tsx file as per
                 below mention.For more details about Firebase: <a
                   href="https://firebase.google.com/">https://firebase.google.com/</a></h5>
               <pre>                    <code class="hljs javascript">
 <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-<span class="hljs-comment">// File : src/index.tsx</span>
+<span class="hljs-comment">// File : src/app/app.tsx</span>
 <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
 
-<span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/guards/firebase/FirebaseContext'</span>; <span class="hljs-comment">// change is here</span>
+<span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/app/context/AuthContext'</span>; <span class="hljs-comment">// change is here</span>
 
-<span class="hljs-keyword">const</span> root = ReactDOM.createRoot(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>) <span class="hljs-keyword">as</span> HTMLElement);
-root.render(
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Spinner</span> /&gt;</span>}&gt;
-    <span class="hljs-tag">&lt;<span class="hljs-name">BrowserRouter</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">BrowserRouter</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
-);
+
+<span class="hljs-keyword">const</span> MyApp = ({ children }) =>  {
+return (
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">AppRouterCacheProvider</span> <span class="hljs-attr">options</span>=<span class="hljs-string">{</span>{<span class="hljs-attr">enableCssLayer:true</span> }</span>}&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">ThemeProvider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{theme}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RTL</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">{activeDir}</span>&gt;</span>
+        <span class="hljs-tag">{<span class="hljs-name">children</span>}</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">RTL</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ThemeProvider</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">AppRouterCacheProvider</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span></span>,
+  )
+};
 
 <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
 <span class="hljs-comment">// File : src/guards/authGuard/UseAuth.tsx</span>
 <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
 <span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> AuthContext <span class="hljs-keyword">from</span> <span class="hljs-string">'../firebase/FirebaseContext'</span>;
+<span class="hljs-keyword">import</span> AuthContext <span class="hljs-keyword">from</span> <span class="hljs-string">'src/app/context/AuthContext'</span>;
 
 <span class="hljs-keyword">const</span> useAuth = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> useContext(AuthContext);
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useAuth;
                     </code>
                   </pre>
+                  <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+<pre> <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/app/context/AuthContext.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-tag">const  initialState : InitialStateType  = { 
+<span class="hljs-name"> platform: 'Firebase', //Change platform to Supabase for Supabase Authentication</span>
+}
+</span>
+</code>
+ </pre>
             </div>
           </div>
           <div class="mt-4 card">
@@ -541,13 +554,176 @@ root.render(
   storageBucket: <span class="hljs-string">'STORAGE_BUCKET'</span>,
   messagingSenderId: <span class="hljs-string">'SENDER_ID'</span>,
   appId: <span class="hljs-string">'API_ID'</span>,
-  measurementId: <span class="hljs-string">'M_ID'</span>,
   databaseURL: <span class="hljs-string">'DATABASE_URL'</span>,
 };
                   </code>
                 </pre>
             </div>
           </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">3. Supabase Method</h4>
+              <h5 class="mt-4 fw-bold">Select the Auth Demo folder</h5>
+              <pre><code class="language-js py-0 hljs javascript"><span class="hljs-comment">//packages/Typescript/Auth </span>
+npm install</code>
+</pre>
+<br>
+<h5 class="mt-4 fw-bold">Folders And Files</h5>
+ <p>Create .env file
+</p>
+<pre>       
+                <code class="language-js py-0 hljs javascript">
+<span class="hljs-comment">// this is your .env file                  </span>
+NEXT_PUBLIC_SUPABASE_URL=<span class="hljs-string">"Your Url"</span>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY Key"</span>
+               
+               </code>
+               </pre> 
+
+
+
+              <p>Inside that folder you will get this file <span class="bg-light"> src &gt; app &gt; guards &gt; supabase &gt;
+                supabaseClient.ts
+                 </span></p>
+
+                 
+                 <pre> <code class="language-js py-0 hljs javascript">
+
+<span class="hljs-keyword">import</span> {createClient} <span class="hljs-keyword">from</span> <span class="hljs-string">"@supabase/supabase-js"</span>
+
+<span class="hljs-attr">const supabaseUrl: string | any =</span>process.env.NEXT_PUBLIC_SUPABASE_URL;
+<span class="hljs-attr">const supabaseKey: string | any =</span>process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+ 
+                  
+<span class="hljs-keyword">export </span>const  supabase = createClient(supabaseUrl,supabaseKey);
+                                  </code>
+                                </pre>
+
+    
+                 
+           
+              <pre>                    <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/app/app.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+
+<span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/app/context/AuthContext'</span>;
+
+
+<span class="hljs-keyword">const</span> MyApp = ({ children }) =>  {
+return (
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">AppRouterCacheProvider</span> <span class="hljs-attr">options</span>=<span class="hljs-string">{</span>{<span class="hljs-attr">enableCssLayer:true</span> }</span>}&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">ThemeProvider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{theme}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RTL</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">{activeDir}</span>&gt;</span>
+        <span class="hljs-tag">{<span class="hljs-name">children</span>}</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">RTL</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ThemeProvider</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">AppRouterCacheProvider</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span></span>,
+  )
+};
+</code>
+</pre>
+<h5 class="mt-4 fw-bold">Platform Configuration</h5>
+<pre> <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/app/context/AuthContext.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+  <span class="hljs-tag">const  initialState : InitialStateType  = { 
+    <span class="hljs-name"> platform: 'Supabase', //Change platform to Firebase for Firebase Authentication</span>
+  }
+  </span>
+
+</code>
+
+
+</pre>
+
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Steps for Generate key</h4>
+              <ul class="pl-4 font-14 text-muted">
+                <li class="py-2">
+                Go to 
+                  <span class="text-primary border-bottom border-primary">“https://supabase.com/</span>
+                 
+                </li>
+                <li class="py-2">click on "Sign Up" or "Log In" and complete the process.</li>
+
+                <li class="py-2">On the dashboard, click on the "New Project" button.</li>
+                <li class="py-2">
+                  After Display popup menu, Enter Project name, Select
+                  Country.Click
+                  on Create Project Button.
+                </li>
+                <li class="py-2">
+                  Once your project is created, go to the Project Dashboard.
+                </li>
+                <li class="py-2">
+                  In Left Panel,  Now Click on
+                  authentication Tab.
+                </li>
+                <li class="py-2">By default, Email & Password authentication is enabled, which allows users to sign up and sign in using their email and password.</li>
+                <li class="py-2">
+                  You can also enable OAuth Providers like Google, GitHub, Twitter, etc.
+                </li>
+                <li class="py-2">
+                  In the Settings tab under Authentication, you can customize email templates for user verification, password reset emails, and more.
+                </li>
+                <li class="py-2">
+                  Now, From the left sidebar, click on API.
+                </li>
+                <li class="py-2">
+                  Poject Url: This is used for client-side authentication, to interact with your Supabase project. Copy this URL.
+                </li>
+                <li class="py-2">
+                  Anon Key: This is used for client-side authentication, Copy this key.
+                </li>
+                <li class="py-2">
+                  Install Supabase : npm install @supabase/supabase-js
+                </li>
+                <li class="py-2">
+                  Create an .env File to Store Your Keys
+                </li>
+               
+<pre>                <code class="language-js py-0 hljs javascript">
+ <span class="hljs-comment">// this is your .env file                  </span>
+NEXT_PUBLIC_SUPABASE_URL=<span class="hljs-string">"Your Url"</span>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY Key"</span>
+
+</code>
+</pre> 
+<li class="py-2">
+  <img src="../../styles/dist/images/shared/supabase (1).png" class="w-100" alt="supabase">
+</li>
+<li class="py-2">
+  Create the supabaseClient.ts File
+</li>
+
+<pre> <code class="language-js py-0 hljs javascript">
+
+  <span class="hljs-keyword">import</span> {createClient} <span class="hljs-keyword">from</span> <span class="hljs-string">"@supabase/supabase-js"</span>
+  
+  <span class="hljs-attr">const supabaseUrl: string | any =</span>process.env.NEXT_PUBLIC_SUPABASE_URL;
+  <span class="hljs-attr">const supabaseKey: string | any =</span>process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+   
+                    
+  <span class="hljs-keyword">export </span>const  supabase = createClient(supabaseUrl,supabaseKey);
+                                    </code>
+                                  </pre>
+
+                                
+              </ul>
+            </div>
+          </div>
+
+
+         
           <!-- ============================================================== -->
           <!-- End Page wrapper  -->
           <!-- ============================================================== -->
