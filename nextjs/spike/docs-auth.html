@@ -363,7 +363,8 @@ npm install</code>
             
 <span class="hljs-keyword">const</span> MyApp = ({ children }) =>  {
   return (
-     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider </span>&gt; //... Setting up Auth Context Provider for NextAuth, Firebase, and Supabase</span>
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SessionProvider <span class="hljs-attr">session</span>=<span class="hljs-string">{session}</span></span>&gt;</span>
+     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt; //... Setting up Auth Context Provider for NextAuth, Firebase, and Supabase</span>
        <span class="hljs-tag">&lt;<span class="hljs-name">AppRouterCacheProvider</span> <span class="hljs-attr">options</span>=<span class="hljs-string">{</span>{<span class="hljs-attr">enableCssLayer:true</span> }</span>}&gt;
          <span class="hljs-tag">&lt;<span class="hljs-name">ThemeProvider</span> <span class="hljs-attr">theme</span>=<span class="hljs-string">{theme}</span>&gt;</span>
            <span class="hljs-tag">&lt;<span class="hljs-name">RTL</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">{activeDir}</span>&gt;</span>
@@ -371,7 +372,9 @@ npm install</code>
           <span class="hljs-tag">&lt;/<span class="hljs-name">RTL</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ThemeProvider</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">AppRouterCacheProvider</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span></span>,
+    <span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">SessionProvider</span>&gt;</span></span>
+
   )
 };
                                 </code>
