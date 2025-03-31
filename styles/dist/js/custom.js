@@ -6,6 +6,9 @@ $(function () {
     $(".left-sidebar").toggleClass("show-sidebar"); //changed the selector
   });
 
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
   // ==============================================================
   // Resize all elements
   // ==============================================================
