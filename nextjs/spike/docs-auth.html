@@ -435,7 +435,7 @@ GITHUB_SECRET=<span class="hljs-string">"your GITHUB_SECRET"</span>
 </pre>
 <br><br>
               <h5 class="mt-4 fw-bold">How To get Google Client Id and Secret Key ?</h5>
-              <p>1) go to https://console.cloud.google.com/getting-started</p>
+              <p>1) Go to https://console.cloud.google.com/getting-started</p>
               <p>2) Checkout the video : <a href="https://www.youtube.com/watch?v=qDRQ2EaWsNM&amp;t=267s">Watch
                   Video</a><br>
                 <iframe width="560" height="315"
@@ -448,12 +448,12 @@ GITHUB_SECRET=<span class="hljs-string">"your GITHUB_SECRET"</span>
               <p>3) You can create Github id and secret key and replace in .env file. (follow this step to create: <a
                   href="https://authjs.dev/guides/configuring-github">https://authjs.dev/guides/configuring-github</a>)
               </p>
-              <p>4) setup callback url http://localhost:3000/api/auth/callback/github while creating a id and key</p>
+              <p>4) Setup callback url http://localhost:3000/api/auth/callback/github while creating a id and key</p>
               <p>5) Once you replace the id and secret key you just need to test the sign in page. </p>
               <p>6) You can add any provider from this link : https://next-auth.js.org/providers/ you just need to add
                 those into router.js/ts file</p><br>
               <h5 class="mt-4 fw-bold">How To restrict any page if user is not signed in ?</h5>
-              <p>curerently we targeted dashboard pages to restrct user</p>
+              <p>curerently we targeted dashboard pages to restrict user</p>
               <pre>                <code class="language-js py-0 hljs javascript">
 <span class="hljs-comment">//just import this </span>
 <span class="hljs-keyword">import</span> { useSession, signIn, signOut } <span class="hljs-keyword">from</span> <span class="hljs-string">"next-auth/react"</span>
