@@ -324,67 +324,137 @@
           </div>
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title">2. Install</h4>
+              <h4 class="card-title">2. Installation</h4>
               <h5 class="card-subtitle mt-2 text-muted">
                 Open package folder and install its dependencies. We
-                recommanded yarn or npm.
+                recommended yarn or npm.
               </h5>
-              <h5 class="mt-4 font-medium">1) Install with npm:</h5>
-              <pre>
-                            <code class="language-sh py-0">
+
+              <div class="table-responsive ">
+                <table class="table table-striped border mt-4 align-middle table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Script</th>
+                      <th scope="col">Project Folder</th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <h5 class="mb-0">Install npm</h5>
+                        </div>
+                      </th>
+                      <td>
+                        <pre class="mt-0">
+                          <code class="language-sh py-0">
 cd project-folder/package/demos
 npm install
-                            </code>
-                        </pre>
-              <h5 class="mt-3 font-medium">2) Install with yarn:</h5>
-
-              <pre>
-                            <code class="language-sh py-0">
-cd project-folder/package/demos
-yarn install
-                            </code>
-                        </pre>
-            </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">3. Start</h4>
-              <h5 class="card-subtitle mt-2 text-muted lh-base">
-                Gulp serves as a versatile, cross-platform streaming task runner, facilitating the automation of
-                numerous development tasks for developers. To globally install Gulp, the following steps are required:
-              </h5>
-              <pre>
-                            <code class="language-sh py-0">
+                          </code>
+                      </pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"> <h5 class="mb-0">Install Gulp</h5></th>
+                      <td>
+                        <pre class="mt-0">
+                          <code class="language-sh py-0">
 npm install --global gulp-cli
-                            </code>
+                          </code>
                         </pre>
-              <h5 class="card-subtitle text-muted mt-4 lh-base">
-                Execute the gulp command within the package/demos/ directory to serve the project files through
-                BrowserSync. Running the gulp task will compile the theme and automatically open the /index.html file in
-                your default web browser.
-              </h5>
-              <pre>
-                            <code class="language-sh py-0">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><h5 class="mb-0">Start</h5></th>
+                      <td>
+                        <pre class="mt-0">
+                          <code class="language-sh py-0">
 gulp
-                            </code>
+                          </code>
                         </pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><h5 class="mb-0">Build</h5></th>
+                      <td>
+                        <pre class="mt-0">
+                          <code class="language-sh py-0">
+gulp build
+                          </code>
+                        </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            
             </div>
           </div>
+
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title">4. Build / Deployment</h4>
+              <h4 class="card-title">3. Color Themes</h4>
               <h5 class="card-subtitle mt-2 text-muted">
-                To build a project use below command. It'll generate dist folder , that dist folder you can upload on
-                site.
-              </h5>
-              <pre>
-                            <code class="language-sh py-0">
-gulp build
-                            </code>
-                        </pre>
-              <h5 class="card-subtitle mt-4">
-                Finally, Your app is ready to be deployed.🥳
-              </h5>
+                By default, Spike applies the default theme using the <code>data-color-theme</code> attribute to define the skin option. You can modify it or add your custom skin as needed.
+              </h5> 
+
+              <p class="mt-4 card-subtitle text-muted">By Default we are giving 6 color themes : </p>
+              <div class="d-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
+                <span class="border p-1 rounded px-2">Blue_Theme</span>
+                <span class="border p-1 rounded px-2">Aqua_Theme</span>
+                <span class="border p-1 rounded px-2">Purple_Theme</span>
+                <span class="border p-1 rounded px-2">Green_Theme</span>
+                <span class="border p-1 rounded px-2">Cyan_Theme</span>
+                <span class="border p-1 rounded px-2">Orange_Theme</span>
+              </div>
+
+              <pre class="mt-4">
+                <code class="language-sh py-0">
+&#x3C;html lang=&#x22;en&#x22; dir=&#x22;ltr&#x22; data-color-theme=&#x22;Blue_Theme&#x22; class=&#x22;light selected&#x22; &#x9;data-layout=&#x22;vertical&#x22; data-boxed-layout=&#x22;boxed&#x22; data-card=&#x22;shadow&#x22;&#x3E;
+                </code>
+            </pre>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">4. Theming</h4>
+              <h5 class="card-subtitle mt-2 text-muted">
+                Spike offers both light and dark style options, with the light style set as the default.
+              </h5> 
+
+              <p class="mt-4 card-subtitle text-muted">By Default we are giving 2 color themes, you just need to change class of <code>class="dark selected"</code> : </p>
+              <div class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
+                <span class="border p-1 rounded px-2">light</span>
+                <span class="border p-1 rounded px-2">dark</span>
+              </div>
+
+              <pre class="mt-4">
+                <code class="language-sh py-0">
+&#x3C;html lang=&#x22;en&#x22; dir=&#x22;ltr&#x22; data-color-theme=&#x22;Blue_Theme&#x22; class=&#x22;dark selected&#x22; &#x9;data-layout=&#x22;vertical&#x22; data-boxed-layout=&#x22;boxed&#x22; data-card=&#x22;shadow&#x22;&#x3E;
+                </code>
+            </pre>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">5. RTL Supported</h4>
+              <h5 class="card-subtitle mt-2 text-muted">
+                Spike comes with built-in RTL support by default.
+              </h5> 
+
+              <p class="mt-4 card-subtitle text-muted">To enable RTL direction, add <code>dir="rtl"</code> attribute to the html element. </p>
+              <div class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
+                <span class="border p-1 rounded px-2">ltr</span>
+                <span class="border p-1 rounded px-2">rtl</span>
+              </div>
+
+              <pre class="mt-4">
+                <code class="language-sh py-0">
+&#x3C;html lang=&#x22;en&#x22; dir=&#x22;rtl&#x22; data-color-theme=&#x22;Blue_Theme&#x22; class=&#x22;light selected&#x22; data-layout=&#x22;vertical&#x22; data-boxed-layout=&#x22;boxed&#x22; data-card=&#x22;shadow&#x22;&#x3E;
+                </code>
+            </pre>
             </div>
           </div>
 

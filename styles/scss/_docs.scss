@@ -5,6 +5,29 @@
     font-size: 16px;
   }
 
+  .text-secondary{
+    &:hover{
+      color: rgba($secondary, 0.8) !important;
+    }
+  }
+
+  .text-warning{
+    &:hover{
+      color: rgba($warning, 0.8) !important;
+    }
+  }
+
+  .text-success{
+    &:hover{
+      color: rgba($success, 0.8) !important;
+    }
+  }
+
+  .text-danger{
+    &:hover{
+      color: rgba($danger, 0.8) !important;
+    }
+  }
   
 
   

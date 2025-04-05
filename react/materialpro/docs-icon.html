@@ -88,10 +88,10 @@
                                     <a class="nav-link sidebar-link d-flex align-items-center"
                                         href="docs-licenses.html"><i class="ti ti-license me-3 fs-4"></i> Licenses</a>
                                 </li>
-                                <!--Theme UI-->
-                                <li class="nav-small-cap mt-4">
-                                    <span class="hide-menu">THEME UI</span>
-                                </li>
+                                <!--Customization-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
                                 <li class="sidebar-item position-relative">
                                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center"
                                         href="javascript:void(0)" aria-expanded="false">
@@ -219,10 +219,10 @@
                                             href="docs-licenses.html"><i class="ti ti-license me-3 fs-4"></i>
                                             Licenses</a>
                                     </li>
-                                    <!--Theme UI-->
-                                    <li class="nav-small-cap mt-4">
-                                        <span class="hide-menu">THEME UI</span>
-                                    </li>
+                                    <!--Customization-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
                                     <li class="sidebar-item position-relative">
                                         <a class="nav-link sidebar-link has-arrow d-flex align-items-center"
                                             href="javascript:void(0)" aria-expanded="false">
@@ -352,23 +352,43 @@
                     <h4 class="mb-4 pb-2">Icons</h3>
                         <div class="mt-4 card">
                             <div class="card-body">
-                                <h4 class="card-title">1. Tabler Icons</h4>
-                                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                                <h4 class="card-title">1.Solar Icons</h4>
+                                <a href="https://icones.js.org/collection/solar"
+                                    class="font-16">https://icones.js.org/collection/solar</a>
                                 <pre>                        <code class="language-js py-0 hljs javascript">
-            <span class="hljs-keyword">import</span> { IconGridDots,IconAward,IconCalendar,IconMail } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tabler/icons'</span>;
-            
-            <span class="hljs-comment">// ----------------------------------------------------------------------</span>
-            
-            <span class="hljs-keyword">const</span> TablerIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-                <span class="hljs-keyword">return</span>(
-                    &lt;IconGridDots width={22} /&gt;
-                    &lt;IconAward width={25} /&gt;
-                    &lt;IconCalendar width={30}/&gt;
-                    &lt;IconMail width={40}/&gt;
-                );
-            }
-                                    </code>
-                                </pre>
+<span class="hljs-keyword">import</span> { Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">"@iconify/react"</span>;
+
+<span class="hljs-comment">// ----------------------------------------------------------------------</span>
+
+<span class="hljs-keyword">const</span> SolarIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span>(
+        &lt;Icon icon="solar:course-up-line-duotone" height={16} /&gt;
+        &lt;Icon icon="solar:pie-chart-3-line-duotone" height={16} /&gt;
+        &lt;Icon icon="solar:cursor-line-duotone" height={16} /&gt; 
+        &lt;Icon icon="solar:pie-chart-3-line-duotone" height={16} /&gt;
+    );
+}
+                        </code>
+                    </pre>
+
+
+                                <h4 class="card-title mt-5">2. Tabler Icons</h4>
+                                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                    <pre>                        <code class="language-js py-0 hljs javascript">
+<span class="hljs-keyword">import</span> { IconGridDots,IconAward,IconCalendar,IconMail } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tabler/icons'</span>;
+
+<span class="hljs-comment">// ----------------------------------------------------------------------</span>
+
+<span class="hljs-keyword">const</span> TablerIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span>(
+        &lt;IconGridDots width={22} /&gt;
+        &lt;IconAward width={25} /&gt;
+        &lt;IconCalendar width={30}/&gt;
+        &lt;IconMail width={40}/&gt;
+    );
+}
+                        </code>
+                    </pre>
                             </div>
                         </div>
                         <!-- ============================================================== -->
