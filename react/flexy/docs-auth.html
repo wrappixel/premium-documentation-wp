@@ -7,7 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MaterialPro admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
     content="Flexy is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
@@ -86,9 +86,9 @@
                       class="ti ti-license me-3 fs-4"></i> Licenses</a>
                 </li>
                 <!--Customization-->
-                                <li class="nav-small-cap mt-4">
-                                    <span class="hide-menu">Customization</span>
-                                </li>
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
                 <li class="sidebar-item position-relative">
                   <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
                     aria-expanded="false">
@@ -139,7 +139,7 @@
                 </li>
                 <li class="sidebar-item">
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
-                      class="ti ti-brand-firebase me-3 fs-4"></i>
+                      class="ti ti-link me-3 fs-4"></i>
                     API-Calls
                   </a>
                 </li>
@@ -211,9 +211,9 @@
                       Licenses</a>
                   </li>
                   <!--Customization-->
-                                <li class="nav-small-cap mt-4">
-                                    <span class="hide-menu">Customization</span>
-                                </li>
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
                   <li class="sidebar-item position-relative">
                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
                       aria-expanded="false">
@@ -265,7 +265,7 @@
                   </li>
                   <li class="sidebar-item">
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
-                        class="ti ti-brand-firebase me-3 fs-4"></i>
+                        class="ti ti-link me-3 fs-4"></i>
                       API-Calls
                     </a>
                   </li>
@@ -333,177 +333,302 @@
           <!-- Start Page Content -->
           <!-- ============================================================== -->
           <h4 class="mb-4 pb-2">Authentication</h4>
-          <div class="mt-5">
-            <!-- ============================================================== -->
-            <!-- Start Page Content -->
-            <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Authentication</h4>
-            <div class="mt-4 alert alert-primary">
-              <h6 class="card-subtitle">By Default, we are using Firebase for auth, if you want to change it to Jwt for
-                that follow below steps.</h6>
-            </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title mb-4">1. Jwt Method</h4>
-                <pre>                      <code class="hljs javascript">
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-comment">// File : src/index.tsx</span>
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  
-  <span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/guards/jwt/JwtContext'</span>; <span class="hljs-comment">// change is here</span>
-  
-  <span class="hljs-keyword">const</span> root = ReactDOM.createRoot(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>) <span class="hljs-keyword">as</span> HTMLElement);
-  root.render(
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Spinner</span> /&gt;</span>}&gt;
-        <span class="hljs-tag">&lt;<span class="hljs-name">BrowserRouter</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">BrowserRouter</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
-  );
-  
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-comment">// File : src/guards/authGuard/UseAuth.tsx</span>
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-  <span class="hljs-keyword">import</span> { AuthContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'../jwt/JwtContext'</span>;
-  
-  <span class="hljs-keyword">const</span> useAuth = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> useContext(AuthContext);
-  
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useAuth;
-                        </code>
-                      </pre>
-              </div>
-            </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">2. Firebase Method</h4>
-                <h5 class="card-subtitle text-muted mt-2 mb-4">For firebase, incipiently change in index.tsx file as per
-                  below mention.For more details about Firebase: <a
-                    href="https://firebase.google.com/">https://firebase.google.com/</a></h5>
-                <pre>                    <code class="hljs javascript">
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-comment">// File : src/index.tsx</span>
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  
-  <span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/guards/firebase/FirebaseContext'</span>; <span class="hljs-comment">// change is here</span>
-  
-  <span class="hljs-keyword">const</span> root = ReactDOM.createRoot(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>) <span class="hljs-keyword">as</span> HTMLElement);
-  root.render(
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Spinner</span> /&gt;</span>}&gt;
-      <span class="hljs-tag">&lt;<span class="hljs-name">BrowserRouter</span>&gt;</span>
+          <div class="mt-4 alert alert-primary">
+            <h6 class="card-subtitle">By Default, we are using Firebase for auth, if you want to change it to Jwt or Supabase for
+              that follow below steps.</h6>
+          </div>
+          <br>
+          <h5 class="mt-1 fw-bold">Select the jwt-firebase Demo folder</h5>
+          <pre><code class="language-js py-0 hljs javascript">
+<span class="hljs-comment">//packages/typescript/jwt-firebase </span>
+npm install</code>
+   </pre>
+   <br/>
+   <h4 class="card-title">Global App Setup with Authentication</h4>
+   <pre>                    <code class="hljs javascript">
+ <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+ <span class="hljs-comment">// File : src/main.tsx</span>
+ <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+          
+<span class="hljs-keyword">import</span> { AuthProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">'src/guards/auth/AuthContext.tsx'</span>; <span class="hljs-comment"></span>       
+<span class="hljs-keyword">const</span> root = ReactDOM.createRoot(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>) <span class="hljs-keyword">as</span> HTMLElement);
+root.render(
+    <span class="hljs-tag">&lt;<span class="hljs-name">CustomizerContextProvider</span>&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Spinner</span>/&gt;</span>}&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">AuthProvider</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">App</span>/&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">AuthProvider</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">BrowserRouter</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
-  );
-  
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-comment">// File : src/guards/authGuard/UseAuth.tsx</span>
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-  <span class="hljs-keyword">import</span> AuthContext <span class="hljs-keyword">from</span> <span class="hljs-string">'../firebase/FirebaseContext'</span>;
-  
-  <span class="hljs-keyword">const</span> useAuth = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> useContext(AuthContext);
-  
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useAuth;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">CustomizerContextProvider</span>&gt;</span></span>,
+);
+                                    </code>
+                                  </pre>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title mb-4">1. Jwt Method</h4>
+              <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+              <pre>                      <code class="hljs javascript">
+
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/guards/auth/AuthContext.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+  <span class="hljs-tag">const  initialState : InitialStateType  = { 
+    <span class="hljs-name"> platform: 'JWT', //Change platform to JWT for JWT Authentication</span>
+  }
+  </span>
                       </code>
                     </pre>
-              </div>
             </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">Steps for Generate key</h4>
-                <ul class="pl-4 font-14 text-muted">
-                  <li class="py-2">
-                    Click on
-                    <span class="text-primary border-bottom border-primary">“Go to console”</span>
-                    display on the right side on firebase account.
-                  </li>
-                  <li class="py-2">Then after Click on add Project.</li>
-                  <li class="py-2">
-                    After Display popup menu, Enter Project name, Select
-                    Country And Click on Terms and condition Checkbox.Click
-                    on Create Project Button.
-                  </li>
-                  <li class="py-2">
-                    Now, Display The Firebase Admin panel
-                  </li>
-                  <li class="py-2">
-                    In Left Panel, Click on Develop option. Now Click on
-                    authentication link.
-                  </li>
-                  <li class="py-2">Click on the “Web Setup” button.</li>
-                  <li class="py-2">
-                    Now, copy the configuration and change in Flexy-react project in
-                    ‘src/components/Firebase/firebase.js’.
-                  </li>
-                  <li class="py-2">
-                    Now go to sign-in Method tab.Enable Email/Password and
-                    Anonymous in sign-in providers.
-                  </li>
-                  <li class="py-2">
-                    Now, Click on database link from left Panel.
-                  </li>
-                  <li class="py-2">
-                    Click on the create a database button.
-                  </li>
-                  <li class="py-2">
-                    Display Popup in Select
-                    <span class="text-primary border-bottom border-primary">“start in locked mode”</span>
-                    and Click on
-                    <span class="text-primary border-bottom border-primary">Enable</span>
-                    Button.
-                  </li>
-                  <li class="py-2">Now, select real-time Database.</li>
-                  <li class="py-2">
-                    Click on rules tab. change the
-                    <span class="text-primary border-bottom border-primary">read and write</span>
-                    rules from
-                    <span class="text-primary border-bottom border-primary">false</span>
-                    to
-                    <span class="text-primary border-bottom border-primary">true.</span>
-                  </li>
-                </ul>
+          </div>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">2. Firebase Method</h4>
+              <h5 class="card-subtitle text-muted mt-2 mb-4">For more details about Firebase: <a
+                  href="https://firebase.google.com/">https://firebase.google.com/</a></h5>
+                  <h5 class="mt-4 fw-bold">Folders And Files</h5>
+                  <p>Inside that folder you will get this file <span class="bg-light"> src &gt; guards &gt; authGuard &gt; UseAuth </span></p>
+              <pre>                    <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/guards/authGuard/UseAuth.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> AuthContext <span class="hljs-keyword">from</span> <span class="hljs-string">'src/app/context/AuthContext'</span>;
 
-                <img src="../../styles/dist/images/shared/firebase.jpg" class="w-100" alt="firebase">
-                <div class="mt-5">
-                  <h5 class="card-subtitle">Video : <a
-                      href="https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s">https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title mb-4">How to add key into template ?</h4>
-                <pre>                  <code class="hljs cs">
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-comment">// File: src/guards/firebase/Firebase.tsx</span>
-  <span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
-  <span class="hljs-keyword">const</span> firebaseConfig = {
-    apiKey: <span class="hljs-string">'API_KEY'</span>,
-    authDomain: <span class="hljs-string">'AUTH_DOMAIN'</span>,
-    projectId: <span class="hljs-string">'PROJECT_ID'</span>,
-    storageBucket: <span class="hljs-string">'STORAGE_BUCKET'</span>,
-    messagingSenderId: <span class="hljs-string">'SENDER_ID'</span>,
-    appId: <span class="hljs-string">'API_ID'</span>,
-    measurementId: <span class="hljs-string">'M_ID'</span>,
-    databaseURL: <span class="hljs-string">'DATABASE_URL'</span>,
-  };
+<span class="hljs-keyword">const</span> useAuth = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> useContext(AuthContext);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useAuth;
                     </code>
                   </pre>
+                  <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+<pre> <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/guards/auth/AuthContext.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-tag">const  initialState : InitialStateType  = { 
+<span class="hljs-name"> platform: 'Firebase', //Change platform to Firebase for Firebase Authentication</span>
+}
+</span>
+</code>
+ </pre>
+            </div>
+          </div>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Steps for Generate key</h4>
+              <ul class="pl-4 font-14 text-muted">
+                <li class="py-2">
+                  click on
+                  <span class="text-primary border-bottom border-primary">“Go to console”</span>
+                  display on the right side on firebase account.
+                </li>
+                <li class="py-2">Then after Click on add Project.</li>
+                <li class="py-2">
+                  After Display popup menu, Enter Project name, Select
+                  Country And Click on Terms and condition Checkbox.Click
+                  on Create Project Button.
+                </li>
+                <li class="py-2">
+                  Now, Display The Firebase Admin panel
+                </li>
+                <li class="py-2">
+                  In Left Panel, Click on Develop option. Now Click on
+                  authentication link.
+                </li>
+                <li class="py-2">Click on the “Web Setup” button.</li>
+                <li class="py-2">
+                  Now, copy the configuration and change in Flexy-react project in
+                  ‘src/components/Firebase/firebase.js’.
+                </li>
+                <li class="py-2">
+                  Now go to sign-in Method tab.Enable Email/Password and
+                  Anonymous in sign-in providers.
+                </li>
+                <li class="py-2">
+                  Now, Click on database link from left Panel.
+                </li>
+                <li class="py-2">
+                  Click on the create a database button.
+                </li>
+                <li class="py-2">
+                  Display Popup in Select
+                  <span class="text-primary border-bottom border-primary">“start in locked mode”</span>
+                  and Click on
+                  <span class="text-primary border-bottom border-primary">Enable</span>
+                  Button.
+                </li>
+                <li class="py-2">Now, select real-time Database.</li>
+                <li class="py-2">
+                  Click on rules tab. change the
+                  <span class="text-primary border-bottom border-primary">read and write</span>
+                  rules from
+                  <span class="text-primary border-bottom border-primary">false</span>
+                  to
+                  <span class="text-primary border-bottom border-primary">true.</span>
+                </li>
+              </ul>
+
+              <img src="../../styles/dist/images/shared/firebase.jpg" class="w-100" alt="firebase">
+              <div class="mt-5">
+                <h5 class="card-subtitle">Video : <a
+                    href="https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s">https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s</a>
+                </h5>
               </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Page wrapper  -->
-            <!-- ============================================================== -->
+          </div>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title mb-4">How to add key into template ?</h4>
+              <pre>                  <code class="hljs cs">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File: src/guards/firebase/Firebase.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-keyword">const</span> firebaseConfig = {
+  apiKey: <span class="hljs-string">'API_KEY'</span>,
+  authDomain: <span class="hljs-string">'AUTH_DOMAIN'</span>,
+  projectId: <span class="hljs-string">'PROJECT_ID'</span>,
+  storageBucket: <span class="hljs-string">'STORAGE_BUCKET'</span>,
+  messagingSenderId: <span class="hljs-string">'SENDER_ID'</span>,
+  appId: <span class="hljs-string">'API_ID'</span>,
+  measurementId: <span class="hljs-string">'M_ID'</span>,
+  databaseURL: <span class="hljs-string">'DATABASE_URL'</span>,
+};
+                  </code>
+                </pre>
+            </div>
+          </div>
+
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">3. Supabase Method</h4>
+            
+<h5 class="mt-4 fw-bold">Folders And Files</h5>
+ <p>Create .env file
+</p>
+<pre>       
+                <code class="language-js py-0 hljs javascript">
+<span class="hljs-comment">// this is your .env file                  </span>
+VITE_SUPABASE_URL=<span class="hljs-string">"Your Url"</span>
+VITE_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY Key"</span>
+               
+               </code>
+               </pre> 
+
+
+              <p>Inside that folder you will get this file <span class="bg-light"> src &gt; app &gt; guards &gt; supabase &gt;
+                supabaseClient.ts
+                 </span></p>
+
+                 
+                 <pre> <code class="language-js py-0 hljs javascript">
+
+<span class="hljs-keyword">import</span> {createClient} <span class="hljs-keyword">from</span> <span class="hljs-string">"@supabase/supabase-js"</span>
+
+<span class="hljs-attr">const supabaseUrl: string | any =</span>import.meta.env.VITE_SUPABASE_URL;;
+<span class="hljs-attr">const supabaseKey: string | any =</span>import.meta.env.VITE_SUPABASE_ANON_KEY;
+ 
+                  
+<span class="hljs-keyword">export </span>const  supabase = createClient(supabaseUrl,supabaseKey);
+                                  </code>
+                                </pre>
+
+    
+                 
+           
+          
+<h5 class="mt-4 fw-bold">Platform Configuration</h5>
+<pre> <code class="hljs javascript">
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+<span class="hljs-comment">// File : src/guards/auth/AuthContext.tsx</span>
+<span class="hljs-comment">// -----------------------------------------------------------------------------------------</span>
+  <span class="hljs-tag">const  initialState : InitialStateType  = { 
+    <span class="hljs-name"> platform: 'Supabase', //Change platform to Supabase for Supabase Authentication</span>
+  }
+  </span>
+
+</code>
+</pre>
+
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Steps for Generate key</h4>
+              <ul class="pl-4 font-14 text-muted">
+                <li class="py-2">
+                Go to 
+                  <span class="text-primary border-bottom border-primary">“https://supabase.com/</span>
+                 
+                </li>
+                <li class="py-2">click on "Sign Up" or "Log In" and complete the process.</li>
+
+                <li class="py-2">On the dashboard, click on the "New Project" button.</li>
+                <li class="py-2">
+                  After Display popup menu, Enter Project name, Select
+                  Country.Click
+                  on Create Project Button.
+                </li>
+                <li class="py-2">
+                  Once your project is created, go to the Project Dashboard.
+                </li>
+                <li class="py-2">
+                  In Left Panel,  Now Click on
+                  authentication Tab.
+                </li>
+                <li class="py-2">By default, Email & Password authentication is enabled, which allows users to sign up and sign in using their email and password.</li>
+                <li class="py-2">
+                  You can also enable OAuth Providers like Google, GitHub, Twitter, etc.
+                </li>
+                <li class="py-2">
+                  In the Settings tab under Authentication, you can customize email templates for user verification, password reset emails, and more.
+                </li>
+                <li class="py-2">
+                  Now, From the left sidebar, click on API.
+                </li>
+                <li class="py-2">
+                  Poject Url: This is used for client-side authentication, to interact with your Supabase project. Copy this URL.
+                </li>
+                <li class="py-2">
+                  Anon Key: This is used for client-side authentication, Copy this key.
+                </li>
+                <li class="py-2">
+                  Install Supabase : npm install @supabase/supabase-js
+                </li>
+                <li class="py-2">
+                  Create an .env File to Store Your Keys
+                </li>
+               
+<pre>                <code class="language-js py-0 hljs javascript">
+ <span class="hljs-comment">// this is your .env file                  </span>
+VITE_SUPABASE_URL=<span class="hljs-string">"Your Url"</span>
+VITE_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY Key"</span>
+
+</code>
+</pre> 
+<li class="py-2">
+  <img src="../../styles/dist/images/shared/supabase (1).png" class="w-100" alt="supabase">
+</li>
+<li class="py-2">
+  Create the supabaseClient.ts File
+</li>
+
+<pre> <code class="language-js py-0 hljs javascript">
+
+  <span class="hljs-keyword">import</span> {createClient} <span class="hljs-keyword">from</span> <span class="hljs-string">"@supabase/supabase-js"</span>
+  
+  <span class="hljs-attr">const supabaseUrl: string | any =</span>import.meta.env.VITE_SUPABASE_URL;
+  <span class="hljs-attr">const supabaseKey: string | any =</span>import.meta.env.VITE_SUPABASE_ANON_KEY;
+   
+                    
+  <span class="hljs-keyword">export </span>const  supabase = createClient(supabaseUrl,supabaseKey);
+                                    </code>
+                                  </pre>
+
+                                
+              </ul>
+            </div>
           </div>
           <!-- ============================================================== -->
           <!-- End Page wrapper  -->
