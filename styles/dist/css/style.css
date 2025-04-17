@@ -2355,7 +2355,7 @@ progress {
   border: var(--bs-border-width) solid var(--bs-border-color);
   appearance: none;
   border-radius: 7px;
-  box-shadow: inset 0 1px 2px rgba(var(--bs-body-color-rgb), 0.075);
+  box-shadow: unset;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2374,7 +2374,7 @@ progress {
   background-color: var(--bs-form-control-bg);
   border-color: #aec3ff;
   outline: 0;
-  box-shadow: inset 0 1px 2px rgba(var(--bs-body-color-rgb), 0.075), 0 0 0 0.25rem rgba(93, 135, 255, 0.25);
+  box-shadow: unset, 0 0 0 0.25rem rgba(93, 135, 255, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -12954,6 +12954,21 @@ textarea.form-control-lg {
 }
 .docs .text-danger:hover {
   color: rgba(250, 137, 107, 0.8) !important;
+}
+.docs .topbar-search .dropdown-menu {
+  min-width: 260px;
+  padding: 8px;
+  overflow-y: auto;
+}
+.docs .topbar-search .dropdown-menu li a {
+  color: #5a6a85;
+  padding: 6px 14px;
+  display: block;
+  border-radius: 4px;
+}
+.docs .topbar-search .dropdown-menu li a:hover {
+  background-color: rgba(17, 20, 45, 0.1);
+  color: #11142d;
 }
 .docs .left-sidebar {
   width: 270px;

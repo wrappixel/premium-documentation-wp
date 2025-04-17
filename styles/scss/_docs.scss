@@ -28,6 +28,29 @@
       color: rgba($danger, 0.8) !important;
     }
   }
+
+
+  .topbar-search{
+    .dropdown-menu{
+      min-width: 260px;
+      padding: 8px;
+      overflow-y: auto;
+
+      li{
+        a{
+          color: $muted;
+          padding: 6px 14px;
+          display: block;
+          border-radius: 4px;
+
+          &:hover{
+            background-color: rgba($color: $dark, $alpha: 0.1);
+            color: $dark;
+          }
+        }
+      }
+    }
+  }
   
 
   

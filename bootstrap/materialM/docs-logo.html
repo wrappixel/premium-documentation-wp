@@ -58,11 +58,304 @@
       <!-- Left Sidebar - style you can find in sidebar.scss  -->
       <!-- ============================================================== -->
       <!--Desktop view sidebar menu-->
-      <aside
-        class="left-sidebar pt-4 d-lg-block d-none"
-        id="navbar-example3"
-        data-simplebar
-      >
+      <aside class="left-sidebar pt-4 d-lg-block d-none" id="navbar-example3" data-simplebar>
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <!-- ============================================================== -->
+          <!-- Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-brand d-flex align-items-center justify-content-between px-4">
+            <!-- Logo icon -->
+            <a href="index.html">
+              <b class="logo-icon">
+                <!-- Dark Logo icon -->
+                <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+              </b>
+              <!--End Logo icon -->
+            </a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <ul id="sidebarnav" class="mt-4">
+            <nav class="nav nav-pills flex-column sidebar-nav">
+              <ul class="list-unstyled">
+                <!--Getting Started-->
+                <li class="nav-small-cap">
+                  <span class="hide-menu">Getting Started</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i
+                      class="ti ti-home-2 me-3 fs-4"></i> Introduction</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-structure.html"><i
+                      class="ti ti-packages me-3 fs-4"></i> Folder Structure</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-start.html"><i
+                      class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                    Start</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-licenses.html"><i
+                      class="ti ti-license me-3 fs-4"></i> Licenses</a>
+                </li>
+                <!--Theme UI-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
+
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-setting.html"><i
+                      class="ti ti-settings me-3 fs-4"></i>Customize Theme
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-logo.html"><i
+                      class="ti ti-adjustments-horizontal me-3 fs-4"></i>Change Logo
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-changes-skin-color.html"><i
+                      class="ti ti-palette me-3 fs-4"></i>Global Skin Color
+                  </a>
+                </li>
+
+                <!--Theme UI-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">THEME UI</span>
+                </li>
+                <li class="sidebar-item position-relative">
+                  <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                    aria-expanded="false">
+                    <span class="hide-menu"><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                      Config
+                    </span>
+                  </a>
+                  <!--sub-menu items-->
+                  <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-color.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Color </span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-typography.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Typography </span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-icon.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Icons </span></a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!--Charts-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Charts</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-charts-apex.html"><i
+                      class="ti ti ti-chart-pie me-3 fs-4"></i>Apex Charts</a>
+                </li>
+
+                <!--Components-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Components</span>
+                </li>
+                <li class="sidebar-item position-relative">
+                  <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                    aria-expanded="false">
+                    <span class="hide-menu"><i class="ti ti-layout-grid me-3 fs-4"></i>UI Elements
+                    </span>
+                  </a>
+                  <!--sub-menu items-->
+                  <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-accordian.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Accordian</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-badge.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Badge</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-buttons.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Buttons</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-dropdowns.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Dropdowns</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-modals.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Modals</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-tab.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Tab</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-tooltip-popover.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Tooltip & Popover</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-notification.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Alerts</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-progressbar.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Progressbar</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-pagination.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Pagination</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-typography.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Typography</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-bootstrap-ui.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Bootstrap UI</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-breadcrumb.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Breadcrumb</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-offcanvas.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Offcanvas</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-lists.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Lists</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-grid.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Grid</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-carousel.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Carousel</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-scrollspy.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Scrollspy</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-spinner.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Spinner</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-link.html" target="_blank"
+                        class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Link</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item position-relative">
+                  <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                    aria-expanded="false">
+                    <span class="hide-menu"><i class="ti ti-layout-sidebar me-3 fs-4"></i>Table
+                    </span>
+                  </a>
+                  <!--sub-menu items-->
+                  <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-basic.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Basic Table</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-dark-basic.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Dark Basic Table</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-sizing.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Sizing Table</span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-layout-coloured.html"
+                        target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu">Coloured Table</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-data-tables.html"><i
+                      class="ti ti-air-conditioning-disabled me-3 fs-4"></i>DataTables</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-helper-classes.html"><i
+                      class="ti ti-components me-3 fs-4"></i>Helper Classes</a>
+                </li>
+
+                <!--Forms-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Forms</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-datepicker.html"><i
+                      class="ti ti-calendar me-3 fs-4"></i>Datepicker</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-form-picker.html"><i
+                      class="ti ti-file-text me-3 fs-4"></i>Form Pickers</a>
+                </li>
+
+                <!--Others-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Others</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-credits.html"><i
+                      class="ti ti-accessible me-3 fs-4"></i>Credits</a>
+                </li>
+
+                <!--Development-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">DEVELOPMENT</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
+                      class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
+                </li>
+              </ul>
+            </nav>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+
+      <!--Mobile view sidebar menu-->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <aside class="left-sidebar pt-4" id="navbar-example3" data-simplebar>
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
           <!-- Sidebar navigation-->
@@ -70,18 +363,12 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <div
-              class="navbar-brand d-flex align-items-center justify-content-between px-4"
-            >
+            <div class="navbar-brand d-flex align-items-center justify-content-between px-4">
               <!-- Logo icon -->
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img
-                    src="../../styles/dist/images/materialM/logo-dark.svg"
-                    alt="homepage"
-                    class="dark-logo"
-                  />
+                  <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -97,33 +384,21 @@
                     <span class="hide-menu">Getting Started</span>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="index.html"
-                      ><i class="ti ti-home-2 me-3 fs-4"></i> Introduction</a
-                    >
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i
+                        class="ti ti-home-2 me-3 fs-4"></i> Introduction</a>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-structure.html"
-                      ><i class="ti ti-packages me-3 fs-4"></i> Folder Structure</a
-                    >
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-structure.html"><i
+                        class="ti ti-packages me-3 fs-4"></i> Folder Structure</a>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-start.html"
-                      ><i class="ti ti-brand-abstract me-3 fs-4"></i> Quick
-                      Start</a
-                    >
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-start.html"><i
+                        class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                      Start</a>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-licenses.html"
-                      ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
-                    >
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-licenses.html"><i
+                        class="ti ti-license me-3 fs-4"></i> Licenses</a>
                   </li>
                   <!--Theme UI-->
                   <li class="nav-small-cap mt-4">
@@ -131,27 +406,18 @@
                   </li>
 
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-setting.html"
-                      ><i class="ti ti-settings me-3 fs-4"></i>Customize Theme
-                      </a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-logo.html"
-                      ><i class="ti ti-adjustments-horizontal me-3 fs-4"></i
-                      >Change Logo
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-setting.html"><i
+                        class="ti ti-settings me-3 fs-4"></i>Customize Theme
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-changes-skin-color.html"
-                      ><i class="ti ti-palette me-3 fs-4"></i
-                      >Global Skin Color
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-logo.html"><i
+                        class="ti ti-adjustments-horizontal me-3 fs-4"></i>Change Logo
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-changes-skin-color.html"><i
+                        class="ti ti-palette me-3 fs-4"></i>Global Skin Color
                     </a>
                   </li>
 
@@ -160,52 +426,220 @@
                     <span class="hide-menu">THEME UI</span>
                   </li>
                   <li class="sidebar-item position-relative">
-                    <a
-                      class="nav-link sidebar-link has-arrow d-flex align-items-center"
-                      href="javascript:void(0)"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu"
-                        ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                    <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                      aria-expanded="false">
+                      <span class="hide-menu"><i class="ti ti-file-infinity me-3 fs-4"></i>Project
                         Config
                       </span>
                     </a>
                     <!--sub-menu items-->
-                    <ul
-                      aria-expanded="false"
-                      class="collapse first-level list-unstyled"
-                    >
+                    <ul aria-expanded="false" class="collapse first-level list-unstyled">
                       <li class="sidebar-item mb-0">
-                        <a href="docs-color.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Color </span></a
-                        >
+                        <a href="docs-color.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Color </span></a>
                       </li>
                       <li class="sidebar-item mb-0">
-                        <a href="docs-typography.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Typography </span></a
-                        >
+                        <a href="docs-typography.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Typography </span></a>
                       </li>
                       <li class="sidebar-item mb-0">
-                        <a href="docs-icon.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Icons </span></a
-                        >
+                        <a href="docs-icon.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Icons </span></a>
                       </li>
                     </ul>
                   </li>
-                  
+
+                  <!--Charts-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Charts</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-charts-apex.html"><i
+                        class="ti ti-chart-pie me-3 fs-4"></i>Apex Charts</a>
+                  </li>
+
+                  <!--Components-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Components</span>
+                  </li>
+                  <li class="sidebar-item position-relative">
+                    <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                      aria-expanded="false">
+                      <span class="hide-menu"><i class="ti ti-layout-grid me-3 fs-4"></i>UI Elements
+                      </span>
+                    </a>
+                    <!--sub-menu items-->
+                    <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-accordian.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Accordian</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-badge.html" target="_blank"
+                          class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Badge</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-buttons.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Buttons</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-dropdowns.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Dropdowns</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-modals.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Modals</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-tab.html" target="_blank"
+                          class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Tab</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-tooltip-popover.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Tooltip & Popover</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-notification.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Alerts</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-progressbar.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Progressbar</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-pagination.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Pagination</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-typography.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Typography</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-bootstrap-ui.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Bootstrap UI</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-breadcrumb.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Breadcrumb</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-offcanvas.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Offcanvas</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-lists.html" target="_blank"
+                          class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Lists</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-grid.html" target="_blank"
+                          class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Grid</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-carousel.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Carousel</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-scrollspy.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Scrollspy</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-spinner.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Spinner</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/ui-link.html" target="_blank"
+                          class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Link</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item position-relative">
+                    <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                      aria-expanded="false">
+                      <span class="hide-menu"><i class="ti ti-layout-sidebar me-3 fs-4"></i>Table
+                      </span>
+                    </a>
+                    <!--sub-menu items-->
+                    <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-basic.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Basic Table</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-dark-basic.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Dark Basic Table</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-sizing.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Sizing Table</span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="https://bootstrapdemos.wrappixel.com/materialM/dist/main/table-layout-coloured.html"
+                          target="_blank" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu">Coloured Table</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-data-tables.html"><i
+                        class="ti ti-air-conditioning-disabled me-3 fs-4"></i>DataTables</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-helper-classes.html"><i
+                        class="ti ti-components me-3 fs-4"></i>Helper Classes</a>
+                  </li>
+
+                  <!--Forms-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Forms</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-datepicker.html"><i
+                        class="ti ti-calendar me-3 fs-4"></i>Datepicker</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-form-picker.html"><i
+                        class="ti ti-file-text me-3 fs-4"></i>Form Pickers</a>
+                  </li>
+
+                  <!--Others-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Others</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-credits.html"><i
+                        class="ti ti-accessible me-3 fs-4"></i>Credits</a>
+                  </li>
+
                   <!--Development-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">DEVELOPMENT</span>
                   </li>
                   <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-change-log.html"
-                      ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
-                    >
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
+                        class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
                   </li>
                 </ul>
               </nav>
@@ -215,168 +649,7 @@
         </div>
         <!-- End Sidebar scroll-->
       </aside>
-
-      <!--Mobile view sidebar menu-->
-      <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
-        <aside class="left-sidebar pt-4" id="navbar-example3" data-simplebar>
-          <!-- Sidebar scroll-->
-          <div class="scroll-sidebar">
-            <!-- Sidebar navigation-->
-            <nav class="sidebar-nav">
-              <!-- ============================================================== -->
-              <!-- Logo -->
-              <!-- ============================================================== -->
-              <div
-                class="navbar-brand d-flex align-items-center justify-content-between px-4"
-              >
-                <!-- Logo icon -->
-                <a href="index.html">
-                  <b class="logo-icon">
-                    <!-- Dark Logo icon -->
-                    <img
-                      src="../../styles/dist/images/materialM/logo-dark.svg"
-                      alt="homepage"
-                      class="dark-logo"
-                    />
-                  </b>
-                  <!--End Logo icon -->
-                </a>
-              </div>
-              <!-- ============================================================== -->
-              <!-- End Logo -->
-              <!-- ============================================================== -->
-              <ul id="sidebarnav" class="mt-4">
-                <nav class="nav nav-pills flex-column sidebar-nav">
-                  <ul class="list-unstyled">
-                    <!--Getting Started-->
-                  <li class="nav-small-cap">
-                    <span class="hide-menu">Getting Started</span>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="index.html"
-                      ><i class="ti ti-home-2 me-3 fs-4"></i> Introduction</a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-structure.html"
-                      ><i class="ti ti-packages me-3 fs-4"></i> Folder Structure</a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-start.html"
-                      ><i class="ti ti-brand-abstract me-3 fs-4"></i> Quick
-                      Start</a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-licenses.html"
-                      ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
-                    >
-                  </li>
-                  <!--Theme UI-->
-                  <li class="nav-small-cap mt-4">
-                    <span class="hide-menu">Customization</span>
-                  </li>
-
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-setting.html"
-                      ><i class="ti ti-settings me-3 fs-4"></i>Customize Theme
-                      </a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-logo.html"
-                      ><i class="ti ti-adjustments-horizontal me-3 fs-4"></i
-                      >Change Logo
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-changes-skin-color.html"
-                      ><i class="ti ti-palette me-3 fs-4"></i
-                      >Global Skin Color
-                    </a>
-                  </li>
-
-                  <!--Theme UI-->
-                  <li class="nav-small-cap mt-4">
-                    <span class="hide-menu">THEME UI</span>
-                  </li>
-                  <li class="sidebar-item position-relative">
-                    <a
-                      class="nav-link sidebar-link has-arrow d-flex align-items-center"
-                      href="javascript:void(0)"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu"
-                        ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
-                        Config
-                      </span>
-                    </a>
-                    <!--sub-menu items-->
-                    <ul
-                      aria-expanded="false"
-                      class="collapse first-level list-unstyled"
-                    >
-                      <li class="sidebar-item mb-0">
-                        <a href="docs-color.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Color </span></a
-                        >
-                      </li>
-                      <li class="sidebar-item mb-0">
-                        <a href="docs-typography.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Typography </span></a
-                        >
-                      </li>
-                      <li class="sidebar-item mb-0">
-                        <a href="docs-icon.html" class="nav-link sub-link"
-                          ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Icons </span></a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  
-                  <!--Development-->
-                  <li class="nav-small-cap mt-4">
-                    <span class="hide-menu">DEVELOPMENT</span>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="nav-link sidebar-link d-flex align-items-center"
-                      href="docs-change-log.html"
-                      ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
-                    >
-                  </li>
-                  </ul>
-                </nav>
-              </ul>
-            </nav>
-            <!-- End Sidebar navigation -->
-          </div>
-          <!-- End Sidebar scroll-->
-        </aside>
-      </div>
+    </div>
 
       <!-- ============================================================== -->
       <!-- End Left Sidebar - style you can find in sidebar.scss  -->
@@ -384,13 +657,20 @@
       <!-- ============================================================== -->
       <!-- Page wrapper  -->
       <!-- ============================================================== -->
-      <div
-        class="page-wrapper pt-0 d-block"
-        data-bs-spy="scroll"
-        data-bs-target="#navbar-example3"
-        data-bs-smooth-scroll="true"
-        tabindex="0"
-      >
+      <div class="page-wrapper pt-0 d-block" data-bs-spy="scroll" data-bs-target="#navbar-example3"
+      data-bs-smooth-scroll="true" tabindex="0">
+      <!-- ============================================================== -->
+      <!-- Topbar Search  -->
+      <!-- ============================================================== -->
+      <div class="topbar-search p-3 d-none d-lg-flex align-items-center justify-content-end">
+        <form class="dropdown position-relative">
+          <div class="position-relative">
+            <input type="text" class="form-control ps-5 py-2 w-auto" id="searchInput" placeholder="Search Here...">
+            <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-4 text-dark ms-3"></i>
+          </div>
+          <ul class="list-unstyled mb-0 dropdown-menu dropdown-menu-end end-0" id="resultList"></ul>
+        </form>
+      </div>
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
@@ -506,7 +786,8 @@
     <script src="../../styles/assets/simplebar/simplebar/dist/simplebar.js"></script>
     <!--Custom JavaScript -->
     <script src="../../styles/dist/js/custom.js"></script>
-    <script src="../../styles/assets/highlights/highlight.min.js"></script>
+  <script src="../../styles/dist/js/topbar-search.js"></script>
+  <script src="../../styles/assets/highlights/highlight.min.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
 
