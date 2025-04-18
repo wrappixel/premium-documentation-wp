@@ -191,6 +191,159 @@
     }
   }
 }
+
+//
+// Form Bootstrap Datepicker
+//
+
+body {
+
+  .datepicker table tr td.active,
+  .datepicker table tr td.active.disabled,
+  .datepicker table tr td.active.disabled:hover,
+  .datepicker table tr td.active:hover,
+  .datepicker table tr td.today,
+  .datepicker table tr td.today.disabled,
+  .datepicker table tr td.today.disabled:hover,
+  .datepicker table tr td.today:hover,
+  .datepicker table tr td.selected,
+  .datepicker table tr td.selected.disabled,
+  .datepicker table tr td.selected.disabled:hover,
+  .datepicker table tr td.selected:hover {
+    background-color: var(--bs-primary) !important;
+    background-image: unset;
+    color: $white;
+  }
+
+  .datepicker table tr td.day.focused,
+  .datepicker table tr td.day:hover,
+  .datepicker table tr td.range,
+  .datepicker table tr td.range.disabled,
+  .datepicker table tr td.range.disabled:hover,
+  .datepicker table tr td.range:hover {
+    background: var(--bs-gray-100);
+  }
+}
+
+.datepicker .day,
+.datepicker .dow {
+  padding: 5px 10px;
+}
+
+//
+// Form material-datepicker
+//
+
+.dtp-date {
+  .material-icons {
+    color: var(--bs-white) !important;
+  }
+}
+
+//
+// Form custom  validation
+//
+.error {
+  .form-control {
+    border-color: var(--bs-danger);
+  }
+
+  .help-block {
+    color: var(--bs-danger);
+  }
+}
+
+.validate {
+  .form-control {
+    border-color: var(--bs-success);
+  }
+
+  .help-block {
+    color: var(--bs-success);
+  }
+}
+
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  background: var(--bs-primary) !important;
+  color: $white !important;
+}
+
+.picker__button--today,
+.picker__button--clear,
+.picker__button--close {
+  font-weight: 600 !important;
+}
+
+.dtp div.dtp-date,
+.dtp div.dtp-time,
+.dtp>.dtp-content>.dtp-date-view>header.dtp-header,
+.dtp table.dtp-picker-days tr>td>a.selected {
+  background: var(--bs-primary) !important;
+}
+
+
+//
+// Datatables
+//
+
+@include media-breakpoint-up(lg) {
+  .datatables {
+    .table-responsive {
+      overflow-x: clip;
+    }
+  }
+}
+
+.table-responsive {
+  .dataTables_wrapper {
+    .dataTables_length {
+      select {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.625rem;
+        font-size: 0.765625rem;
+        border-radius: 5px;
+        border-color: var(--bs-border-color);
+      }
+    }
+
+    .dataTables_filter {
+      margin-bottom: 25px;
+
+      input {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.765625rem;
+        border-radius: 5px;
+        border: 1px solid var(--bs-border-color);
+      }
+    }
+
+    .dataTables_paginate {
+      .paginate_button {
+        cursor: pointer;
+        padding: 6px 12px;
+        border: 1px solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        margin: 0 3px;
+
+        .previous {
+          border-radius: 7px 0 0 7px;
+          background-color: var(--bs-gray-200);
+        }
+
+        &.current {
+          color: $white;
+          background-color: var(--bs-primary);
+          border-color: var(--bs-primary);
+        }
+      }
+    }
+  }
+}
+
+
 @include media-breakpoint-down(lg) {
   .docs {
     .left-sidebar {

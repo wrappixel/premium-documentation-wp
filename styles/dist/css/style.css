@@ -13090,6 +13090,113 @@ textarea.form-control-lg {
   border-radius: 10px;
 }
 
+body .datepicker table tr td.active,
+body .datepicker table tr td.active.disabled,
+body .datepicker table tr td.active.disabled:hover,
+body .datepicker table tr td.active:hover,
+body .datepicker table tr td.today,
+body .datepicker table tr td.today.disabled,
+body .datepicker table tr td.today.disabled:hover,
+body .datepicker table tr td.today:hover,
+body .datepicker table tr td.selected,
+body .datepicker table tr td.selected.disabled,
+body .datepicker table tr td.selected.disabled:hover,
+body .datepicker table tr td.selected:hover {
+  background-color: var(--bs-primary) !important;
+  background-image: unset;
+  color: #fff;
+}
+body .datepicker table tr td.day.focused,
+body .datepicker table tr td.day:hover,
+body .datepicker table tr td.range,
+body .datepicker table tr td.range.disabled,
+body .datepicker table tr td.range.disabled:hover,
+body .datepicker table tr td.range:hover {
+  background: var(--bs-gray-100);
+}
+
+.datepicker .day,
+.datepicker .dow {
+  padding: 5px 10px;
+}
+
+.dtp-date .material-icons {
+  color: var(--bs-white) !important;
+}
+
+.error .form-control {
+  border-color: var(--bs-danger);
+}
+.error .help-block {
+  color: var(--bs-danger);
+}
+
+.validate .form-control {
+  border-color: var(--bs-success);
+}
+.validate .help-block {
+  color: var(--bs-success);
+}
+
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  background: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+.picker__button--today,
+.picker__button--clear,
+.picker__button--close {
+  font-weight: 600 !important;
+}
+
+.dtp div.dtp-date,
+.dtp div.dtp-time,
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header,
+.dtp table.dtp-picker-days tr > td > a.selected {
+  background: var(--bs-primary) !important;
+}
+
+@media (min-width: 992px) {
+  .datatables .table-responsive {
+    overflow-x: clip;
+  }
+}
+.table-responsive .dataTables_wrapper .dataTables_length select {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.625rem;
+  font-size: 0.765625rem;
+  border-radius: 5px;
+  border-color: var(--bs-border-color);
+}
+.table-responsive .dataTables_wrapper .dataTables_filter {
+  margin-bottom: 25px;
+}
+.table-responsive .dataTables_wrapper .dataTables_filter input {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.765625rem;
+  border-radius: 5px;
+  border: 1px solid var(--bs-border-color);
+}
+.table-responsive .dataTables_wrapper .dataTables_paginate .paginate_button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  margin: 0 3px;
+}
+.table-responsive .dataTables_wrapper .dataTables_paginate .paginate_button .previous {
+  border-radius: 7px 0 0 7px;
+  background-color: var(--bs-gray-200);
+}
+.table-responsive .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
 @media (max-width: 991.98px) {
   .docs .left-sidebar {
     left: 0px;

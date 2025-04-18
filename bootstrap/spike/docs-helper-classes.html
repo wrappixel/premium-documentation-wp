@@ -27,9 +27,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
+
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -638,7 +640,7 @@
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
-    <div class="page-wrapper pt-0 d-block" data-bs-spy="scroll" data-bs-target="#navbar-example3"
+   <div class="page-wrapper pt-0 d-block" data-bs-spy="scroll" data-bs-target="#navbar-example3"
       data-bs-smooth-scroll="true" tabindex="0">
       <!-- ============================================================== -->
       <!-- Topbar Search  -->
@@ -687,233 +689,709 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <div class="card mt-4">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-2 col-md-6 border-end text-center">
-                  <h3 class="fw-bold">v5.3.2</h3>
-                  <h6 class="text-muted">Bootstrap</h6>
+          <h3 class="mb-4 pb-2">Helper Classes</h3>
+          <div class="mt-4 card card-body">
+            <p class="text-muted mb-2">For all common styling needs, it is recommended to use Bootstrap's utility
+              classes. Refer to the official <a href="https://getbootstrap.com/docs/5.3/utilities/background/"
+                target="_blank"> Bootstrap Documentation</a> for a comprehensive list of
+              available utilities.</p>
+            <p class="text-muted mb-0">With our extended low-level utility classes, you can build and customize
+              components effortlessly—without writing a single line of custom CSS or SASS.</p>
+          </div>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Background color</h4>
+            <p class="text-muted">Similar to the contextual text color classes, set the background of an element to
+              any contextual class. Background utilities do not set <code>color</code>, so in some cases you’ll want to
+              use <code>.text-*</code>
+              <a class="text-decoration-underline" href="https://getbootstrap.com/docs/5.3/utilities/colors/"
+                target="_blank"> color utilities</a>.
+            </p>
+            <div class="border-2 border-start border-primary bg-light rounded p-3">
+              Background utilities like <code>.bg-*</code> that generated from our original <code>$theme-colors</code>
+              Sass map don’t yet respond
+              to color modes, however, any <code>.bg-*-subtle</code> utility will. This will be resolved in v6.
+            </div>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW" role="tabpanel">
+                  <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+                  <div class="p-3 mb-2 bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
+                  <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+                  <div class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
+                  <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+                  <div class="p-3 mb-2 bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
+                  <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+                  <div class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
+                  <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+                  <div class="p-3 mb-2 bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
+                  <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+                  <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
+                  <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+                  <div class="p-3 mb-2 bg-light-subtle text-light-emphasis">.bg-light-subtle</div>
+                  <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+                  <div class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
+                  <div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+                  <div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
+                  <div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+                  <div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+                  <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+                  <div class="p-3 mb-2 bg-transparent text-body">.bg-transparent</div>
                 </div>
-                <div class="col-lg-2 col-md-6 border-end text-center">
-                  <h3 class="fw-bold">v4.0.2</h3>
-                  <h6 class="text-muted">Gulp</h6>
-                </div>
-                <div class="col-lg-2 col-md-6 border-end text-center">
-                  <h3 class="fw-bold">v3.43.0</h3>
-                  <h6 class="text-muted mb-0">Apexcharts</h6>
-                </div>
-                <div class="col-lg-2 col-md-6 border-end text-center">
-                  <h3 class="fw-bold">v6.1.9</h3>
-                  <h6 class="text-muted">Fullcalender</h6>
-                </div>
-                <div class="col-lg-2 col-md-6 border-end text-center">
-                  <h3 class="fw-bold">v1.13.8</h3>
-                  <h6 class="text-muted">Datatables</h6>
-                </div>
-                <div class="col-lg-2 col-md-6 text-center">
-                  <h3 class="fw-bold">v6.7.0</h3>
-                  <h6 class="text-muted">Tinymce</h6>
+                <div class="tab-pane" id="HTML" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;div class=&#x22;p-3 mb-2 bg-primary text-white&#x22;&#x3E;.bg-primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-primary-subtle text-primary-emphasis&#x22;&#x3E;.bg-primary-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-secondary text-white&#x22;&#x3E;.bg-secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-secondary-subtle text-secondary-emphasis&#x22;&#x3E;.bg-secondary-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-success text-white&#x22;&#x3E;.bg-success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-success-subtle text-success-emphasis&#x22;&#x3E;.bg-success-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-danger text-white&#x22;&#x3E;.bg-danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-danger-subtle text-danger-emphasis&#x22;&#x3E;.bg-danger-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-warning text-dark&#x22;&#x3E;.bg-warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-warning-subtle text-warning-emphasis&#x22;&#x3E;.bg-warning-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-info text-dark&#x22;&#x3E;.bg-info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-info-subtle text-info-emphasis&#x22;&#x3E;.bg-info-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-light text-dark&#x22;&#x3E;.bg-light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-light-subtle text-light-emphasis&#x22;&#x3E;.bg-light-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-dark text-white&#x22;&#x3E;.bg-dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-dark-subtle text-dark-emphasis&#x22;&#x3E;.bg-dark-subtle&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-body-secondary&#x22;&#x3E;.bg-body-secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-body-tertiary&#x22;&#x3E;.bg-body-tertiary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-body text-body&#x22;&#x3E;.bg-body&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-black text-white&#x22;&#x3E;.bg-black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-white text-dark&#x22;&#x3E;.bg-white&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-3 mb-2 bg-transparent text-body&#x22;&#x3E;.bg-transparent&#x3C;/div&#x3E;
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
           </div>
-          <div class="mt-5">
-            <h3>Quickly create amazing web apps with Spike 🚀</h3>
-            <p class="text-muted mt-3">A flexible, developer-friendly, and finely crafted HTML admin dashboard template.</p>
-          </div>
 
-          <div class="row mt-4 pt-5 border-top">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <span class="bg-primary rounded-3 p-3 text-white d-inline-block">
-                    <i class="ti ti-brand-abstract fs-2"></i>
-                  </span>
-                  <h4 class="card-title mt-4 fs-4">Quick Start</h4>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-2 mb-3">Boost your development with this theme! Use
-                    our template for quick setup, theming, and RTL support.</p>
-                  <a href="./docs-start.html"
-                    class="stretched-link fw-medium fs-6 d-flex align-items-center gap-1">Start Now
-                    <i class="ti ti-chevron-right fs-6"></i>
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Border</h4>
+            <p class="text-muted mb-0">Use border utilities to add or remove an element’s borders. Choose from all
+              borders or one at a time.
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW2" role="tab">
+                    <span>PREVIEW</span>
                   </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <span class="bg-secondary rounded-3 p-3 text-white d-inline-block">
-                    <i class="ti ti-settings fs-2"></i>
-                  </span>
-                  <h4 class="card-title mt-4 fs-4">Customize Theme</h4>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-2 mb-3">Customize Spike super easily without
-                    any single line of code. Just change in <code>app.init.js</code> File.</p>
-                  <a href="./docs-setting.html"
-                    class="stretched-link fw-medium fs-6 d-flex align-items-center gap-1 text-secondary">Customize Now
-                    <i class="ti ti-chevron-right fs-6"></i>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML2" role="tab">
+                    <span>HTML</span>
                   </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <span class="bg-warning rounded-3 p-3 text-white d-inline-block">
-                    <i class="ti ti-heart-handshake fs-2"></i>
-                  </span>
-                  <h4 class="card-title mt-4 fs-4">Dedicated Support</h4>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-2 mb-3">We firmly believe that exceptional support
-                    is the cornerstone of a great experience.</p>
-                  <a href="https://support.wrappixel.com/" target="_blank"
-                    class="stretched-link fw-medium fs-6 d-flex align-items-center gap-1 text-warning">Get Support
-                    <i class="ti ti-chevron-right fs-6"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <span class="bg-success rounded-3 p-3 text-white d-inline-block">
-                    <i class="ti ti-palette fs-2"></i>
-                  </span>
-                  <h4 class="card-title mt-4 fs-4">Customize Colors</h4>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-2 mb-3">Customize Theme Colors with a simple change
-                    in <code>_variables-blue.scss</code> File.</p>
-                  <a href="./docs-color.html"
-                    class="stretched-link fw-medium fs-6 d-flex align-items-center gap-1 text-success">Customize Colors
-                    <i class="ti ti-chevron-right fs-6"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <span class="bg-danger rounded-3 p-3 text-white d-inline-block">
-                    <i class="ti ti-typography fs-2"></i>
-                  </span>
-                  <h4 class="card-title mt-4 fs-4">Change Typography</h4>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-2 mb-3">To change typography of whole theme, just
-                    need to change in <code>_variables.scss</code> File.</p>
-                  <a href="./docs-typography.html"
-                    class="stretched-link fw-medium fs-6 d-flex align-items-center gap-1 text-danger">Change Typography
-                    <i class="ti ti-chevron-right fs-6"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card border-primary">
-                <div class="card-body">
-                  <span class="bg-white border rounded-3 p-3 text-primary d-inline-block">
-                    <i class="ti ti-template fs-2"></i>
-                  </span>
-                  <p class="card-subtitle lh-base text-muted fs-6 mt-4 mb-3">Admin templates built on top of latest frameworks &
-                    libraries</p>
-
-                    <h5 class="mb-4">Checkout other versions</h5>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW2" role="tabpanel">
                   <div class="d-flex align-items-center gap-3">
-                    <a data-bs-toggle="tooltip" data-bs-title="Angular" href="https://www.wrappixel.com/templates/spike-angular-admin-template/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/angular-cat-icon.svg" width="23" alt="angular" />
-                    </a>
-                    <a data-bs-toggle="tooltip" data-bs-title="Next.js" href="https://www.wrappixel.com/templates/spike-nextjs-admin-template/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/next-cat-icon.svg" width="23" alt="next" />
-                    </a>
-                    <a data-bs-toggle="tooltip" data-bs-title="Nuxt.js" href="https://www.wrappixel.com/templates/spike-nuxtjs-admin-template/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/nuxt-cat-icon.svg" width="23" alt="nuxt" />
-                    </a>
-                    <a data-bs-toggle="tooltip" data-bs-title="React" href="https://www.wrappixel.com/templates/spike-nextjs-admin-template/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/react-cat-icon.svg" width="23" alt="react" />
-                    </a>
-                    <a data-bs-toggle="tooltip" data-bs-title="Vue.js" href="https://www.wrappixel.com/templates/spike-vuejs-admin-dashboard/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/vue-cat-icon.svg" width="23" alt="vue" />
-                    </a>
-                    <a data-bs-toggle="tooltip" data-bs-title="Tailwind" href="https://www.wrappixel.com/templates/spike-free-tailwind-admin-template/?ref=376#demos" target="_blank">
-                      <img src="../../styles/dist/images/tailwindcss.svg" width="23" alt="Tailwind" />
-                    </a>
+                    <span class="border d-block bg-body-secondary" style="width: 50px; height: 50px;"></span>
+                    <span class="border-top d-block bg-body-secondary" style="width: 50px; height: 50px;"></span>
+                    <span class="border-end d-block bg-body-secondary" style="width: 50px; height: 50px;"></span>
+                    <span class="border-bottom d-block bg-body-secondary" style="width: 50px; height: 50px;"></span>
+                    <span class="border-start d-block bg-body-secondary" style="width: 50px; height: 50px;"></span>
                   </div>
-                 
+                </div>
+                <div class="tab-pane" id="HTML2" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;span class=&#x22;border&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;border-top&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;border-end&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;border-bottom&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;border-start&#x22;&#x3E;&#x3C;/span&#x3E;
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
           </div>
-          <iframe width="100%" height="500" src="https://www.youtube.com/embed/wJkl3P5HnZw?si=mDjZPk7tswOSHLOT"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <div class="mt-5">
-            <h3 class="mt-5">Support</h3>
-            <div class="mt-4 card card-body">
-              <h5 class="font-weight-normal text-muted lh-base">
-                We at WrapPixel.com are here to assist with support for our
-                templates. If you need help, please submit a ticket at :-
-                <a href="http://wrappixel.com/support/">wrappixel.com/support</a>
-              </h5>
-              <h5 class="font-weight-normal text-muted mt-3 lh-base">
-                We kindly ask that before submitting a ticket, you take a
-                moment to review the full documentation. This will help ensure
-                your question is related to support and that the issue you're
-                facing hasn’t already been addressed. By doing so, we can
-                provide you with a quicker and more accurate response
-              </h5>
-              <div class="card mt-4">
-                <div class="card-body">
-                  <h4 class="card-title">Covered Services</h4>
-                  <ul class="mb-0">
-                    <li class="font-16 py-1 text-muted">
-                      Addressing questions or concerns related to the template
-                    </li>
-                    <li class="font-16 py-1 text-muted">
-                      Resolving any reported bugs.
-                    </li>
-                  </ul>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Colors</h4>
+            <p class="text-muted">Colorize text with color utilities. If you want to colorize links, you can use the <a
+                href="https://getbootstrap.com/docs/5.3/helpers/colored-links/" target="_blank">.link-* helper
+                classes</a> which have <code>:hover</code> and <code>:focus</code> states.
+            </p>
+            <div class="border-2 border-start border-primary bg-light rounded p-3">
+              Color utilities like <code>.text-*</code> that generated from our original <code>$theme-colors</code> Sass
+              map don’t yet respond to color modes, however, any <code>.text-*-emphasis</code> utility will. This will
+              be resolved in v6.
+            </div>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW3" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML3" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW3" role="tabpanel">
+                  <p class="text-primary">.text-primary</p>
+                  <p class="text-primary-emphasis">.text-primary-emphasis</p>
+                  <p class="text-secondary">.text-secondary</p>
+                  <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+                  <p class="text-success">.text-success</p>
+                  <p class="text-success-emphasis">.text-success-emphasis</p>
+                  <p class="text-danger">.text-danger</p>
+                  <p class="text-danger-emphasis">.text-danger-emphasis</p>
+                  <p class="text-warning bg-dark">.text-warning</p>
+                  <p class="text-warning-emphasis">.text-warning-emphasis</p>
+                  <p class="text-info bg-dark">.text-info</p>
+                  <p class="text-info-emphasis">.text-info-emphasis</p>
+                  <p class="text-light bg-dark">.text-light</p>
+                  <p class="text-light-emphasis">.text-light-emphasis</p>
+                  <p class="text-dark bg-white">.text-dark</p>
+                  <p class="text-dark-emphasis">.text-dark-emphasis</p>
+
+                  <p class="text-body">.text-body</p>
+                  <p class="text-body-emphasis">.text-body-emphasis</p>
+                  <p class="text-body-secondary">.text-body-secondary</p>
+                  <p class="text-body-tertiary">.text-body-tertiary</p>
+
+                  <p class="text-black bg-white">.text-black</p>
+                  <p class="text-white bg-dark">.text-white</p>
+                  <p class="text-black-50 bg-white">.text-black-50</p>
+                  <p class="text-white-50 bg-dark">.text-white-50</p>
                 </div>
-              </div>
-              <div class="card mt-4">
-                <div class="card-body">
-                  <h4 class="card-title">What’s Not Covered</h4>
-                  <ul class="mb-0">
-                    <li class="font-16 py-1 text-muted">
-                      Installation services are not included
-                    </li>
-                    <li class="font-16 py-1 text-muted">
-                      Support for third-party plugins or software is not
-                      offered
-                    </li>
-                    <li class="font-16 py-1 text-muted">
-                      Assistance with integrating technologies such as PHP,
-                      .NET, Java, etc., is not available
-                    </li>
-                    <li class="font-16 py-1 text-muted">
-                      We do not resolve issues within customized or
-                      implemented templates
-                    </li>
-                  </ul>
+                <div class="tab-pane" id="HTML3" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;text-primary&#x22;&#x3E;.text-primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-primary-emphasis&#x22;&#x3E;.text-primary-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-secondary&#x22;&#x3E;.text-secondary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-secondary-emphasis&#x22;&#x3E;.text-secondary-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-success&#x22;&#x3E;.text-success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-success-emphasis&#x22;&#x3E;.text-success-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-danger&#x22;&#x3E;.text-danger&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-danger-emphasis&#x22;&#x3E;.text-danger-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-warning bg-dark&#x22;&#x3E;.text-warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-warning-emphasis&#x22;&#x3E;.text-warning-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-info bg-dark&#x22;&#x3E;.text-info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-info-emphasis&#x22;&#x3E;.text-info-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-light bg-dark&#x22;&#x3E;.text-light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-light-emphasis&#x22;&#x3E;.text-light-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-dark bg-white&#x22;&#x3E;.text-dark&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-dark-emphasis&#x22;&#x3E;.text-dark-emphasis&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;text-body&#x22;&#x3E;.text-body&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-body-emphasis&#x22;&#x3E;.text-body-emphasis&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-body-secondary&#x22;&#x3E;.text-body-secondary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-body-tertiary&#x22;&#x3E;.text-body-tertiary&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;text-black bg-white&#x22;&#x3E;.text-black&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-dark&#x22;&#x3E;.text-white&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-black-50 bg-white&#x22;&#x3E;.text-black-50&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white-50 bg-dark&#x22;&#x3E;.text-white-50&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
           </div>
-          <div class="mt-5">
-            <h3 class="mt-5">Custom Work</h3>
-            <div class="mt-4 card card-body">
-              <h5 class="font-weight-normal text-muted lh-base">
-                We at WrapPixel.com are here to help with any custom work you
-                may need. If you require tailored solutions or specific
-                adjustments, please submit a request at:
-                <a href="https://wrappixel.com/hire-us/">wrappixel.com/hire-us</a>
-              </h5>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Link</h4>
+            <p class="text-muted mb-0">Change the alpha opacity of the link <code>rgba()</code> color value with
+              utilities. Please be aware that changes to a color’s opacity can lead to links with <a
+                class="text-decoration-underline"
+                href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/#color-contrast"
+                target="_blank">insufficient contrast</a>.
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW4" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML4" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW4" role="tabpanel">
+                  <p><a class="link-opacity-10 text-decoration-underline" href="#">Link opacity 10</a></p>
+                  <p><a class="link-opacity-25 text-decoration-underline" href="#">Link opacity 25</a></p>
+                  <p><a class="link-opacity-50 text-decoration-underline" href="#">Link opacity 50</a></p>
+                  <p><a class="link-opacity-75 text-decoration-underline" href="#">Link opacity 75</a></p>
+                  <p class="mb-0"><a class="link-opacity-100 text-decoration-underline" href="#">Link opacity 100</a>
+                  </p>
+                </div>
+                <div class="tab-pane" id="HTML4" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p&#x3E;&#x3C;a class=&#x22;link-opacity-10&#x22; href=&#x22;#&#x22;&#x3E;Link opacity 10&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;a class=&#x22;link-opacity-25&#x22; href=&#x22;#&#x22;&#x3E;Link opacity 25&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;a class=&#x22;link-opacity-50&#x22; href=&#x22;#&#x22;&#x3E;Link opacity 50&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;a class=&#x22;link-opacity-75&#x22; href=&#x22;#&#x22;&#x3E;Link opacity 75&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;a class=&#x22;link-opacity-100&#x22; href=&#x22;#&#x22;&#x3E;Link opacity 100&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Opacity</h4>
+            <p class="text-muted mb-0">The <code>opacity</code> property sets the opacity level for an element. The
+              opacity level
+              describes the transparency level, where <code>1</code> is not transparent at all, <code>.5</code> is 50%
+              visible, and <code>0</code> is
+              completely transparent.
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW5" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML5" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW5" role="tabpanel">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="opacity-100 p-3 bg-primary text-light fw-bold rounded">100%</div>
+                    <div class="opacity-75 p-3 bg-primary text-light fw-bold rounded">75%</div>
+                    <div class="opacity-50 p-3 bg-primary text-light fw-bold rounded">50%</div>
+                    <div class="opacity-25 p-3 bg-primary text-light fw-bold rounded">25%</div>
+                    <div class="opacity-0 p-3 bg-primary text-light fw-bold rounded">0%</div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="HTML5" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;div class=&#x22;d-flex align-items-center gap-3&#x22;&#x3E;
+  &#x3C;div class=&#x22;opacity-100 p-3 bg-primary text-light fw-bold rounded&#x22;&#x3E;100%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;opacity-75 p-3 bg-primary text-light fw-bold rounded&#x22;&#x3E;75%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;opacity-50 p-3 bg-primary text-light fw-bold rounded&#x22;&#x3E;50%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;opacity-25 p-3 bg-primary text-light fw-bold rounded&#x22;&#x3E;25%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;opacity-0 p-3 bg-primary text-light fw-bold rounded&#x22;&#x3E;0%&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Shadows</h4>
+            <p class="text-muted mb-0">While shadows on components are disabled by default in Bootstrap and can be
+              enabled via <code>$enable-shadows</code>, you can also quickly add or remove a shadow with our
+              <code>box-shadow</code> utility
+              classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated
+              variables to
+              match).
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW6" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML6" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW6" role="tabpanel">
+                  <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+                  <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+                  <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+                  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>
+                </div>
+                <div class="tab-pane" id="HTML6" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;div class=&#x22;shadow-none p-3 mb-5 bg-body-tertiary rounded&#x22;&#x3E;No shadow&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;shadow-sm p-3 mb-5 bg-body-tertiary rounded&#x22;&#x3E;Small shadow&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;shadow p-3 mb-5 bg-body-tertiary rounded&#x22;&#x3E;Regular shadow&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;shadow-lg p-3 mb-5 bg-body-tertiary rounded&#x22;&#x3E;Larger shadow&#x3C;/div&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Sizing</h4>
+            <p class="text-muted mb-0">Width and height utilities are generated from the utility API in
+              <code>_utilities.scss</code>.
+              Includes support for <code>25%, 50%, 75%, 100%</code>, and <code>auto</code> by default. Modify those
+              values as you need to generate
+              different utilities here.
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW7" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML7" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW7" role="tabpanel">
+                  <div class="w-25 p-3 bg-primary-subtle text-primary border border-primary">Width 25%</div>
+                  <div class="w-50 p-3 bg-primary-subtle text-primary border border-primary">Width 50%</div>
+                  <div class="w-75 p-3 bg-primary-subtle text-primary border border-primary">Width 75%</div>
+                  <div class="w-100 p-3 bg-primary-subtle text-primary border border-primary">Width 100%</div>
+                  <div class="w-auto p-3 bg-primary-subtle text-primary border border-primary">Width auto</div>
+                </div>
+                <div class="tab-pane" id="HTML7" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;div class=&#x22;w-25 p-3 bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Width 25%&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-50 p-3 bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Width 50%&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-75 p-3 bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Width 75%&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-100 p-3 bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Width 100%&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-auto p-3 bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Width auto&#x3C;/div&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW8" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML8" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW8" role="tabpanel">
+                  <div style="height: 100px;">
+                    <div class="h-25 p-3 d-inline-block bg-primary-subtle text-primary border border-primary">Height 25%
+                    </div>
+                    <div class="h-50 p-3 d-inline-block bg-primary-subtle text-primary border border-primary">Height 50%
+                    </div>
+                    <div class="h-75 p-3 d-inline-block bg-primary-subtle text-primary border border-primary">Height 75%
+                    </div>
+                    <div class="h-100 p-3 d-inline-block bg-primary-subtle text-primary border border-primary">Height
+                      100%</div>
+                    <div class="h-auto p-3 d-inline-block bg-primary-subtle text-primary border border-primary">Height
+                      auto</div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="HTML8" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;div style=&#x22;height: 100px;&#x22;&#x3E;
+  &#x3C;div class=&#x22;h-25 p-3 d-inline-block bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Height 25%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;h-50 p-3 d-inline-block bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Height 50%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;h-75 p-3 d-inline-block bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Height 75%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;h-100 p-3 d-inline-block bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Height 100%&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;h-auto p-3 d-inline-block bg-primary-subtle text-primary border border-primary&#x22;&#x3E;Height auto&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 card card-body">
+            <h4 class="mb-3">Text</h4>
+            <p class="text-muted mb-0">Quickly style and customize text elements using text utilities—ideal for
+              controlling font size, color, weight, alignment, and more.
+            </p>
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Text alignment</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW9" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML9" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW9" role="tabpanel">
+                  <p class="text-start">Start aligned text on all viewport sizes.</p>
+                  <p class="text-center">Center aligned text on all viewport sizes.</p>
+                  <p class="text-end">End aligned text on all viewport sizes.</p>
+
+                  <p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+                  <p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+                  <p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+                  <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+                  <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+                </div>
+                <div class="tab-pane" id="HTML9" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;text-start&#x22;&#x3E;Start aligned text on all viewport sizes.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-center&#x22;&#x3E;Center aligned text on all viewport sizes.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-end&#x22;&#x3E;End aligned text on all viewport sizes.&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;text-sm-end&#x22;&#x3E;End aligned text on viewports sized SM (small) or wider.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-md-end&#x22;&#x3E;End aligned text on viewports sized MD (medium) or wider.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-lg-end&#x22;&#x3E;End aligned text on viewports sized LG (large) or wider.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-xl-end&#x22;&#x3E;End aligned text on viewports sized XL (extra large) or wider.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-xxl-end&#x22;&#x3E;End aligned text on viewports sized XXL (extra extra large) or wider.&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Text transform</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW10" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML10" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW10" role="tabpanel">
+                  <p class="text-lowercase">Lowercased text.</p>
+                  <p class="text-uppercase">Uppercased text.</p>
+                  <p class="text-capitalize">CapiTaliZed text.</p>
+                </div>
+                <div class="tab-pane" id="HTML10" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;text-lowercase&#x22;&#x3E;Lowercased text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-uppercase&#x22;&#x3E;Uppercased text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-capitalize&#x22;&#x3E;CapiTaliZed text.&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Font size</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW11" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML11" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW11" role="tabpanel">
+                  <p class="fs-1">.fs-1 text</p>
+                  <p class="fs-2">.fs-2 text</p>
+                  <p class="fs-3">.fs-3 text</p>
+                  <p class="fs-4">.fs-4 text</p>
+                  <p class="fs-5">.fs-5 text</p>
+                  <p class="fs-6">.fs-6 text</p>
+                </div>
+                <div class="tab-pane" id="HTML11" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;fs-1&#x22;&#x3E;.fs-1 text&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-2&#x22;&#x3E;.fs-2 text&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-3&#x22;&#x3E;.fs-3 text&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-4&#x22;&#x3E;.fs-4 text&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-5&#x22;&#x3E;.fs-5 text&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-6&#x22;&#x3E;.fs-6 text&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Font weight and italics</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW12" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML12" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW12" role="tabpanel">
+                  <p class="fw-bold">Bold text.</p>
+                  <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+                  <p class="fw-semibold">Semibold weight text.</p>
+                  <p class="fw-medium">Medium weight text.</p>
+                  <p class="fw-normal">Normal weight text.</p>
+                  <p class="fw-light">Light weight text.</p>
+                  <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+                  <p class="fst-italic">Italic text.</p>
+                  <p class="fst-normal">Text with normal font style</p>
+                </div>
+                <div class="tab-pane" id="HTML12" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;fw-bold&#x22;&#x3E;Bold text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-bolder&#x22;&#x3E;Bolder weight text (relative to the parent element).&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-semibold&#x22;&#x3E;Semibold weight text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-medium&#x22;&#x3E;Medium weight text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-normal&#x22;&#x3E;Normal weight text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-light&#x22;&#x3E;Light weight text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lighter&#x22;&#x3E;Lighter weight text (relative to the parent element).&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fst-italic&#x22;&#x3E;Italic text.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fst-normal&#x22;&#x3E;Text with normal font style&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Line height</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW13" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML13" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW13" role="tabpanel">
+                  <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+                  <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+                  <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+                  <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+                </div>
+                <div class="tab-pane" id="HTML13" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;lh-1&#x22;&#x3E;This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;lh-sm&#x22;&#x3E;This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;lh-base&#x22;&#x3E;This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;lh-lg&#x22;&#x3E;This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.&#x3C;/p&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 card card-body mb-0">
+              <h5 class="mb-3">Text decoration</h5>
+              <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link fs-6 active" data-bs-toggle="tab" href="#PREVIEW14" role="tab">
+                    <span>PREVIEW</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" data-bs-toggle="tab" href="#HTML14" role="tab">
+                    <span>HTML</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="PREVIEW14" role="tabpanel">
+                  <p class="text-decoration-underline">This text has a line underneath it.</p>
+                  <p class="text-decoration-line-through">This text has a line going through it.</p>
+                  <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+                </div>
+                <div class="tab-pane" id="HTML14" role="tabpanel">
+                  <pre class="mt-3">
+                    <code class="language-sh py-0">
+&#x3C;p class=&#x22;text-decoration-underline&#x22;&#x3E;This text has a line underneath it.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-decoration-line-through&#x22;&#x3E;This text has a line going through it.&#x3C;/p&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;text-decoration-none&#x22;&#x3E;This link has its text decoration removed&#x3C;/a&#x3E;
+                    </code>
+                  </pre>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- ============================================================== -->
           <!-- End Of Page Content -->
           <!-- ============================================================== -->
+
         </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
