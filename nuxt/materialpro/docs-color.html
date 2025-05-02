@@ -203,9 +203,9 @@
                         class="ti ti-license me-3 fs-4"></i> Licenses</a>
                   </li>
                   <!--Customization-->
-                <li class="nav-small-cap mt-4">
-                  <span class="hide-menu">Customization</span>
-                </li>
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Customization</span>
+                  </li>
                   <li class="sidebar-item position-relative">
                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
                       aria-expanded="false">
@@ -335,40 +335,45 @@
               </h5>
               <pre>
                     <code class="language-js py-0">
+import type { ThemeTypes } from '@/types/themeTypes/ThemeType';
 const BLUE_THEME: ThemeTypes = {
-  name: 'BLUE_THEME',
-  dark: false,
-  variables: {
-      'border-color': '#e5eaef',
-      'border-opacity': 1,
-  },
-  colors: {
-      primary: '#1e88e5',
-      secondary: '#0cb9c5',
-      info: '#539BFF',
-      success: '#13DEB9',
-      accent: '#FFAB91',
-      warning: '#FFAE1F',
-      error: '#FA896B',
-      lightprimary: '#f5fcfd',
-      lightsecondary: '#E8F7FF',
-      lightsuccess: '#E6FFFA',
-      lighterror: '#FDEDE8',
-      lightwarning: '#FEF5E5',
-      textPrimary: '#2A3547',
-      textSecondary: '#2A3547',
-      borderColor: '#e5eaef',
-      inputBorder: '#DFE5EF',
-      containerBg: '#ffffff',
-      background: '#eef5f9',
-      hoverColor: '#f6f9fc',
-      surface: '#fff',
-      'on-surface-variant': '#fff',
-      grey100: '#F2F6FA',
-      grey200: '#EAEFF4',
-      darkbg:'#2a3447'
-  }
+    name: 'BLUE_THEME',
+    dark: false,
+    variables: {
+        'border-color': '#ebf1f6',
+        'border-opacity': 1,
+    },
+    colors: {
+        primary: '#1B84FF',
+        secondary: '#43CED7',
+        info: '#2CABE3',
+        success: '#2CD07E',
+        accent: '#FFAB91',
+        warning: '#F6C000',
+        error: '#F8285A',
+        purple:'#725AF2',
+        indigo:'#6610f2',
+        lightprimary: '#EDF5FD',
+        lightsecondary: '#F2FCFC',
+        lightsuccess: '#EDFDF2',
+        lighterror: '#FFF0F4',
+        lightwarning: '#FFFCF0',
+        lightinfo: '#E4F5FF',
+        textPrimary: '#3A4752',
+        textSecondary: '#768B9E',
+        borderColor: '#ebf1f6',
+        inputBorder: '#DFE5EF',
+        containerBg: '#ffffff',
+        background: '#eef5f9',
+        hoverColor: '#f6f9fc',
+        surface: '#fff',
+        'on-surface-variant': '#fff',
+        grey100: '#F2F6FA',
+        grey200: '#EAEFF4'
+    }
 };
+
+export { BLUE_THEME};
       </code>
   </pre>
             </div>
@@ -384,39 +389,38 @@ const BLUE_THEME: ThemeTypes = {
               </h5>
               <pre>
                     <code class="language-js py-0">
+import type { ThemeTypes } from '@/types/themeTypes/ThemeType';
 const DARK_BLUE_THEME: ThemeTypes = {
-  name: 'DARK_BLUE_THEME',
-  dark: true,
-  variables: {
-      'border-color': '#333F55',
-      'border-opacity': 1,
-  },
-  colors: {
-      primary: '#1e88e5',
-      secondary: '#0cb9c5',
-      info: '#539BFF',
-      success: '#13DEB9',
-      accent: '#FA896B',
-      warning: '#FFAE1F',
-      error: '#FA896B',
-      lightprimary: '#253662',
-      lightsecondary: '#1C455D',
-      lightsuccess: '#1B3C48',
-      lighterror: '#4B313D',
-      lightwarning: '#4D3A2A',
-      textPrimary: '#EAEFF4',
-      textSecondary: '#7C8FAC',
-      borderColor: '#333F55',
-      inputBorder: '#465670',
-      containerBg: '#2a3447',
-      background: '#2a3447',
-      hoverColor: '#333f55',
-      surface: '#2a3447',
-      'on-surface-variant': '#2a3447',
-      grey100: '#333F55',
-      grey200: '#465670'
-  }
+    name: 'DARK_BLUE_THEME',
+    dark: true,
+    variables: {
+        'border-color': '#333F55',
+        'border-opacity': 1,
+    },
+    colors: {
+        primary: '#1B84FF',
+        secondary: '#0cb9c5',
+        lightprimary: '#253662',
+        lightsecondary: '#1C455D',
+        lightsuccess: '#1B3C48',
+        lighterror: '#4B313D',
+        lightwarning: '#4D3A2A',
+        lightinfo:'#223662',
+        textPrimary: '#EAEFF4',
+        textSecondary: '#7C8FAC',
+        borderColor: '#333F55',
+        inputBorder: '#465670',
+        containerBg: '#2a3447',
+        background: '#192838',
+        surface: '#152332',
+        hoverColor: '#333f55',
+        'on-surface-variant': '#2a3447',
+        grey100: '#333F55',
+        grey200: '#465670'
+    }
 };
+
+export { DARK_BLUE_THEME };
                           </code>
                         </pre>
             </div>
