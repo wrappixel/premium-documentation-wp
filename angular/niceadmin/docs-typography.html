@@ -7,21 +7,20 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MaterialM admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="MaterialM is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>MaterialM Admin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/materialm-material-angular-dashboard-template/" />
+  <title>NiceAdmin Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/materialM/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
   <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -32,7 +31,6 @@
 </head>
 
 <body>
-
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -55,7 +53,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -172,7 +170,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -299,7 +297,7 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
@@ -320,61 +318,55 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Icons</h3>
+          <h4 class="mb-4 pb-2">Typography</h3>
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">1. Tabler Icons</h4>
-                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                <h4 class="card-title">Google fonts</h4>
+                <h5 class="card-subtitle mt-2 text-muted">1) Change the google fonts link as per your choice : <span
+                    class="text-dark font-medium">src/index.html</span></h5>
+                <pre>
+                        <code class="language-html py-0">
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
+    &#x3C;head&#x3E;
+        &#x3C;meta charset=&#x22;utf-8&#x22; /&#x3E;
+        &#x3C;link href=&#x22;https://fonts.googleapis.com/css2?family=Onest:wght@100..900&#x26;display=swap&#x22; rel=&#x22;stylesheet&#x22; /&#x3E;
+    &#x3C;/head&#x3E;
+
+    &#x3C;body&#x3E;
+        ...
+    &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+                        </code>
+                    </pre>
+                <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span
+                    class="text-dark font-medium">src/asssets/scss/_variables.scss</span></h5>
                 <pre>
                         <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// app.module.ts
-// ----------------------------------------------------------------------
+// Font URL
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet");
+                          
+$font-family: 'Onest', sans-serif;
+                        </code>
+                    </pre>
 
-// icons
-import { TablerIconsModule } from 'angular-tabler-icons';
-import * as TablerIcons from 'angular-tabler-icons/icons';
-
-@NgModule({
-  declarations: [],
-  imports: [
-    TablerIconsModule.pick(TablerIcons),
-  ],
-  exports: [TablerIconsModule],
-})
-
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i-tabler name=&quot;home&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;points&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;grid-dots&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+                <h5 class="card-subtitle mt-4 text-muted">3) Change Font family in : <span
+                    class="text-dark font-medium">src/asssets/scss/override-component/_theme.scss</span> and <span
+                    class="text-dark font-medium">src/asssets/scss/themecolors/*.scss (all files)</span></h5>
+                <pre>
+                        <code class="language-js py-0">
+// Font Family
+                          
+@include mat.theme(
+  (
+    color: mat.$azure-palette,
+    typography: "Onest",
+  )
+);
 
                         </code>
                     </pre>
-              </div>
-            </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">2. Solar Icons</h4>
-                <a href="https://icones.js.org/collection/solar"
-                  class="font-16">https://icones.js.org/collection/solar</a>
-                <pre>
-                      <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// src/index.html
-// ----------------------------------------------------------------------
 
-// icons
-&lt;script src=&quot;https://code.iconify.design/2/2.0.3/iconify.min.js&quot;/&gt;&lt;/script&gt;
-
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i class=&quot;iconify&quot; data-icon=&quot;solar:menu-dots-outline&quot;&gt;&lt;/i&gt;
-
-                      </code>
-                  </pre>
               </div>
             </div>
             <!-- ============================================================== -->

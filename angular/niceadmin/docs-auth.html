@@ -7,28 +7,26 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MaterialM admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Wrappixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="MaterialM is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>MaterialM Admin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/materialm-material-angular-dashboard-template/" />
+  <title>NiceAdmin Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/materialM/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
   <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -55,7 +53,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -172,7 +170,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -299,7 +297,7 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/materialM/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
@@ -320,77 +318,124 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Icons</h3>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">1. Tabler Icons</h4>
-                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
-                <pre>
-                        <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// app.module.ts
-// ----------------------------------------------------------------------
+          <h4 class="mb-4 pb-2">Authentication</h4>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title mb-4">Authguard</h4>
+              <h5 class="font-weight-normal text-muted lh-base">Auth guard provide lifecycle event called canActivate.
+                The canActivate is like a constructor. It will be called before accessing the routes. The canActivate
+                has to return true to access the page. If it returns false, we can not access the page. We can write our
+                user authorization and authentication logic inside the canActivate function.</h5>
+              <pre>
+                      <code>
+// -----------------------------------------------------------------------------------------
+// File : src/app/login.service.ts
+// -----------------------------------------------------------------------------------------
 
-// icons
-import { TablerIconsModule } from 'angular-tabler-icons';
-import * as TablerIcons from 'angular-tabler-icons/icons';
+import { Injectable } from '@angular/core';
 
-@NgModule({
-  declarations: [],
-  imports: [
-    TablerIconsModule.pick(TablerIcons),
-  ],
-  exports: [TablerIconsModule],
+@Injectable()
+export class LoginService {
+  constructor() {}
+
+  checkusernameandpassword(uname: string, pwd: string) {
+    if (uname === 'admin' && pwd === 'admin123') {
+      localStorage.setItem('username', 'admin');
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------------------
+// File : src/app/auth.guard.ts
+// -----------------------------------------------------------------------------------------
+import { Injectable } from '@angular/core';
+import {
+  CanActivate,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  Router,
+} from '@angular/router';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
 })
+export class AuthGuard implements CanActivate {
+  constructor(private routes: Router) {}
 
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i-tabler name=&quot;home&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;points&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;grid-dots&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): boolean {
+    if (localStorage.getItem('username') != null) {
+      return true;
+    } else {
+      this.routes.navigate(['/authentication/side-login']);
+      return false;
+    }
+  }
+}
 
-                        </code>
-                    </pre>
-              </div>
-            </div>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">2. Solar Icons</h4>
-                <a href="https://icones.js.org/collection/solar"
-                  class="font-16">https://icones.js.org/collection/solar</a>
-                <pre>
-                      <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// src/index.html
-// ----------------------------------------------------------------------
-
-// icons
-&lt;script src=&quot;https://code.iconify.design/2/2.0.3/iconify.min.js&quot;/&gt;&lt;/script&gt;
-
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i class=&quot;iconify&quot; data-icon=&quot;solar:menu-dots-outline&quot;&gt;&lt;/i&gt;
+// -----------------------------------------------------------------------------------------
+// File : src/app/app-routing.module.ts
+// -----------------------------------------------------------------------------------------
+import { AuthGuard } from './auth.guard';
+const routes: Routes = [
+  {
+    path: '',
+    component: FullComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: '',
+        redirectTo: '/starter',
+        pathMatch: 'full',
+      },
+      {
+        path: 'starter',
+        loadChildren: () =>
+          import('./pages/pages.module').then((m) => m.PagesModule),
+      },
+    ],
+  },
+];
 
                       </code>
-                  </pre>
-              </div>
+                    </pre>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Of Page Content -->
-            <!-- ============================================================== -->
-
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Page wrapper  -->
+          <!-- ============================================================== -->
         </div>
-      </div>
-      <!-- ============================================================== -->
-      <!-- End Container fluid  -->
-      <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Of Page Content -->
+        <!-- ============================================================== -->
 
+      </div>
     </div>
     <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
+    <!-- End Container fluid  -->
     <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <!-- <footer class="footer bg-white text-center">
+          All Rights Reserved by niceadmin. Designed and Developed by
+          <a href="https://www.Wrappixel.com">Wrappixel.com</a>
+        </footer> -->
+
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Page wrapper  -->
+  <!-- ============================================================== -->
   </div>
   <!-- ============================================================== -->
   <!-- End Wrapper -->
@@ -409,6 +454,10 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#navbar-example3",
+    });
   </script>
   <!-- End JS -->
 </body>
