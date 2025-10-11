@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords"
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Niceadmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+  <meta name="description"
+    content="Niceadmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Niceadmin Nuxtjs Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/Niceadmin-vuetify-nuxt-js-admin-template/" />
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <!-- This page css -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
+  <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div id="main-wrapper" class="docs">
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!--Desktop view sidebar menu-->
+    <aside class="left-sidebar pt-4 d-lg-block d-none" id="navbar-example3" data-simplebar>
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <!-- ============================================================== -->
+          <!-- Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-brand d-flex align-items-center justify-content-between px-4">
+            <!-- Logo icon -->
+            <a href="index.html">
+              <b class="logo-icon">
+                <!-- Dark Logo icon -->
+                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              </b>
+              <!--End Logo icon -->
+            </a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <ul id="sidebarnav" class="mt-4">
+            <nav class="nav nav-pills flex-column sidebar-nav">
+              <ul class="list-unstyled">
+                <!--Getting Started-->
+                <li class="nav-small-cap">
+                  <span class="hide-menu">Getting Started</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i
+                      class="ti ti-home-2 me-3 fs-4"></i> Introduction</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-structure.html"><i
+                      class="ti ti-packages me-3 fs-4"></i> Folder Structure</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-start.html"><i
+                      class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                    Start</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-licenses.html"><i
+                      class="ti ti-license me-3 fs-4"></i> Licenses</a>
+                </li>
+                <!--Customization-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">Customization</span>
+                </li>
+                <li class="sidebar-item position-relative">
+                  <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                    aria-expanded="false">
+                    <span class="hide-menu"><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                      Config
+                    </span>
+                  </a>
+                  <!--sub-menu items-->
+                  <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-color.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Color </span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-typography.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Typography </span></a>
+                    </li>
+                    <li class="sidebar-item mb-0">
+                      <a href="docs-icon.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                        <span class="hide-menu"> Icons </span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-setting.html"><i
+                      class="ti ti-settings me-3 fs-4"></i>Customize Theme
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-logo.html"><i
+                      class="ti ti-adjustments-horizontal me-3 fs-4"></i>Change Logo
+                  </a>
+                </li>
+                <!--Development-->
+                <li class="nav-small-cap mt-4">
+                  <span class="hide-menu">DEVELOPMENT</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-routing.html"><i
+                      class="ti ti-route me-3 fs-4"></i> Routing</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-multi-language.html"><i
+                      class="ti ti-text-recognition me-3 fs-4"></i> Multi
+                    Language
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html">
+                    <i class="ti ti-link me-3 fs-4"></i>
+                    API Calls
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
+                      class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
+                </li>
+              </ul>
+            </nav>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+
+    <!--Mobile view sidebar menu-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <aside class="left-sidebar pt-4" id="navbar-example3" data-simplebar>
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-brand d-flex align-items-center justify-content-between px-4">
+              <!-- Logo icon -->
+              <a href="index.html">
+                <b class="logo-icon">
+                  <!-- Dark Logo icon -->
+                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                </b>
+                <!--End Logo icon -->
+              </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <ul id="sidebarnav" class="mt-4">
+              <nav class="nav nav-pills flex-column sidebar-nav">
+                <ul class="list-unstyled">
+                  <!--Getting Started-->
+                  <li class="nav-small-cap">
+                    <span class="hide-menu">Getting Started</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i
+                        class="ti ti-home-2 me-3 fs-4"></i> Introduction</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-structure.html"><i
+                        class="ti ti-packages me-3 fs-4"></i> Folder Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-start.html"><i
+                        class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                      Start</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-licenses.html"><i
+                        class="ti ti-license me-3 fs-4"></i> Licenses</a>
+                  </li>
+                  <!--Customization-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Customization</span>
+                  </li>
+                  <li class="sidebar-item position-relative">
+                    <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
+                      aria-expanded="false">
+                      <span class="hide-menu"><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                        Config
+                      </span>
+                    </a>
+                    <!--sub-menu items-->
+                    <ul aria-expanded="false" class="collapse first-level list-unstyled">
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-color.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Color </span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-typography.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Typography </span></a>
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-icon.html" class="nav-link sub-link"><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Icons </span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-setting.html"><i
+                        class="ti ti-settings me-3 fs-4"></i>Customize Theme
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-logo.html"><i
+                        class="ti ti-adjustments-horizontal me-3 fs-4"></i>Change Logo
+                    </a>
+                  </li>
+                  <!--Development-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">DEVELOPMENT</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-routing.html"><i
+                        class="ti ti-route me-3 fs-4"></i> Routing
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-multi-language.html"><i
+                        class="ti ti-text-recognition me-3 fs-4"></i> Multi
+                      Language
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html">
+                      <i class="ti ti-link me-3 fs-4"></i>
+                      API Calls
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
+                        class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
+                  </li>
+                </ul>
+              </nav>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper pt-0 d-block" data-bs-spy="scroll" data-bs-target="#navbar-example3"
+      data-bs-smooth-scroll="true" tabindex="0">
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <div class="position-relative d-lg-none">
+        <div
+          class="navbar-header bg-white d-flex align-items-center justify-content-between p-3 fixed-top page-wrapper w-auto">
+          <!-- ============================================================== -->
+          <!-- Toggle which is visible on mobile only -->
+          <!-- ============================================================== -->
+          <!-- Logo icon -->
+          <a href="index.html">
+            <b class="logo-icon d-lg-none d-block">
+              <!-- Dark Logo icon -->
+              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+            </b>
+            <!--End Logo icon -->
+          </a>
+          <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
+            <!---Mobile view canvas button--->
+            <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
+              role="button" aria-controls="offcanvasExample">
+              <i class="ti ti-menu-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Container fluid  -->
+      <!-- ============================================================== -->
+      <div class="container-fluid mt-4">
+        <div class="mt-5">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <h4 class="mb-4 pb-2">Color</h4>
+          <div class="alert alert-primary mt-4">
+            To change primary and secondary color you have to use this
+            file:
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Override Colors</h4>
+              <h5 class="card-subtitle mt-2 text-muted mb-4">
+                For any change in colors :
+                <span class="text-dark font-medium">For any change in colors : app/assets/css/theme/default-theme.css</span>
+              </h5>
+              <pre>
+                    <code class="language-js py-0">
+:root {
+
+  /*Default Colors*/
+  --color-background: oklch(97.015% 0.00011 271.152);
+  --color-foreground: oklch(0% 0 0);
+  --color-card: oklch(100% 0.00011 271.152);
+  --color-card-foreground: oklch(14.954% 0.02208 166.621);
+  --color-primary: oklch(42.35% 0.06788 180.96);
+  --color-primary-foreground: oklch(100% 0.00011 271.152);
+  --color-secondary: oklch(92.619% 0.17657 128.9);
+  --color-secondary-foreground: oklch(14.954% 0.02208 166.621);
+  --color-success: oklch(74.856% 0.18318 137.287);
+  --color-warning: oklch(81.236% 0.16186 81.391);
+  --color-destructive: oklch(63.681% 0.20784 25.315);
+  --color-accent: oklch(58.32% 0.2173 294.044);
+  --color-lightsuccess: oklch(97.056% 0.02232 135.14);
+  --color-lightprimary: oklch(94.354% 0.00759 187.692);
+  --color-lightsecondary: oklch(99.171% 0.0193 126);
+  --color-lightdestructive: oklch(93.695% 0.02861 17.47);
+  --color-lightwarning: oklch(96.893% 0.03191 87.282);
+  --color-lightaccent: oklch(93.694% 0.03043 300.207);
+  --color-border: oklch(91.068% 0.00338 146.977);
+  --color-input: oklch(92.027% 0.01515 260.808);
+  --color-muted: oklch(53.208% 0.00864 165.094);
+  --color-ring: oklch(35.415% 0.01379 167.153);
+}
+
+.dark {
+  --color-background: oklch(21.08% 0.00982 173.292);
+  --color-foreground: oklch(100% 0.00011 271.152);
+  --color-card: oklch(14.954% 0.02208 166.621);
+  --color-card-foreground: oklch(100% 0.00011 271.152);
+  --color-border: oklch(25.754% 0.01595 168.816);
+  --color-ring: oklch(90.67% 0.0001 271.152);
+  --color-lightsuccess: oklch(27.05% 0.04261 144.319);
+  --color-lightdestructive: oklch(22.193% 0.02906 33.827);
+  --color-lightwarning: oklch(26.673% 0.04298 107.045);
+  --color-lightaccent: oklch(20.438% 0.0284 274.356);
+  --color-input: oklch(25.754% 0.01595 168.816);
+}
+
+[data-color-theme="GREEN_THEME"] {
+  --color-primary: oklch(42.35% 0.06788 180.96);
+  --color-secondary: oklch(92.619% 0.17657 128.9);
+  --color-lightprimary: oklch(94.354% 0.00759 187.692);
+  --color-lightsecondary: oklch(99.171% 0.0193 126);
+}
+
+[data-color-theme="BROWN_THEME"] {
+  --color-primary: oklch(35.736% 0.01883 119.821);
+  --color-secondary: oklch(78.279% 0.16797 66.191);
+  --color-lightprimary: oklch(93.979% 0.00123 107.74);
+  --color-lightsecondary: oklch(97.66% 0.01561 177.499);
+}
+
+[data-color-theme="VIOLET_THEME"] {
+  --color-primary: oklch(29.648% 0.10822 305.119);
+  --color-secondary: oklch(80.557% 0.09596 293.56);
+  --color-lightprimary: oklch(93.504% 0.0087 307.937);
+  --color-lightsecondary: oklch(97.15% 0.012 210.27);
+}
+
+[data-color-theme="BLUE_THEME"] {
+  --color-primary: oklch(38.016% 0.0853 240.692);
+  --color-secondary: oklch(86.734% 0.11298 212.555);
+  --color-lightprimary: oklch(93.969% 0.0085 236.978);
+  --color-lightsecondary: oklch(96.737% 0.01925 230.907);
+}
+
+[data-color-theme="TEAL_THEME"] {
+  --color-primary: oklch(40.062% 0.06616 219.132);
+  --color-secondary: oklch(90.118% 0.13306 171.278);
+  --color-lightprimary: oklch(94.213% 0.00705 220.248);
+  --color-lightsecondary: oklch(97.71% 0.01145 36.977);
+}
+
+[data-color-theme="LAVENDER_THEME"] {
+  --color-primary: oklch(22.852% 0.09711 268.692);
+  --color-secondary: oklch(84.636% 0.07565 269.87);
+  --color-lightprimary: oklch(92.864% 0.00692 277.073);
+  --color-lightsecondary: oklch(98.501% 0.00709 268.597);
+}
+
+
+.dark[data-color-theme="GREEN_THEME"] {
+  --color-lightprimary: oklch(22.592% 0.03324 174.975);
+  --color-lightsecondary: oklch(42.101% 0.07554 132.706);
+}
+
+.dark[data-color-theme="BROWN_THEME"] {
+  --color-lightprimary: oklch(20.655% 0.01778 155.433);
+  --color-lightsecondary: oklch(34.544% 0.05781 177.553);
+}
+
+.dark[data-color-theme="VIOLET_THEME"] {
+  --color-lightprimary: oklch(18.126% 0.02647 286.962);
+  --color-lightsecondary: oklch(35.802% 0.05729 205.434);
+}
+
+.dark[data-color-theme="BLUE_THEME"] {
+  --color-lightprimary: oklch(21.002% 0.03333 215.992);
+  --color-lightsecondary: oklch(37.286% 0.06153 237.364);
+}
+
+.dark[data-color-theme="TEAL_THEME"] {
+  --color-lightprimary: oklch(21.672% 0.02988 198.987);
+  --color-lightsecondary: oklch(29.45% 0.04539 36.695);
+}
+
+.dark[data-color-theme="LAVENDER_THEME"] {
+  --color-lightprimary: oklch(16.387% 0.02672 247.556);
+  --color-lightsecondary: oklch(35.255% 0.02448 241.535);
+}
+      </code>
+  </pre>
+            </div>
+          </div>
+         
+          <!-- ============================================================== -->
+          <!-- End Of Page Content -->
+          <!-- ============================================================== -->
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <!-- <footer class="footer bg-white text-center">
+          All Rights Reserved by Niceadmin. Designed and Developed by
+          <a href="https://www.WrapPixel.com">WrapPixel.com</a>
+        </footer> -->
+
+      <!-- ============================================================== -->
+      <!-- End footer -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- End Page -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <script src="../../styles/assets/jquery/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="../../styles/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- apps -->
+  <script src="../../styles/assets/simplebar/simplebar/dist/simplebar.js"></script>
+  <!--Custom JavaScript -->
+  <script src="../../styles/dist/js/custom.js"></script>
+  <script src="../../styles/assets/highlights/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#navbar-example3",
+    });
+  </script>
+  <!-- End JS -->
+</body>
+
+</html>
