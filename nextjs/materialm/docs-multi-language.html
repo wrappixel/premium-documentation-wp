@@ -88,9 +88,9 @@
                                         href="docs-licenses.html"><i class="ti ti-license me-3 fs-4"></i> Licenses</a>
                                 </li>
                                 <!--Customization-->
-                <li class="nav-small-cap mt-4">
-                  <span class="hide-menu">Customization</span>
-                </li>
+                                <li class="nav-small-cap mt-4">
+                                    <span class="hide-menu">Customization</span>
+                                </li>
                                 <li class="sidebar-item position-relative">
                                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center"
                                         href="javascript:void(0)" aria-expanded="false">
@@ -225,9 +225,9 @@
                                             Licenses</a>
                                     </li>
                                     <!--Customization-->
-                <li class="nav-small-cap mt-4">
-                  <span class="hide-menu">Customization</span>
-                </li>
+                                    <li class="nav-small-cap mt-4">
+                                        <span class="hide-menu">Customization</span>
+                                    </li>
                                     <li class="sidebar-item position-relative">
                                         <a class="nav-link sidebar-link has-arrow d-flex align-items-center"
                                             href="javascript:void(0)" aria-expanded="false">
@@ -423,85 +423,89 @@
 <span class="hljs-comment">// File: src/app/(DashboardLayout)/layout/vertical/header/Language.tsx  </span>
 <span class="hljs-comment">// --------------------------------------------------------------------</span>
 
-<span class="hljs-string">"use client"</span>;
-<span class="hljs-keyword">import</span> React, { useContext, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
-<span class="hljs-keyword">import</span> { useTranslation } <span class="hljs-keyword">from</span> <span class="hljs-string">"react-i18next"</span>;
-<span class="hljs-keyword">import</span> { CustomizerContext } <span class="hljs-keyword">from</span> <span class="hljs-string">"@/app/context/customizerContext"</span>;
-<span class="hljs-keyword">import</span> Image <span class="hljs-keyword">from</span> <span class="hljs-string">"next/image"</span>;
-<span class="hljs-keyword">import</span> { Dropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">"flowbite-react"</span>;
+&#x22;use client&#x22;;
+import { useContext, useEffect, useState } from &#x22;react&#x22;;
 
-<span class="hljs-keyword">const</span> Languages = [
-  {
-    <span class="hljs-attr">flagname</span>: <span class="hljs-string">"English (UK)"</span>,
-    <span class="hljs-attr">icon</span>: <span class="hljs-string">"/images/flag/icon-flag-en.svg"</span>,
-    <span class="hljs-attr">value</span>: <span class="hljs-string">"en"</span>,
-  },
-  {
-    <span class="hljs-attr">flagname</span>: <span class="hljs-string">"中国人 (Chinese)"</span>,
-    <span class="hljs-attr">icon</span>: <span class="hljs-string">"/images/flag/icon-flag-cn.svg"</span>,
-    <span class="hljs-attr">value</span>: <span class="hljs-string">"ch"</span>,
-  },
-  {
-    <span class="hljs-attr">flagname</span>: <span class="hljs-string">"français (French)"</span>,
-    <span class="hljs-attr">icon</span>: <span class="hljs-string">"/images/flag/icon-flag-fr.svg"</span>,
-    <span class="hljs-attr">value</span>: <span class="hljs-string">"fr"</span>,
-  },
+import { CustomizerContext } from &#x22;@/app/context/CustomizerContext&#x22;;
+import Image from &#x22;next/image&#x22;;
+import i18n from &#x22;@/utils/i18n&#x22;;
 
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from &#x22;@/components/ui/dropdown-menu&#x22;;
+
+const Languages = [
   {
-    <span class="hljs-attr">flagname</span>: <span class="hljs-string">"عربي (Arabic)"</span>,
-    <span class="hljs-attr">icon</span>: <span class="hljs-string">"/images/flag/icon-flag-sa.svg"</span>,
-    <span class="hljs-attr">value</span>: <span class="hljs-string">"ar"</span>,
+    flagname: &#x22;English (UK)&#x22;,
+    icon: &#x22;/images/flag/icon-flag-en.svg&#x22;,
+    value: &#x22;en&#x22;,
+  },
+  {
+    flagname: &#x22;&#x4E2D;&#x56FD;&#x4EBA; (Chinese)&#x22;,
+    icon: &#x22;/images/flag/icon-flag-cn.svg&#x22;,
+    value: &#x22;ch&#x22;,
+  },
+  {
+    flagname: &#x22;fran&#xE7;ais (French)&#x22;,
+    icon: &#x22;/images/flag/icon-flag-fr.svg&#x22;,
+    value: &#x22;fr&#x22;,
+  },
+  {
+    flagname: &#x22;&#x639;&#x631;&#x628;&#x64A; (Arabic)&#x22;,
+    icon: &#x22;/images/flag/icon-flag-sa.svg&#x22;,
+    value: &#x22;ar&#x22;,
   },
 ];
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Language = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-keyword">const</span> { i18n } = useTranslation();
+export const Language = () =&#x3E; {
+  const { isLanguage, setIsLanguage, activeDir } =
+    useContext(CustomizerContext);
 
-  <span class="hljs-keyword">const</span> { isLanguage, setIsLanguage } = useContext(CustomizerContext);
-  <span class="hljs-keyword">const</span> currentLang =
-    Languages.find(<span class="hljs-function">(<span class="hljs-params">_lang</span>) =&gt;</span> _lang.value === isLanguage) || Languages[<span class="hljs-number">1</span>];
+  const currentLang =
+    Languages.find((_lang) =&#x3E; _lang.value === isLanguage) || Languages[1];
 
-  useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  useEffect(() =&#x3E; {
     i18n.changeLanguage(isLanguage);
-  }, [isLanguage]);
-  <span class="hljs-keyword">return</span> (
-    &lt;&gt;
-        &lt;div className="relative group/menu"&gt;
-                &lt;Dropdown
-                label=""
-                className="w-56 "
-                dismissOnClick={false}
-                renderTrigger={() =&gt; (
-                    &lt;span className="h-10 w-10 hover:bg-lightprimary rounded-full flex justify-center items-center cursor-pointer group-hover/menu:bg-lightprimary "&gt;
-                    &lt;Image
-                        src={currentLang.icon}
-                        height={40}
-                        width={35}
-                        alt="language"
-                        className="rounded-full h-6 w-6 object-cover cursor-pointer"
-                    /&gt;
-                    &lt;/span&gt;
-                )}
-            &gt;
-            {Languages.map((item, index) =&gt; (
-                &lt;Dropdown.Item
-                className="flex gap-3 items-center py-3 w-full"
-                key={index}
-                onClick={() =&gt; setIsLanguage(item.value)}
-                &gt;
-                &lt;Image
-                    src={item.icon}
-                    alt="flag"
-                    height={24}
-                    width={24}
-                    className="rounded-full object-cover h-6 w-6"
-                /&gt;
-                &lt;span&gt;{item.flagname}&lt;/span&gt;
-                &lt;/Dropdown.Item&gt;
-            ))}
-            &lt;/Dropdown&gt;
-        &lt;/div&gt;
-    &lt;/&gt;
+  }, [isLanguage, i18n]);
+
+  return (
+    &#x3C;div className=&#x22;relative group/menu&#x22;&#x3E;
+      &#x3C;DropdownMenu dir={activeDir === &#x22;rtl&#x22; ? &#x22;rtl&#x22; : &#x22;ltr&#x22;}&#x3E;
+        &#x3C;DropdownMenuTrigger asChild&#x3E;
+          &#x3C;span className=&#x22;h-10 w-10 hover:bg-lightprimary rounded-full flex justify-center items-center cursor-pointer group-hover/menu:bg-lightprimary&#x22;&#x3E;
+            &#x3C;Image
+              src={currentLang.icon}
+              alt=&#x22;language&#x22;
+              width={100}
+              height={100}
+              className=&#x22;rounded-full h-6 w-6 object-cover cursor-pointer&#x22;
+            /&#x3E;
+          &#x3C;/span&#x3E;
+        &#x3C;/DropdownMenuTrigger&#x3E;
+
+        &#x3C;DropdownMenuContent className=&#x22;w-56 rounded-sm p-0&#x22;&#x3E;
+          {Languages.map((item, index) =&#x3E; (
+            &#x3C;DropdownMenuItem
+              key={index}
+              onSelect={() =&#x3E; setIsLanguage(item.value)}
+              className=&#x22;flex gap-3 items-center p-3 w-full cursor-pointer&#x22;
+            &#x3E;
+              &#x3C;Image
+                src={item.icon}
+                alt={item.flagname}
+                className=&#x22;rounded-full object-cover h-6 w-6&#x22;
+                width={100}
+                height={100}
+              /&#x3E;
+              &#x3C;span&#x3E;{item.flagname}&#x3C;/span&#x3E;
+            &#x3C;/DropdownMenuItem&#x3E;
+          ))}
+        &#x3C;/DropdownMenuContent&#x3E;
+      &#x3C;/DropdownMenu&#x3E;
+    &#x3C;/div&#x3E;
   );
 };
               
