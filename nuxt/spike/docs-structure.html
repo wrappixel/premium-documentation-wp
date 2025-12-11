@@ -202,9 +202,9 @@
                         class="ti ti-license me-3 fs-4"></i> Licenses</a>
                   </li>
                   <!--Customization-->
-                <li class="nav-small-cap mt-4">
-                  <span class="hide-menu">Customization</span>
-                </li>
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Customization</span>
+                  </li>
                   <li class="sidebar-item position-relative">
                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
                       aria-expanded="false">
@@ -321,64 +321,59 @@
           <div class="bg-light p-3 rounded">
             <h4 class="font-weight-medium">Spike Nuxtjs Dashboard</h4>
             <pre class="">
-              <code class="language-plaintext">
+             <code class="language-plaintext">
 📦  
 ├── 📂 docs                                  > Documentation for the theme  
 ├── 📂 packages
 │   ├── 📂 main                              > Main demo package  
-│   │   ├── 📂 _mockApis                     > Mock API data for testing  
-│   │   ├── 📂 assets                        > All assets used in the theme  
-│   │   │   ├── 📂 scss                      > SCSS stylesheets for theme styling  
-│   │   ├── 📂 components                    > All reusable components  
-│   │   │   ├── 📂 apps                      > App-specific components  
-│   │   │   ├── 📂 auth                      > Authentication-related components  
-│   │   │   ├── 📂 forms                     > All form components  
-│   │   │   ├── 📂 landingpage               > Landing page components  
-│   │   │   ├── 📂 lc                        > Localization-related components  
-│   │   │   ├── 📂 pages                     > Page-level components  
-│   │   │   ├── 📂 shared                    > Common components used across the app  
-│   │   │   ├── 📂 style-components          > Styled components for UI customization  
-│   │   │   ├── 📂 table                     > Table components for data display  
-│   │   │   ├── 📂 ui-components             > UI elements like buttons, modals, etc.  
-│   │   │   ├── 📂 widgets                   > Dashboard widgets and UI elements  
-│   │   ├── 📂 layouts                       > Page layout components  
-│   │   │   ├── 📄 blank.vue                 > Blank layout (used for authentication)  
-│   │   │   ├── 📄 default.vue               > Default layout for main pages  
-│   │   ├── 📂 pages                         > All pages of the theme  
-│   │   │   ├── 📂 apps                      > App-related pages  
-│   │   │   ├── 📂 auth                      > Authentication pages  
-│   │   │   ├── 📂 charts                    > Chart pages for data visualization  
-│   │   │   ├── 📂 dashboard                 > Dashboard pages  
-│   │   │   ├── 📂 forms                     > Form-related pages  
-│   │   │   ├── 📂 theme-pages               > Theme customization pages  
-│   │   │   ├── 📂 tables                    > Table-related pages  
-│   │   │   ├── 📂 ui-components             > UI components demo pages  
-│   │   │   ├── 📂 widgets                   > Widget pages  
-│   │   │   ├── 📄 index.vue                 > Main entry page for routing  
-│   │   ├── 📂 plugins                       > Additional plugins used in the theme  
-│   │   │   ├── 📄 vuetify.ts                 > Vuetify plugin configuration  
-│   │   ├── 📂 public                        > Publicly accessible assets  
-│   │   │   ├── 📂 images                    > All images used in the theme  
-│   │   ├── 📂 router                        > Vue router configuration for navigation  
-│   │   ├── 📂 store                         > Vuex store for managing app state  
-│   │   │   ├── 📂 apps                      > Store modules for apps  
-│   │   │   ├── 📄 auth.ts                   > Authentication state management  
-│   │   │   ├── 📄 authUser.ts               > User authentication state  
-│   │   │   ├── 📄 customizer.ts             > Theme and layout customizations  
-│   │   ├── 📂 theme                         > Theme-level settings and configurations  
-│   │   ├── 📂 types                         > TypeScript types for app consistency  
-│   │   │   ├── 📂 apps                      > Types related to apps  
-│   │   │   ├── 📂 components                > Types for components  
-│   │   │   ├── 📂 customers                 > Customer-related types  
-│   │   │   ├── 📂 landingpage               > Landing page types  
-│   │   │   ├── 📂 themeTypes                > Types for theme settings  
-│   │   ├── 📂 utils                         > Utility functions and helpers  
-│   │   │   ├── 📂 helpers                   > Helper functions  
-│   │   │   ├── 📂 locals                    > Localization utilities  
-│   │   │   ├── 📄 axios.ts                  > Axios HTTP client configuration  
-│   │   ├── 📄 app.vue                       > Root Vue app component  
-│   │   ├── 📄 config.ts                     > Configuration settings for the app  
-│   │   ├── 📄 error.vue                     > Error page component  
+│   │   ├── 📂 app                           
+│   │   │   ├── 📂 _mockapis                 > Mock API data for testing  
+│   │   │   ├── 📂 assets                    > All assets used in the theme  
+│   │   │   │   ├── 📂 scss                   > stylesheets for theme styling  
+│   │   │   ├── 📂 components                  > App components
+│   │   │   │   ├── 📂 apps                    > All app components
+│   │   │   │   ├── 📂 auth                    > Auth component
+│   │   │   │   ├── 📂 dashboards              > All dashboard components
+│   │   │   │   ├── 📂 forms                   > All form components
+│   │   │   │   ├── 📂 lc                      > header/footer components
+│   │   │   │   ├── 📂 pages                   > All page components
+│   │   │   │   ├── 📂 shared                  > Common components used across the theme
+│   │   │   │   ├── 📂 tables                  > All table components
+│   │   │   │   ├── 📂 ui-components           > All UI components
+│   │   │   │   ├── 📂 widgets                 > All widget components
+│   │   │   ├── 📂 layouts
+│   │   │   │   ├── 📄 blank.vue               > Blank layout for auth pages
+│   │   │   │   ├── 📄 default.vue             > Default layout for inner pages
+│   │   │   ├── 📂 lib                   
+│   │   │   ├── 📂 pages                         > All pages components
+│   │   │   │   ├── 📂 apps                      > App-related pages  
+│   │   │   │   ├── 📂 auth                      > Authentication pages  
+│   │   │   │   ├── 📂 charts                    > Chart pages for data visualization  
+│   │   │   │   ├── 📂 dashboard                 > Dashboard pages  
+│   │   │   │   ├── 📂 forms                     > Form-related pages  
+│   │   │   │   ├── 📂 theme-pages               > Theme customization pages  
+│   │   │   │   ├── 📂 tables                    > Table-related pages  
+│   │   │   │   ├── 📂 ui-components             > UI components demo pages  
+│   │   │   │   ├── 📂 widgets                   > Widget pages  
+│   │   │   │   ├── 📄 index.vue                 > Main entry page for routing  
+│   │   │   ├── 📂 plugins                       > Additional plugins used in the theme  
+│   │   │   │   ├── 📄 vuetify.ts                > Plugin configuration  
+│   │   │   │   ├── 📄 vue-apex-charts.client.ts > For apexchart configuration
+│   │   │   ├── 📂 store                         > Store for managing app state  
+│   │   │   │   ├── 📂 apps                      > Store modules for apps  
+│   │   │   │   ├── 📄 customizer.ts             > Theme and layout customizations 
+    │   │   ├── 📄 app.vue                       > Root Vue app component  
+    │   │   ├── 📄 app.config.ts                 > Configuration settings for the app  
+│   │   │   ├── 📂 theme                         > Theme colors  
+        │   │   ├── 📄 DarkTheme.ts              > Dark theme colors  
+        │   │   ├── 📄 LightTheme.ts             > Light theme colors        
+│   │   ├── 📂 modules                          > All reusable components  
+│   │   ├── 📂 public                           > Template images  
+│   │   │   ├── 📂 images                       > All images   
+│   │   ├── 📂 server                         
+│   │   ├── 📂 shared                        > Additional plugins used in the theme  
+│   │   │   ├── 📂 types                     > Define TypeScript types  
+│   │   │   ├── 📂 utils                     > Utility functions and helpers 
 │   │   ├── 📄 nuxt.config.ts                > Nuxt.js configuration file  
 │   │   ├── 📄 package.json                  > Project dependencies and scripts  
 │   │   ├── 📄 tsconfig.json                 > TypeScript configuration  
