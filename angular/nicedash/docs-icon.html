@@ -7,14 +7,14 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="Wrappixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
@@ -55,7 +55,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -172,7 +172,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -299,7 +299,7 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
@@ -320,19 +320,63 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Licenses</h3>
+          <h4 class="mb-4 pb-2">Icons</h3>
             <div class="mt-4 card">
               <div class="card-body">
+                <h4 class="card-title">1. Tabler Icons</h4>
+                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                <pre>
+                        <code class="language-js py-0">
+// ----------------------------------------------------------------------
+// app.module.ts
+// ----------------------------------------------------------------------
 
-                <p class="card-subtitle text-muted ">Any Premium (Pro) product or item purchased from <a
-                    href="https://wrappixel.com/">WrapPixel</a> is subject to the terms of the license you acquire. This
-                  license grants you non-exclusive rights to use the product in both personal and client projects.
-                  Please refer to the <a href="https://wrappixel.com/license/">WrapPixel license</a> for further
-                  details.</p>
+// icons
+import { TablerIconsModule } from 'angular-tabler-icons';
+import * as TablerIcons from 'angular-tabler-icons/icons';
 
+@NgModule({
+  declarations: [],
+  imports: [
+    TablerIconsModule.pick(TablerIcons),
+  ],
+  exports: [TablerIconsModule],
+})
+
+// ----------------------------------------------------------------------
+// usage
+// ----------------------------------------------------------------------
+&lt;i-tabler name=&quot;home&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+&lt;i-tabler name=&quot;points&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+&lt;i-tabler name=&quot;grid-dots&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+
+                        </code>
+                    </pre>
               </div>
             </div>
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">2. Solar Icons</h4>
+                <a href="https://icones.js.org/collection/solar"
+                  class="font-16">https://icones.js.org/collection/solar</a>
+                <pre>
+                      <code class="language-js py-0">
+// ----------------------------------------------------------------------
+// src/index.html
+// ----------------------------------------------------------------------
 
+// icons
+&lt;script src=&quot;https://code.iconify.design/2/2.0.3/iconify.min.js&quot;/&gt;&lt;/script&gt;
+
+// ----------------------------------------------------------------------
+// usage
+// ----------------------------------------------------------------------
+&lt;i class=&quot;iconify&quot; data-icon=&quot;solar:menu-dots-outline&quot;&gt;&lt;/i&gt;
+
+                      </code>
+                  </pre>
+              </div>
+            </div>
             <!-- ============================================================== -->
             <!-- End Of Page Content -->
             <!-- ============================================================== -->

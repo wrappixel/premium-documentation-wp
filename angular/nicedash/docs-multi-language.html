@@ -7,21 +7,20 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WRapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
   <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -32,7 +31,6 @@
 </head>
 
 <body>
-
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -55,7 +53,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -172,7 +170,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -299,7 +297,7 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
@@ -320,35 +318,57 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Icons</h3>
+          <h4 class="mb-4 pb-2">Multi Language</h3>
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">1. Tabler Icons</h4>
-                <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+                <h4 class="card-title">1. Add content</h4>
                 <pre>
-                        <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// app.module.ts
-// ----------------------------------------------------------------------
+                        <code class="language-js py-0 ">
+// ----------------------------------------------------
+// File: src/assets/i18n/de.json  
+// ----------------------------------------------------  
 
-// icons
-import { TablerIconsModule } from 'angular-tabler-icons';
-import * as TablerIcons from 'angular-tabler-icons/icons';
+{
+  "Analytical": "Analytisch",
+  "eCommerce": "E-Commerce",
+  "Chat": "Plaudern",
+}
 
-@NgModule({
-  declarations: [],
-  imports: [
-    TablerIconsModule.pick(TablerIcons),
-  ],
-  exports: [TablerIconsModule],
-})
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: src/assets/i18n/en.json  
+// ----------------------------------------------------  
 
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i-tabler name=&quot;home&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;points&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
-&lt;i-tabler name=&quot;grid-dots&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
+{
+  "Analytical": "Analytical",
+  "eCommerce": "eCommerce",
+  "Chat": "Chat",
+}
+
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: src/assets/i18n/es.json  
+// ----------------------------------------------------  
+
+{
+  "Analytical": "Analítica",
+  "eCommerce": "comércio eletrônico",
+  "Chat": "Bater papo",
+}
+
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: src/assets/i18n/fr.json  
+// ---------------------------------------------------- 
+
+{
+  "Analytical": "Analytique",
+  "eCommerce": "commerce électronique",
+  "Chat": "Discuter",
+}
 
                         </code>
                     </pre>
@@ -356,25 +376,82 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
             </div>
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">2. Solar Icons</h4>
-                <a href="https://icones.js.org/collection/solar"
-                  class="font-16">https://icones.js.org/collection/solar</a>
-                <pre>
-                      <code class="language-js py-0">
-// ----------------------------------------------------------------------
-// src/index.html
-// ----------------------------------------------------------------------
+                <h4 class="card-title">2. Usage</h4>
+                <pre class="mt-4">
+<code class="language-js py-0">
+// ----------------------------------------------------
+// File: src/app/layouts/full/vertical/header/header.component.ts
+// ---------------------------------------------------- 
 
-// icons
-&lt;script src=&quot;https://code.iconify.design/2/2.0.3/iconify.min.js&quot;/&gt;&lt;/script&gt;
+public selectedLanguage: any = {
+  language: 'English',
+  code: 'en',
+  type: 'US',
+  icon: '/assets/images/flag/icon-flag-en.svg',
+};
 
-// ----------------------------------------------------------------------
-// usage
-// ----------------------------------------------------------------------
-&lt;i class=&quot;iconify&quot; data-icon=&quot;solar:menu-dots-outline&quot;&gt;&lt;/i&gt;
+public languages: any[] = [
+  {
+    language: 'English',
+    code: 'en',
+    type: 'US',
+    icon: '/assets/images/flag/icon-flag-en.svg',
+  },
+  {
+    language: 'Español',
+    code: 'es',
+    icon: '/assets/images/flag/icon-flag-es.svg',
+  },
+  {
+    language: 'Français',
+    code: 'fr',
+    icon: '/assets/images/flag/icon-flag-fr.svg',
+  },
+  {
+    language: 'German',
+    code: 'de',
+    icon: '/assets/images/flag/icon-flag-de.svg',
+  },
+];
 
-                      </code>
-                  </pre>
+constructor(
+    private translate: TranslateService
+  ) {
+    translate.setDefaultLang('en');
+  }
+
+  changeLanguage(lang: any): void {
+    this.translate.use(lang.code);
+    this.selectedLanguage = lang;
+  }
+
+// ----------------------------------------------------
+// File: src/app/layouts/full/vertical/header/header.component.html
+// ---------------------------------------------------- 
+&lt;button [matMenuTriggerFor]=&quot;flags&quot; mat-icon-button class=&quot;m-r-5&quot;&gt;
+  &lt;img
+    [src]=&quot;selectedLanguage.icon&quot;
+    class=&quot;rounded-circle object-cover icon-20&quot;
+  /&gt;
+&lt;/button&gt;
+&lt;mat-menu #flags=&quot;matMenu&quot; class=&quot;cardWithShadow&quot;&gt;
+  &lt;button
+    mat-menu-item
+    *ngFor=&quot;let lang of languages&quot;
+    (click)=&quot;changeLanguage(lang)&quot;
+  &gt;
+    &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+      &lt;img
+        [src]=&quot;lang.icon&quot;
+        class=&quot;rounded-circle object-cover m-r-8 icon-20&quot;
+      /&gt;
+      &lt;span class=&quot;mat-subtitle-1 f-s-14&quot;&gt;{{ lang.language }}&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/button&gt;
+&lt;/mat-menu&gt;
+</code>
+
+                    </pre>
               </div>
             </div>
             <!-- ============================================================== -->

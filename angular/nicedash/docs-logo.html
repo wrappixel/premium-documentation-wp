@@ -7,14 +7,14 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -52,7 +53,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -169,7 +170,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -203,9 +204,9 @@
                         class="ti ti-license me-3 fs-4"></i> Licenses</a>
                   </li>
                   <!--Customization-->
-                <li class="nav-small-cap mt-4">
-                  <span class="hide-menu">Customization</span>
-                </li>
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Customization</span>
+                  </li>
                   <li class="sidebar-item position-relative">
                     <a class="nav-link sidebar-link has-arrow d-flex align-items-center" href="javascript:void(0)"
                       aria-expanded="false">
@@ -296,11 +297,16 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -317,158 +323,54 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Quick Start</h4>
-
+          <h4 class="mb-4 pb-2">Change Logo</h4>
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title">1. Requirements</h4>
-              <h5 class="card-subtitle mt-2 text-muted">
-                Before proceeding, you need to have the latest stable
-                <a href="https://nodejs.org/">node.js</a>
+              <h4 class="card-title">Change Logo</h4>
+              <h5 class="card-subtitle mt-2 text-muted mb-4">
+                To change logo :
+                <span class="text-dark font-medium">src/app/layouts/full/vertical/sidebar/branding.component.ts</span>
               </h5>
-              <h5 class="mt-4 font-medium">Recommended environment:</h5>
-              <ul class="text-muted">
-                <li class="font-16">node js 20+</li>
-                <li class="font-16">npm js 10+</li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">2. Installation</h4>
-              <h5 class="card-subtitle mt-2 text-muted">
-                Open package folder and install its dependencies. We
-                recommended yarn or npm.
-              </h5>
+              <div class="border-2 border-start border-primary bg-light rounded p-3">
+                Put the logo image into the assets/images/logos folder.
+              </div>
+              <pre>
+                    <code class="language-js py-0">
+import { Component } from &#x27;@angular/core&#x27;;
+import { CoreService } from &#x27;src/app/services/core.service&#x27;;
+import { RouterModule } from &#x27;@angular/router&#x27;;
 
-              <div class="table-responsive ">
-                <table class="table table-striped border mt-4 align-middle table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">Script</th>
-                      <th scope="col">Project Folder</th>
-                    </tr>
-                  </thead>
-                  <tbody >
-                    <tr>
-                      <th scope="row">
-                        <div class="d-flex align-items-center">
-                          <h5 class="mb-0">Install npm</h5>
-                        </div>
-                      </th>
-                      <td>
-                        <pre class="mt-0">
-                          <code class="language-sh py-0">
-cd project-folder
-npm install
-                          </code>
-                      </pre>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row"> <h5 class="mb-0">Install angular/cli</h5></th>
-                      <td>
-                        <pre class="mt-0">
-                          <code class="language-sh py-0">
-npm install --global @angular/cli
-                          </code>
+@Component({
+  selector: &#x27;app-branding&#x27;,
+  imports: [RouterModule],
+  template: &#x60;
+    &#x3C;div class=&#x22;d-flex align-items-center&#x22;&#x3E;
+      &#x3C;a [routerLink]=&#x22;[&#x27;/&#x27;]&#x22; class=&#x22;logodark&#x22;&#x3E;
+        &#x3C;img
+          src=&#x22;./assets/images/logos/dark-logo.svg&#x22;
+          class=&#x22;align-middle m-2&#x22;
+          alt=&#x22;logo&#x22;
+        /&#x3E;
+      &#x3C;/a&#x3E;
+
+      &#x3C;a [routerLink]=&#x22;[&#x27;/&#x27;]&#x22; class=&#x22;logolight&#x22;&#x3E;
+        &#x3C;img
+          src=&#x22;./assets/images/logos/light-logo.svg&#x22;
+          class=&#x22;align-middle m-2&#x22;
+          alt=&#x22;logo&#x22;
+        /&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+  &#x60;,
+})
+export class BrandingComponent {
+  options = this.settings.getOptions();
+  constructor(private settings: CoreService) { }
+}
+                            </code>
                         </pre>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><h5 class="mb-0">Start</h5></th>
-                      <td>
-                        <pre class="mt-0">
-                          <code class="language-sh py-0">
-ng serve -o
-                          </code>
-                        </pre>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row"><h5 class="mb-0">Build</h5></th>
-                      <td>
-                        <pre class="mt-0">
-                          <code class="language-sh py-0">
-ng build
-                          </code>
-                        </pre>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            
             </div>
           </div>
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">3. Color Themes</h4>
-              <h5 class="card-subtitle mt-2 text-muted">
-                By default, NiceAdmin applies the default theme using the <code>activeTheme</code> attribute to define the skin option. You can modify it or add your custom skin as needed in <code>config.ts</code>.
-              </h5> 
-
-              <p class="mt-4 card-subtitle text-muted">By Default we are giving 6 color themes : </p>
-              <div class="d-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
-                <span class="border p-1 rounded px-2">Green_Theme</span>
-                <span class="border p-1 rounded px-2">Yellow_Theme</span>
-                <span class="border p-1 rounded px-2">Violet_Theme</span>
-                <span class="border p-1 rounded px-2">Blue_Theme</span>
-                <span class="border p-1 rounded px-2">Teal_Theme</span>
-                <span class="border p-1 rounded px-2">Lavender_Theme</span>
-              </div>
-
-              <pre class="mt-4">
-                <code class="language-sh py-0">
-activeTheme: 'green_theme',
-                </code>
-            </pre>
-            </div>
-          </div>
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">4. Theming</h4>
-              <h5 class="card-subtitle mt-2 text-muted">
-                NiceAdmin offers both light and dark style options, with the light style set as the default.
-              </h5> 
-
-              <p class="mt-4 card-subtitle text-muted">By Default we are giving 2 color themes, you just need to change attribute of <code>theme</code> in <code>config.ts</code> file : </p>
-              <div class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
-                <span class="border p-1 rounded px-2">light</span>
-                <span class="border p-1 rounded px-2">dark</span>
-              </div>
-
-              <pre class="mt-4">
-                <code class="language-sh py-0">
-theme: 'dark',
-                </code>
-            </pre>
-            </div>
-          </div>
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">5. RTL Supported</h4>
-              <h5 class="card-subtitle mt-2 text-muted">
-                NiceAdmin comes with built-in RTL support by default.
-              </h5> 
-
-              <p class="mt-4 card-subtitle text-muted">To enable RTL direction, add <code>dir="rtl"</code> attribute in <code>config.ts</code>. </p>
-              <div class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2">
-                <span class="border p-1 rounded px-2">ltr</span>
-                <span class="border p-1 rounded px-2">rtl</span>
-              </div>
-
-              <pre class="mt-4">
-                <code class="language-sh py-0">
-dir: 'rtl',
-                </code>
-            </pre>
-            </div>
-          </div>
-
           <!-- ============================================================== -->
           <!-- End Of Page Content -->
           <!-- ============================================================== -->
@@ -477,6 +379,7 @@ dir: 'rtl',
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
@@ -499,6 +402,10 @@ dir: 'rtl',
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#navbar-example3",
+    });
   </script>
   <!-- End JS -->
 </body>

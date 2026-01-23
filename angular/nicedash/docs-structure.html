@@ -7,14 +7,14 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
@@ -30,7 +30,6 @@
 </head>
 
 <body>
-
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -53,7 +52,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -170,7 +169,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -296,16 +295,11 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
-            <!-- <a
-                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
-                href="javascript:void(0)"
-                ><i class="ti ti-menu-2"></i
-              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -322,136 +316,68 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Color</h4>
+          <h4 class="mb-4 pb-2">Folder Structure</h4>
 
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
-              <h5 class="card-subtitle mt-2 text-muted mb-4">
-                For any change in colors :
-                <span class="text-dark font-medium">src/assets/scss/themecolors/_green_theme.scss</span>
-              </h5>
-              <pre>
-                    <code class="language-js py-0">
-@use "sass:map";
-@use "@angular/material" as mat;
 
-html.green_theme {
-  --mat-sys-primary: rgb(22, 90, 80);
-  --mat-sys-primary-fixed-dim: rgba(22, 90, 80, 0.15);
-  --mat-sys-secondary: rgb(194 253 117);
-  --mat-sys-secondary-fixed-dim: rgba(194, 253, 117, 0.15);
-  --mat-sys-tertiary: rgb(194 253 117);
-}                       
-                            </code>
-                        </pre>
-            </div>
+          <div class="bg-light p-3 rounded">
+            <h4 class="font-weight-medium">
+              NiceDash Angular Dashboard
+            </h4>
+            <pre class="docs-code">
+              <code class="bg-light text-dark">
+📦
+├── 📂 Docs                                     > Contain template Documentation
+├── 📂 package                                  > Contain template static & generated assets
+│   ├── 📂 Main                                 > Main Demo files
+│   │   ├── 📂 src                              > Contain template static & generated assets of main demo
+│   │   │   ├── 📂 app                          
+│   │   │   │   ├── 📂 components               > All components files
+│   │   │   │   ├── 📂 layout                   > All layout files
+│   │   │   │   │   ├── 📂 blank                > Blank Layout files
+│   │   │   │   │   └── 📂 full                 > Full Layout files
+│   │   │   │   ├── 📂 pages                    > Contains all pages files
+│   │   │   │   │   ├── 📂 apps                 > Contains all apps files
+│   │   │   │   │   ├── 📂 authentication       > Contains all authentication page files
+│   │   │   │   │   ├── 📂 charts               > Contains all charts files
+│   │   │   │   │   ├── 📂 dashboards           > Contains all dashboard files
+│   │   │   │   │   ├── 📂 forms                > Contains all forms files
+│   │   │   │   │   ├── 📂 starter              > Contains all starter files
+│   │   │   │   │   ├── 📂 tables               > Contains all tables files
+│   │   │   │   │   ├── 📂 theme-pages          > Contains all theme pages files
+│   │   │   │   │   ├── 📂 ui-components        > Contains all UI components files
+│   │   │   │   │   ├── 📂 widgets              > Contains all widgets files
+│   │   │   │   │   └── 📄 pages.routes.ts      > Used for routing
+│   │   │   │   ├── 📂 pipe                     > Contains filter.pipe files
+│   │   │   │   │   └── 📄 filter.pipe.ts       > Used for filtering
+│   │   │   │   ├── 📂 services                 > Contains services files
+│   │   │   │   ├── 📄 app.component.html       
+│   │   │   │   ├── 📄 app.component.spec.ts    
+│   │   │   │   ├── 📄 app.component.ts         
+│   │   │   │   ├── 📄 app.config.ts            
+│   │   │   │   ├── 📄 config.ts                
+│   │   │   │   ├── 📄 app.routes.ts            
+│   │   │   │   └── 📄 material.module.ts       
+│   │   │   └── 📂 assets                       > Contains all assets for the project
+│   │   │       └── 📂 images                   > Images (jpeg/png)
+│   │   ├── 📄 angular.json                      
+│   │   ├── 📄 package.json                      
+│   │   ├── 📄 tsconfig.app.json                 
+│   │   ├── 📄 tsconfig.json                     
+│   │   └── 📄 tsconfig.spec.json                
+│   ├── 📂 authguard                             > Authguard Demo files
+│   ├── 📂 dark                                  > Dark Demo files
+│   ├── 📂 horizontal                            > Horizontal Demo files
+│   ├── 📂 minisidebar                           > Minisidebar Demo files
+│   ├── 📂 rtl                                   > RTL Demo files
+│   └── 📂 starterkit                            > Starterkit to get started with the project
+                              </code>
+            </pre>
           </div>
-
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">Light Theme Variables Settings</h4>
-              <h5 class="card-subtitle mt-2 text-muted mb-4">
-                For any change in colors :
-                <span class="text-dark font-medium">src/assets/scss/theme-variables/_light-theme-variables.scss</span>
-              </h5>
-              <pre>
-                    <code class="language-js py-0">
-html.light-theme {
-  color-scheme: light;
-  --mat-sys-corner-small: 12px;
-  --mat-sys-corner-medium: 16px;
-  --mat-sys-background: #F5F5F5;
-  --mat-sys-surface-bright: #f2f6fa;
-  --mat-sys-surface: #fff;
-  --mat-sys-surface-container: #fff;
-  --mat-sys-surface-container-low: #fff;
-  --mat-sys-surface-container-lowest: #686e6b;
-  --mat-sys-on-background: #030E09;
-  --mat-sys-outline: #e5e6e6;
-  --mat-sys-outline-variant: #e5e6e6;
-  --mat-form-field-outlined-hover-outline-color: var(--mat-sys-primary);
-  --mat-checkbox-unselected-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-menu-item-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-button-toggle-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-option-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-option-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-slide-toggle-unselected-track-color: var(--mat-sys-primary-fixed-dim);
-  --mat-stepper-header-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-stepper-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-dialog-supporting-text-color: var(--mat-sys-on-background);
-  --mat-expansion-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-}                     
-                            </code>
-                        </pre>
-            </div>
-          </div>
-
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">Dark Theme Variables Settings</h4>
-              <h5 class="card-subtitle mt-2 text-muted mb-4">
-                For any change in colors :
-                <span class="text-dark font-medium">src/assets/scss/theme-variables/_dark-theme-variables.scss</span>
-              </h5>
-              <pre>
-                    <code class="language-js py-0">
-html.dark-theme {
-  color-scheme: dark;
-  --mat-sys-corner-small: 8px;
-  --mat-sys-corner-medium: 16px;
-  --mat-sys-background: #141a18;
-  --mat-sys-on-background: #fff;
-  --mat-sys-on-primary: #fff;
-  --mat-sys-surface-bright: #ffffff05;
-  --mat-sys-surface: #030e09;
-  --mat-sys-surface-container: #030e09;
-  --mat-sys-surface-container-low: #1f2a3d;
-  --mat-sys-outline-variant: #1c2622;
-  --mat-sys-outline: #1c2622;
-  --mat-form-field-outlined-hover-outline-color: var(--mat-sys-primary);
-  --mat-checkbox-unselected-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-menu-item-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-button-toggle-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-option-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-option-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-slide-toggle-unselected-track-color: var(--mat-sys-primary-fixed-dim);
-  --mat-stepper-header-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-stepper-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  --mat-expansion-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
-  @include mat.card-overrides(
-    (
-      elevated-container-color: #030e09,
-      elevated-container-elevation: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
-      subtitle-text-color: rgba(255, 255, 255, 0.67),
-    )
-  );
-  @include mat.theme-overrides(
-    (
-      level1: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-      level2: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-      level3: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-    )
-  );
-}                    
-                            </code>
-                        </pre>
-            </div>
-          </div>
-
-
-          <!-- ============================================================== -->
-          <!-- End Of Page Content -->
-          <!-- ============================================================== -->
         </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
-      <!-- ============================================================== -->
-
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
@@ -474,10 +400,6 @@ html.dark-theme {
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
-
-    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-      target: "#navbar-example3",
-    });
   </script>
   <!-- End JS -->
 </body>

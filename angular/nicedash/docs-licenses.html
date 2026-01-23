@@ -7,20 +7,21 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Wrappixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
   <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -54,7 +55,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -171,7 +172,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -298,7 +299,7 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
@@ -319,65 +320,22 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Routing</h4>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">1. How to add a new route?</h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/app.routes.ts
-// ----------------------------------------------------
+          <h4 class="mb-4 pb-2">Licenses</h3>
+            <div class="mt-4 card">
+              <div class="card-body">
 
-const routes: Routes = [
-  {
-    path: '',
-    component: FullComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: '/landingpage',
-        pathMatch: 'full',
-      },
-      // new added
-      {
-        path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.routes').then((m) => m.PagesRoutes),
-      },
-    ],
-  },
-];
- 
- 
-                            </code>
-                        </pre>
+                <p class="card-subtitle text-muted ">Any Premium (Pro) product or item purchased from <a
+                    href="https://wrappixel.com/">WrapPixel</a> is subject to the terms of the license you acquire. This
+                  license grants you non-exclusive rights to use the product in both personal and client projects.
+                  Please refer to the <a href="https://wrappixel.com/license/">WrapPixel license</a> for further
+                  details.</p>
+
+              </div>
             </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">2. How to add page to sidebar ?</h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/layouts/full/vertical/sidebar/sidebar-data.ts
-// ----------------------------------------------------
 
-export const navItems: NavItem[] = [
-  {
-    displayName: 'Starter',
-    iconName: 'aperture',
-    route: '/starter',
-  },
-]
-                            </code>
-                        </pre>
-            </div>
-          </div>
-
-          <!-- ============================================================== -->
-          <!-- End Of Page Content -->
-          <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Of Page Content -->
+            <!-- ============================================================== -->
 
         </div>
       </div>

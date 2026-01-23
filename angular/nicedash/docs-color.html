@@ -7,14 +7,14 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceAdmin admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, NiceDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="NiceAdmin is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="NiceDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>NiceAdmin Template by WrapPixel.com</title>
-  <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-angular-admin-template/" />
+  <title>NiceDash Template by WrapPixel.com</title>
+  <link rel="canonical" href="https://www.wrappixel.com/templates/nicedash-angular-admin-template/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/niceadmin/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/nicedash/favicon.ico" />
   <!-- This page css -->
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
@@ -52,7 +53,7 @@
             <a href="index.html">
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -141,8 +142,6 @@
                     Authentication
                   </a>
                 </li>
-                <!--Support-->
-
                 <li class="sidebar-item">
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                       class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -171,7 +170,7 @@
               <a href="index.html">
                 <b class="logo-icon">
                   <!-- Dark Logo icon -->
-                  <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+                  <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
                 </b>
                 <!--End Logo icon -->
               </a>
@@ -261,7 +260,7 @@
                       Authentication
                     </a>
                   </li>
-                  <!--Support-->
+
                   <li class="sidebar-item">
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                         class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
@@ -297,11 +296,16 @@
           <a href="index.html">
             <b class="logo-icon d-lg-none d-block">
               <!-- Dark Logo icon -->
-              <img src="../../styles/dist/images/niceadmin/logo-dark.svg" alt="homepage" class="dark-logo" />
+              <img src="../../styles/dist/images/nicedash/logo-dark.svg" alt="homepage" class="dark-logo" />
             </b>
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -318,231 +322,125 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Theme Settings</h4>
+          <h4 class="mb-4 pb-2">Color</h4>
 
-          <div class="mt-4 card">
+          <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Customizer Usage</h4>
-
-              <div class="row mt-4">
-                <div class="col-md-4">
-                  <img alt="customizer" class="border rounded img-fluid"
-                    src="../../styles/dist/images/niceadmin/app-customizer.jpg" />
-                </div>
-                <div class="col-md-8">
-                  <p class="fs-6 text-muted">
-                    The Customizer enables you and your customers to modify
-                    the primary colors, themes, skins, layout options, and
-                    overall appearance of the template in real time.
-                  </p>
-                  <p class="fs-6 text-muted">
-                    While we recommend using this for enhanced customization,
-                    its use is entirely optional. Please review both scenarios
-                    carefully to understand its usage and benefits.
-                  </p>
-
-                  <div class="border-2 border-start border-primary bg-light rounded p-3">
-                    <span class="fw-semibold">Note : </span>
-
-                    <p class="fs-6 mt-2">You must have below files in your project :</p>
-                    <p class="fs-6 mt-2 mb-0">1. config.ts <span class="fw-medium d-block">Path:
-                        main/src/app/config.ts</span></p>
-                    <p class="fs-6 mt-2">2. core.service.ts <span class="fw-medium d-block">Path:
-                        main/src/app/services/core.service.ts</span></p>
-                    <p class="fs-6 mt-2">3. customizer.component.html <span class="fw-medium d-block">Path:
-                        main/src/app/layouts/full/shared/customizer/customizer.component.html</span></p>
-                    <p class="fs-6 mt-2">4. customizer.component.ts <span class="fw-medium d-block">Path:
-                        main/src/app/layouts/full/shared/customizer/customizer.component.ts</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">1. Default settings</h4>
+              <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+              <h5 class="card-subtitle mt-2 text-muted mb-4">
+                For any change in colors :
+                <span class="text-dark font-medium">src/assets/scss/themecolors/_green_theme.scss</span>
+              </h5>
               <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
+                    <code class="language-js py-0">
+@use "sass:map";
+@use "@angular/material" as mat;
 
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'light',
-  sidenavOpened: true,
-  sidenavCollapsed: false,
-  boxed: true,
-  horizontal: false,
-  cardBorder: false,
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
- 
-                            </code>
-                        </pre>
-            </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">
-                2. How to set right-to-left (RTL) settings ?
-              </h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'rtl', // change is here
-  theme: 'light',
-  sidenavOpened: true,
-  sidenavCollapsed: false,
-  boxed: true,
-  horizontal: false,
-  cardBorder: false,
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
-
-                            </code>
-                        </pre>
-            </div>
-          </div>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">3. How to set Dark theme ?</h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'dark', // change is here
-  sidenavOpened: true,
-  sidenavCollapsed: false,
-  boxed: true,
-  horizontal: false,
-  cardBorder: false,
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
+html.green_theme {
+  --mat-sys-primary: rgb(22, 90, 80);
+  --mat-sys-primary-fixed-dim: rgba(22, 90, 80, 0.15);
+  --mat-sys-secondary: rgb(194 253 117);
+  --mat-sys-secondary-fixed-dim: rgba(194, 253, 117, 0.15);
+  --mat-sys-tertiary: rgb(194 253 117);
+}                       
                             </code>
                         </pre>
             </div>
           </div>
 
+
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title">4. How to change color theme ?</h4>
+              <h4 class="card-title">Light Theme Variables Settings</h4>
+              <h5 class="card-subtitle mt-2 text-muted mb-4">
+                For any change in colors :
+                <span class="text-dark font-medium">src/assets/scss/theme-variables/_light-theme-variables.scss</span>
+              </h5>
               <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'light',
-  sidenavOpened: true,
-  sidenavCollapsed: false,
-  boxed: true,
-  horizontal: false,
-  cardBorder: false,
-  // green_theme | yellow_theme | violet_theme | blue_theme | teal_theme | lavender_theme
-  activeTheme: 'yellow_theme', // change is here
-  language: 'en-us',
-  navPos: 'side',
-};
+                    <code class="language-js py-0">
+html.light-theme {
+  color-scheme: light;
+  --mat-sys-corner-small: 12px;
+  --mat-sys-corner-medium: 16px;
+  --mat-sys-background: #F5F5F5;
+  --mat-sys-surface-bright: #f2f6fa;
+  --mat-sys-surface: #fff;
+  --mat-sys-surface-container: #fff;
+  --mat-sys-surface-container-low: #fff;
+  --mat-sys-surface-container-lowest: #686e6b;
+  --mat-sys-on-background: #030E09;
+  --mat-sys-outline: #e5e6e6;
+  --mat-sys-outline-variant: #e5e6e6;
+  --mat-form-field-outlined-hover-outline-color: var(--mat-sys-primary);
+  --mat-checkbox-unselected-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-menu-item-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-button-toggle-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-option-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-option-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-slide-toggle-unselected-track-color: var(--mat-sys-primary-fixed-dim);
+  --mat-stepper-header-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-stepper-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-dialog-supporting-text-color: var(--mat-sys-on-background);
+  --mat-expansion-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+}                     
                             </code>
                         </pre>
             </div>
           </div>
 
+
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title">5. How to set Minisidebar ?</h4>
+              <h4 class="card-title">Dark Theme Variables Settings</h4>
+              <h5 class="card-subtitle mt-2 text-muted mb-4">
+                For any change in colors :
+                <span class="text-dark font-medium">src/assets/scss/theme-variables/_dark-theme-variables.scss</span>
+              </h5>
               <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'light', 
-  sidenavOpened: true,
-  sidenavCollapsed: true, // change is here
-  boxed: true,
-  horizontal: false,
-  cardBorder: false,
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
+                    <code class="language-js py-0">
+html.dark-theme {
+  color-scheme: dark;
+  --mat-sys-corner-small: 8px;
+  --mat-sys-corner-medium: 16px;
+  --mat-sys-background: #141a18;
+  --mat-sys-on-background: #fff;
+  --mat-sys-on-primary: #fff;
+  --mat-sys-surface-bright: #ffffff05;
+  --mat-sys-surface: #030e09;
+  --mat-sys-surface-container: #030e09;
+  --mat-sys-surface-container-low: #1f2a3d;
+  --mat-sys-outline-variant: #1c2622;
+  --mat-sys-outline: #1c2622;
+  --mat-form-field-outlined-hover-outline-color: var(--mat-sys-primary);
+  --mat-checkbox-unselected-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-menu-item-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-button-toggle-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-option-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-option-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-slide-toggle-unselected-track-color: var(--mat-sys-primary-fixed-dim);
+  --mat-stepper-header-focus-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-stepper-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  --mat-expansion-header-hover-state-layer-color: var(--mat-sys-primary-fixed-dim);
+  @include mat.card-overrides(
+    (
+      elevated-container-color: #030e09,
+      elevated-container-elevation: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
+      subtitle-text-color: rgba(255, 255, 255, 0.67),
+    )
+  );
+  @include mat.theme-overrides(
+    (
+      level1: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+      level2: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+      level3: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+    )
+  );
+}                    
                             </code>
                         </pre>
             </div>
           </div>
 
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">6. How to set Horizontal Layout ?</h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'light', 
-  sidenavOpened: true,
-  sidenavCollapsed: true, // change is here
-  boxed: true,
-  horizontal: true, // change is here
-  cardBorder: false,
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
-                            </code>
-                        </pre>
-            </div>
-          </div>
-
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title">7. How to set card Border ?</h4>
-              <pre>
-                            <code class="language-js py-0">
-// ----------------------------------------------------
-// File: src/app/config.ts
-// ----------------------------------------------------
-
-export const defaults: AppSettings = {
-  dir: 'ltr',
-  theme: 'light', 
-  sidenavOpened: true,
-  sidenavCollapsed: true, // change is here
-  boxed: true,
-  horizontal: false,
-  cardBorder: true, // change is here
-  activeTheme: 'green_theme',
-  language: 'en-us',
-  navPos: 'side',
-};
-                            </code>
-                        </pre>
-            </div>
-          </div>
 
           <!-- ============================================================== -->
           <!-- End Of Page Content -->
@@ -552,6 +450,8 @@ export const defaults: AppSettings = {
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
+      <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
@@ -574,6 +474,10 @@ export const defaults: AppSettings = {
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#navbar-example3",
+    });
   </script>
   <!-- End JS -->
 </body>
