@@ -205,7 +205,7 @@
                   </li>
                   <li class="sidebar-item">
                     <a
-                      class="nav-link sidebar-link d-flex align-items-center"
+                      class="nav-link sidebar-link d-flex align-items-center active"
                       href="docs-supabase.html"
                       ><i class="ti ti-database me-3 fs-4"></i>
                       Supabase &amp; Database
@@ -401,7 +401,7 @@
                     </li>
                     <li class="sidebar-item">
                       <a
-                        class="nav-link sidebar-link d-flex align-items-center"
+                        class="nav-link sidebar-link d-flex align-items-center active"
                         href="docs-supabase.html"
                         ><i class="ti ti-database me-3 fs-4"></i>
                         Supabase &amp; Database
@@ -415,7 +415,6 @@
                         Authentication
                       </a>
                     </li>
-
                     <li class="sidebar-item">
                       <a
                         class="nav-link sidebar-link d-flex align-items-center"
@@ -453,9 +452,6 @@
           <div
             class="navbar-header bg-white d-flex align-items-center justify-content-between p-3 fixed-top page-wrapper w-auto"
           >
-            <!-- ============================================================== -->
-            <!-- Toggle which is visible on mobile only -->
-            <!-- ============================================================== -->
             <!-- Logo icon -->
             <a href="index.html">
               <b class="logo-icon d-lg-none d-block">
@@ -490,74 +486,268 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Quick Start</h4>
+            <h4 class="mb-4 pb-2">Supabase &amp; Database</h4>
+
+            <!-- Overview -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">1. Requirements</h4>
-                <h5 class="card-subtitle mt-2 text-muted">
-                  Before proceeding, you need to have the latest stable
-                  <a href="https://nodejs.org/">node.js</a>
-                </h5>
-                <h5 class="mt-4 font-medium">Recommended environment:</h5>
-                <ul class="text-muted">
-                  <li class="font-16">node js 20+</li>
-                  <li class="font-16">npm js 10+</li>
+                <h4 class="card-title">Overview</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  ShadcnDashboard uses <strong>Supabase</strong> as its backend platform (authentication + hosted PostgreSQL)
+                  and <strong>Prisma ORM</strong> to interact with the database. Two separate clients handle different concerns:
+                </p>
+                <ul class="text-muted mt-3">
+                  <li class="font-16 py-1">
+                    <strong>Supabase client</strong> — manages authentication (sign-up, sign-in, OAuth, session tokens).
+                  </li>
+                  <li class="font-16 py-1">
+                    <strong>Prisma client</strong> — handles all database queries (profiles, orders, products, permissions).
+                  </li>
+                  <li class="font-16 py-1">
+                    <strong>Supabase admin client</strong> — server-side only, bypasses Row Level Security for privileged operations.
+                  </li>
                 </ul>
               </div>
             </div>
+
+            <!-- Required Packages -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">2. Installation</h4>
-                <h5 class="card-subtitle mt-2 text-muted">
-                  Open package folder and install its dependencies. We
-                  recommended yarn or npm.
-                </h5>
+                <h4 class="card-title">Required Packages</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  These packages are already included in the template. If you are starting from scratch or adding
+                  Supabase + Prisma to an existing project, install them with:
+                </p>
+                <pre class="mt-4"><code class="language-sh py-0">
+npm install @supabase/supabase-js @prisma/client @prisma/adapter-pg prisma dotenv tsx
+                </code></pre>
 
-                <div class="table-responsive">
-                  <table
-                    class="table table-striped border mt-4 align-middle table-bordered"
-                  >
+                <div class="table-responsive mt-4">
+                  <table class="table table-striped border align-middle table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">Script</th>
-                        <th scope="col">Project Folder</th>
+                        <th scope="col">Package</th>
+                        <th scope="col">Version</th>
+                        <th scope="col">Purpose</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">
-                          <div class="d-flex align-items-center">
-                            <h5 class="mb-0">Install npm</h5>
-                          </div>
-                        </th>
-                        <td>
-                          <pre class="mt-0">
-                                      <code class="language-sh py-0">
-cd project-folder
-npm install
-                                      </code>
-                                  </pre>
-                        </td>
+                        <td><code>@supabase/supabase-js</code></td>
+                        <td>^2.106.2</td>
+                        <td>Supabase client for auth and realtime</td>
                       </tr>
                       <tr>
-                        <th scope="row"><h5 class="mb-0">Start</h5></th>
-                        <td>
-                          <pre class="mt-0">
-                                      <code class="language-sh py-0">
-npm run dev or yarn run dev
-                                      </code>
-                                    </pre>
-                        </td>
+                        <td><code>@prisma/client</code></td>
+                        <td>^7.8.0</td>
+                        <td>Auto-generated type-safe database client</td>
                       </tr>
                       <tr>
-                        <th scope="row"><h5 class="mb-0">Build</h5></th>
-                        <td>
-                          <pre class="mt-0">
-                                      <code class="language-sh py-0">
-npm run build or yarn build
-                                      </code>
-                                    </pre>
-                        </td>
+                        <td><code>@prisma/adapter-pg</code></td>
+                        <td>^7.8.0</td>
+                        <td>PostgreSQL adapter with connection pooling support</td>
+                      </tr>
+                      <tr>
+                        <td><code>prisma</code></td>
+                        <td>^7.8.0</td>
+                        <td>Prisma CLI — migrations, schema, codegen (devDependency)</td>
+                      </tr>
+                      <tr>
+                        <td><code>dotenv</code></td>
+                        <td>^17.4.2</td>
+                        <td>Loads <code>.env</code> variables for scripts like the seed runner</td>
+                      </tr>
+                      <tr>
+                        <td><code>tsx</code></td>
+                        <td>latest</td>
+                        <td>Runs TypeScript files directly (used by the seed script)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h5 class="mt-4 font-medium">package.json scripts</h5>
+                <p class="text-muted mt-2 lh-base">
+                  The template includes the following useful scripts in <code>package.json</code>:
+                </p>
+                <pre class="mt-3"><code class="language-sh py-0">
+"scripts": {
+  "dev":   "next dev",
+  "build": "prisma generate && next build",
+  "start": "next start",
+  "seed":  "tsx prisma/seed-all.ts"
+}
+                </code></pre>
+                <p class="text-muted mt-3 lh-base">
+                  Notice that <code>build</code> automatically runs <code>prisma generate</code> before building —
+                  this ensures the Prisma client is always up to date when deploying.
+                  You can also run the seed script with the shorthand:
+                </p>
+                <pre class="mt-3"><code class="language-sh py-0">
+npm run seed
+                </code></pre>
+              </div>
+            </div>
+
+            <!-- Step 1: Create a Supabase Project -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">1. Create a Supabase Project</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  If you don't have a Supabase project yet, follow these steps:
+                </p>
+                <ol class="text-muted mt-3">
+                  <li class="font-16 py-1">Go to <strong>supabase.com</strong> and sign in.</li>
+                  <li class="font-16 py-1">Click <strong>New Project</strong> and fill in the project name, database password, and region.</li>
+                  <li class="font-16 py-1">Once the project is ready, go to <strong>Project Settings → API</strong> to find your keys.</li>
+                  <li class="font-16 py-1">Go to <strong>Project Settings → Database</strong> to find your connection strings.</li>
+                </ol>
+                <p class="text-muted mt-3 lh-base">
+                  You will need the following values for your <code>.env</code> file:
+                </p>
+                <ul class="text-muted mt-2">
+                  <li class="font-16 py-1"><code>Project URL</code> → <code>NEXT_PUBLIC_SUPABASE_URL</code></li>
+                  <li class="font-16 py-1"><code>anon / public key</code> → <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code></li>
+                  <li class="font-16 py-1"><code>service_role key</code> → <code>SUPABASE_SERVICE_ROLE_KEY</code></li>
+                  <li class="font-16 py-1"><code>Connection string (Transaction mode)</code> → <code>DATABASE_URL</code></li>
+                  <li class="font-16 py-1"><code>Connection string (Session mode / direct)</code> → <code>DIRECT_URL</code></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Step 2: Configure Environment Variables -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">2. Configure Environment Variables</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  Copy <code>.env.example</code> to <code>.env</code> at the root of the project and fill in your values:
+                </p>
+                <pre class="mt-4"><code class="language-sh py-0">
+cp .env.example .env
+                </code></pre>
+                <p class="text-muted mt-3 lh-base">
+                  Then open <code>.env</code> and replace the placeholder values:
+                </p>
+                <pre class="mt-3"><code class="language-sh py-0">
+# Toggle demo mode — set to false to use real database data
+NEXT_PUBLIC_DEMO_MODE=false
+
+# Supabase — client-side (safe to expose)
+NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key"
+
+# OAuth providers (optional)
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+GITHUB_CLIENT_ID="your-github-client-id"
+GITHUB_CLIENT_SECRET="your-github-client-secret"
+
+# Database — used by Prisma (Transaction mode / pgbouncer)
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:6543/DB?pgbouncer=true"
+
+# Database — direct connection used by Prisma migrations
+DIRECT_URL="postgresql://USER:PASSWORD@HOST:5432/DB"
+
+# Supabase — server-side secret (never expose to the browser)
+SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
+                </code></pre>
+                <div class="alert alert-warning mt-4" role="alert">
+                  <strong>Important:</strong> Never commit your <code>.env</code> file to version control.
+                  The <code>SUPABASE_SERVICE_ROLE_KEY</code> bypasses Row Level Security — keep it server-side only.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Database Clients -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">3. Database Clients</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The project exposes three pre-configured clients inside the <code>lib/</code> folder.
+                  Import the right one depending on context.
+                </p>
+
+                <h5 class="mt-4 font-medium">lib/supabase.ts — Client-side Supabase</h5>
+                <p class="text-muted mt-2 lh-base">
+                  Used in React components and client-side code for authentication operations (sign in, sign up, OAuth).
+                  Respects Row Level Security (RLS).
+                </p>
+                <pre class="mt-3"><code class="language-typescript py-0">
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+export const supabase = createClient(supabaseUrl, supabaseKey)
+                </code></pre>
+
+                <h5 class="mt-4 font-medium">lib/supabase-server.ts — Server-side Admin Client</h5>
+                <p class="text-muted mt-2 lh-base">
+                  Used only in API routes and server components. Uses the service role key so it bypasses RLS.
+                  <strong>Never import this in client components.</strong>
+                </p>
+                <pre class="mt-3"><code class="language-typescript py-0">
+import { createClient } from "@supabase/supabase-js";
+
+// Server-side only — uses service role key (bypasses Row Level Security)
+export const supabaseAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
+                </code></pre>
+
+                <h5 class="mt-4 font-medium">lib/prisma.ts — Prisma Client</h5>
+                <p class="text-muted mt-2 lh-base">
+                  Singleton Prisma client using the <code>@prisma/adapter-pg</code> adapter for connection pooling
+                  via <code>DATABASE_URL</code> (pgbouncer / Transaction mode). Use this for all database queries.
+                </p>
+                <pre class="mt-3"><code class="language-typescript py-0">
+import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "./generated/prisma/client";
+
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
+};
+
+function createClient() {
+  const connectionString = process.env.DATABASE_URL!;
+  const adapter = new PrismaPg({ connectionString });
+  return new PrismaClient({ adapter, log: ["error"] });
+}
+
+export const prisma = globalForPrisma.prisma ?? createClient();
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+                </code></pre>
+
+                <div class="table-responsive mt-4">
+                  <table class="table table-striped border align-middle table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">File</th>
+                        <th scope="col">Export</th>
+                        <th scope="col">Use In</th>
+                        <th scope="col">Purpose</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>lib/supabase.ts</code></td>
+                        <td><code>supabase</code></td>
+                        <td>Client components</td>
+                        <td>Auth operations, respects RLS</td>
+                      </tr>
+                      <tr>
+                        <td><code>lib/supabase-server.ts</code></td>
+                        <td><code>supabaseAdmin</code></td>
+                        <td>API routes, server only</td>
+                        <td>Privileged ops, bypasses RLS</td>
+                      </tr>
+                      <tr>
+                        <td><code>lib/prisma.ts</code></td>
+                        <td><code>prisma</code></td>
+                        <td>API routes, server only</td>
+                        <td>All database queries via ORM</td>
                       </tr>
                     </tbody>
                   </table>
@@ -565,58 +755,290 @@ npm run build or yarn build
               </div>
             </div>
 
+            <!-- Step 4: Prisma Schema -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">3. Theming</h4>
-                <h5 class="card-subtitle mt-2 text-muted">
-                  shadcndashboard offers both light and dark style options, with
-                  the light style set as the default.
-                </h5>
+                <h4 class="card-title">4. Prisma Schema</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The database schema is defined in <code>prisma/schema.prisma</code>.
+                  It contains five models and two enums:
+                </p>
 
-                <p class="mt-4 card-subtitle text-muted">
-                  By Default we are giving 2 color themes, you just need to
-                  change attribute of <code>activeMode</code> in
-                  <code>config.ts / config.js</code> file :
+                <div class="table-responsive mt-4">
+                  <table class="table table-striped border align-middle table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Model</th>
+                        <th scope="col">Table</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>Profile</code></td>
+                        <td><code>profiles</code></td>
+                        <td>User profiles — <code>id</code> matches Supabase <code>auth.users</code> UUID</td>
+                      </tr>
+                      <tr>
+                        <td><code>Order</code></td>
+                        <td><code>orders</code></td>
+                        <td>Purchase orders linked to a Profile and a Product</td>
+                      </tr>
+                      <tr>
+                        <td><code>Product</code></td>
+                        <td><code>products</code></td>
+                        <td>Product catalog with price and stock</td>
+                      </tr>
+                      <tr>
+                        <td><code>Permission</code></td>
+                        <td><code>permissions</code></td>
+                        <td>Named permission definitions</td>
+                      </tr>
+                      <tr>
+                        <td><code>RoleDefinition</code></td>
+                        <td><code>role_definitions</code></td>
+                        <td>Role hierarchy with assigned permission names</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h5 class="mt-4 font-medium">Role Enum</h5>
+                <p class="text-muted mt-2 lh-base">
+                  Each profile is assigned one of the following roles:
                 </p>
                 <div
                   class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2"
                 >
-                  <span class="border p-1 rounded px-2">light</span>
-                  <span class="border p-1 rounded px-2">dark</span>
+                  <span class="border p-1 rounded px-2">USER</span>
+                  <span class="border p-1 rounded px-2">ADMIN</span>
+                  <span class="border p-1 rounded px-2">EDITOR</span>
+                  <span class="border p-1 rounded px-2">COMMENTOR</span>
                 </div>
 
-                <pre class="mt-4">
-                            <code class="language-sh py-0">
-activeMode: "light",
-                            </code>
-                        </pre>
+                <h5 class="mt-4 font-medium">Full Schema</h5>
+                <pre class="mt-3"><code class="language-typescript py-0">
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Profile {
+  id        String   @id           // same as Supabase auth.users id (UUID)
+  email     String   @unique
+  name      String?
+  role      Role     @default(USER)
+  orders    Order[]
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("profiles")
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  productId    String      @map("product_id")
+  product      Product     @relation(fields: [productId], references: [id])
+  price        Float
+  status       OrderStatus @default(PENDING)
+  purchaseDate DateTime    @default(now()) @map("purchase_date")
+  expireDate   DateTime    @map("expire_date")
+  userId       String      @map("user_id")
+  user         Profile     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime    @default(now()) @map("created_at")
+  review       Int?
+
+  @@map("orders")
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  price       Float
+  stock       Int      @default(0)
+  image       String?
+  orders      Order[]
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("products")
+}
+
+model Permission {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("permissions")
+}
+
+model RoleDefinition {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  hierarchy   Int
+  permissions String[]
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("role_definitions")
+}
+
+enum Role {
+  USER
+  ADMIN
+  COMMENTOR
+  EDITOR
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  COMPLETE
+  CANCELLED
+}
+                </code></pre>
               </div>
             </div>
 
+            <!-- Step 5: Run Migrations -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">4. RTL Supported</h4>
-                <h5 class="card-subtitle mt-2 text-muted">
-                  shadcndashboard comes with built-in RTL support by default.
-                </h5>
+                <h4 class="card-title">5. Run Migrations</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  After configuring your <code>.env</code> file, push the schema to your Supabase database.
+                  Prisma uses <code>DIRECT_URL</code> (plain Postgres port, not pgbouncer) for migrations.
+                </p>
 
-                <p class="mt-4 card-subtitle text-muted">
-                  To enable RTL direction, add
-                  <code>activeDir: "rtl"</code> attribute in the
-                  <code>config.ts / config.js</code> file.
+                <div class="table-responsive mt-4">
+                  <table class="table table-striped border align-middle table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Command</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><h5 class="mb-0">Generate client</h5></th>
+                        <td>
+                          <pre class="mt-0"><code class="language-sh py-0">
+npx prisma generate
+                          </code></pre>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><h5 class="mb-0">Push schema (dev)</h5></th>
+                        <td>
+                          <pre class="mt-0"><code class="language-sh py-0">
+npx prisma db push
+                          </code></pre>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><h5 class="mb-0">Create migration</h5></th>
+                        <td>
+                          <pre class="mt-0"><code class="language-sh py-0">
+npx prisma migrate dev --name init
+                          </code></pre>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><h5 class="mb-0">Deploy migration (production)</h5></th>
+                        <td>
+                          <pre class="mt-0"><code class="language-sh py-0">
+npx prisma migrate deploy
+                          </code></pre>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="alert alert-info mt-4" role="alert">
+                  <strong>Note:</strong> Use <code>prisma db push</code> for quick prototyping during development.
+                  Use <code>prisma migrate dev</code> when you want a tracked migration history for production.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6: Seed the Database -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">6. Seed the Database</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The project includes a seed script at <code>prisma/seed-all.ts</code> that loads sample data
+                  from <code>data/data.json</code> and inserts it into the database using idempotent <code>upsert</code> operations.
+                  Seeding order matters due to foreign key dependencies:
+                </p>
+                <ol class="text-muted mt-3">
+                  <li class="font-16 py-1">Products</li>
+                  <li class="font-16 py-1">Profiles</li>
+                  <li class="font-16 py-1">Permissions</li>
+                  <li class="font-16 py-1">Role Definitions</li>
+                  <li class="font-16 py-1">Orders</li>
+                </ol>
+                <p class="text-muted mt-3 lh-base">Run the seed script with:</p>
+                <pre class="mt-3"><code class="language-sh py-0">
+npx tsx prisma/seed-all.ts
+                </code></pre>
+                <div class="alert alert-warning mt-4" role="alert">
+                  <strong>Important:</strong> Profiles are linked to Supabase <code>auth.users</code> by UUID.
+                  Make sure the user accounts exist in Supabase Auth before seeding, or create them via the
+                  Supabase dashboard so the UUIDs match.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 7: Demo Mode -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">7. Demo Mode</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The template ships with a <strong>Demo Mode</strong> that lets you explore the dashboard without connecting
+                  to a real Supabase project. In demo mode, mock credentials are pre-filled and no real database calls are made.
+                </p>
+                <p class="text-muted mt-3 lh-base">
+                  To toggle demo mode, set the following variable in your <code>.env</code> file:
                 </p>
                 <div
                   class="d-inline-flex align-items-center gap-4 border px-4 py-3 rounded-3 mt-2"
                 >
-                  <span class="border p-1 rounded px-2">ltr</span>
-                  <span class="border p-1 rounded px-2">rtl</span>
+                  <span class="border p-1 rounded px-2">true</span>
+                  <span class="border p-1 rounded px-2">false</span>
                 </div>
-
-                <pre class="mt-4">
-                            <code class="language-sh py-0">
-activeDir: "rtl",
-                            </code>
-                        </pre>
+                <pre class="mt-4"><code class="language-sh py-0">
+# Set to false when connecting to your own Supabase project
+NEXT_PUBLIC_DEMO_MODE=true
+                </code></pre>
+                <p class="text-muted mt-3 lh-base">
+                  Demo credentials when <code>NEXT_PUBLIC_DEMO_MODE=true</code>:
+                </p>
+                <div class="table-responsive mt-3">
+                  <table class="table table-striped border align-middle table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Role</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>User</td>
+                        <td><code>user@shadcn.com</code></td>
+                        <td><code>user@123</code></td>
+                      </tr>
+                      <tr>
+                        <td>Admin</td>
+                        <td><code>admin@shadcn.com</code></td>
+                        <td><code>admin@123</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
