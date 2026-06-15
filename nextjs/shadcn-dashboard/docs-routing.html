@@ -226,7 +226,34 @@
                       ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                     >
                   </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -447,7 +474,34 @@
                         ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                       >
                     </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -633,6 +687,105 @@
               </div>
             </div>
 
+            <!-- React JS Section -->
+            <div id="react-section" class="mt-5">
+              <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+                <i class="ti ti-brand-react text-primary fs-5"></i> React JS — Routing
+              </h4>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">How Routing Works</h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    The React JS version uses <strong>React Router v7</strong> with <code>createBrowserRouter</code>.
+                    All routes are defined in one file: <code>src/routes/Router.tsx</code>.
+                    Unlike Next.js, there is no file-based routing — every page must be manually registered.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Router Setup — <code>src/routes/Router.tsx</code></h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    Routes are grouped by layout: <code>FullLayout</code> (sidebar dashboard) and <code>BlankLayout</code> (auth pages without sidebar).
+                  </p>
+                  <pre class="mt-3"><code class="language-javascript">import { lazy } from 'react';
+import { Navigate, createBrowserRouter } from 'react-router';
+import Loadable from '../layouts/full/shared/loadable/Loadable';
+
+const FullLayout  = Loadable(lazy(() => import('../layouts/full/FullLayout')));
+const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
+
+const MyPage = Loadable(lazy(() => import('../views/my-feature/MyPage')));
+
+const Router = [
+  {
+    path: '/',
+    element: &lt;FullLayout /&gt;,
+    children: [
+      { path: '/my-feature', element: &lt;MyPage /&gt; },
+    ],
+  },
+  {
+    path: '/',
+    element: &lt;BlankLayout /&gt;,
+    children: [
+      { path: '/auth/login', element: &lt;Login /&gt; },
+    ],
+  },
+];
+
+const router = createBrowserRouter(Router);
+export default router;</code></pre>
+                </div>
+              </div>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Add Page to Sidebar</h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    Open <code>src/layouts/full/vertical/sidebar/sidebaritems.ts</code> and add a new item.
+                    The <code>url</code> must match the path registered in <code>Router.tsx</code>.
+                  </p>
+                  <pre class="mt-3"><code class="language-javascript">// src/layouts/full/vertical/sidebar/sidebaritems.ts
+import { uniqueId } from 'lodash';
+import { MyIcon } from 'lucide-react';
+
+const SidebarContent: MenuItem[] = [
+  {
+    heading: 'My Section',
+    items: [
+      {
+        id: uniqueId(),
+        name: 'My Page',
+        icon: MyIcon,
+        url: '/my-feature',   // matches Router.tsx path
+      },
+    ],
+  },
+];</code></pre>
+                </div>
+              </div>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Navigating Between Pages</h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    Use React Router's <code>Link</code> or <code>useNavigate</code> — not a plain <code>&lt;a&gt;</code> tag which causes full page reloads.
+                  </p>
+                  <pre class="mt-3"><code class="language-javascript">import { Link, useNavigate } from 'react-router';
+
+// Declarative
+&lt;Link to="/my-feature"&gt;Go to My Page&lt;/Link&gt;
+
+// Programmatic
+const navigate = useNavigate();
+navigate('/my-feature');</code></pre>
+                </div>
+              </div>
+            </div>
+
             <!-- ============================================================== -->
             <!-- End Of Page Content -->
             <!-- ============================================================== -->
@@ -667,6 +820,7 @@
     <!-- End JS -->
   </body>
 </html>
+
 
 
 

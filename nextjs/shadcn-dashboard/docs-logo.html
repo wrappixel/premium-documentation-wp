@@ -226,7 +226,34 @@
                       ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                     >
                   </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -446,7 +473,34 @@
                         ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                       >
                     </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -610,6 +664,62 @@ export default FullLogo;
                         </pre>
               </div>
             </div>
+            <!-- React JS Section -->
+            <div id="react-section" class="mt-5">
+              <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+                <i class="ti ti-brand-react text-primary fs-5"></i> React JS — Change Logo
+              </h4>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Change Logo</h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    To change the logo in the React JS version, edit the file:
+                    <code>src/layouts/full/shared/logo/FullLogo.tsx</code>
+                  </p>
+                  <div class="border-2 border-start border-primary bg-light rounded p-3 mt-3">
+                    Put your logo image inside <code>src/assets/images/logos/</code> folder.
+                  </div>
+                  <pre class="mt-3"><code class="language-javascript">// src/layouts/full/shared/logo/FullLogo.tsx
+import { Link } from 'react-router';
+import Logo from 'src/assets/images/logos/darklogo.svg';
+import Logowhite from 'src/assets/images/logos/whitelogo.svg';
+
+const FullLogo = () => {
+  return (
+    &lt;Link to={'/'} className="max-w-[40px] block lg:max-w-[120px] overflow-hidden"&gt;
+      {/* Dark mode logo */}
+      &lt;img src={Logo} alt='logo' width={100} height={32}
+        className='block dark:hidden max-w-[120px] rtl:scale-x-[-1]' /&gt;
+      {/* Light mode logo */}
+      &lt;img src={Logowhite} alt='logo' width={100} height={32}
+        className='hidden dark:block max-w-[120px] rtl:scale-x-[-1]' /&gt;
+    &lt;/Link&gt;
+  );
+};
+
+export default FullLogo;</code></pre>
+                </div>
+              </div>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Key Difference vs Next.js</h4>
+                  <div class="table-responsive mt-3">
+                    <table class="table table-striped border align-middle table-bordered">
+                      <thead><tr><th>Next.js</th><th>React JS</th></tr></thead>
+                      <tbody>
+                        <tr><td>Uses <code>next/image</code> (optimized)</td><td>Uses plain <code>&lt;img&gt;</code> tag with SVG imports</td></tr>
+                        <tr><td>Uses <code>next/link</code></td><td>Uses <code>Link</code> from <code>react-router</code></td></tr>
+                        <tr><td><code>'use client'</code> directive required</td><td>Not needed — all components are client-side</td></tr>
+                        <tr><td>Logo in <code>public/images/logos/</code></td><td>Logo in <code>src/assets/images/logos/</code></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- ============================================================== -->
             <!-- End Of Page Content -->
             <!-- ============================================================== -->
@@ -659,6 +769,7 @@ export default FullLogo;
     <!-- End JS -->
   </body>
 </html>
+
 
 
 

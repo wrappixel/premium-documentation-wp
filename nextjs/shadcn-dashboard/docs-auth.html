@@ -161,7 +161,34 @@
                   <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                       class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
                 </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -329,7 +356,34 @@
                     <a class="nav-link sidebar-link d-flex align-items-center" href="docs-change-log.html"><i
                         class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
                   </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -811,6 +865,110 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY 
           <!-- End Page wrapper  -->
           <!-- ============================================================== -->
         </div>
+        <!-- React JS Section -->
+        <div id="react-section" class="mt-5 px-4">
+          <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+            <i class="ti ti-brand-react text-primary fs-5"></i> React JS — Authentication
+          </h4>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">How Auth Works</h4>
+              <p class="card-subtitle mt-2 text-muted lh-base">
+                The React JS version uses <strong>client-side only authentication</strong>. There is no server session,
+                no NextAuth, and no server middleware. Auth state is managed via React Context or stored in
+                <code>localStorage</code>. Auth pages are wrapped in <code>BlankLayout</code> (no sidebar).
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Auth Page Structure</h4>
+              <p class="card-subtitle mt-2 text-muted lh-base">
+                Auth pages live in <code>src/views/auth/</code> and are registered in <code>Router.tsx</code> under <code>BlankLayout</code>.
+              </p>
+              <pre class="mt-3"><code class="language-javascript">// src/routes/Router.tsx
+import { BlankLayout } from '../layouts/blank/BlankLayout';
+import Login from '../views/auth/auth1/login';
+import Register from '../views/auth/auth1/register';
+
+{
+  path: '/',
+  element: &lt;BlankLayout /&gt;,
+  children: [
+    { path: '/auth/auth1/login',    element: &lt;Login /&gt; },
+    { path: '/auth/auth1/register', element: &lt;Register /&gt; },
+    { path: '/auth/auth1/forgot-password', element: &lt;ForgotPassword /&gt; },
+    { path: '/auth/auth2/login',    element: &lt;Login2 /&gt; },
+  ],
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Available Auth Page Variants</h4>
+              <div class="table-responsive mt-3">
+                <table class="table table-striped border align-middle table-bordered">
+                  <thead><tr><th>Route</th><th>File</th><th>Layout</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>/auth/auth1/login</code></td><td><code>src/views/auth/auth1/login/index.tsx</code></td><td>Style 1</td></tr>
+                    <tr><td><code>/auth/auth2/login</code></td><td><code>src/views/auth/auth2/login/index.tsx</code></td><td>Style 2</td></tr>
+                    <tr><td><code>/auth/auth1/register</code></td><td><code>src/views/auth/auth1/register/index.tsx</code></td><td>Style 1</td></tr>
+                    <tr><td><code>/auth/auth1/forgot-password</code></td><td><code>src/views/auth/auth1/forgot-password/index.tsx</code></td><td>Style 1</td></tr>
+                    <tr><td><code>/auth/auth1/two-steps</code></td><td><code>src/views/auth/auth1/two-steps/index.tsx</code></td><td>Style 1</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Shared Auth Form Components</h4>
+              <p class="card-subtitle mt-2 text-muted lh-base">
+                The actual form logic (inputs, validation, submit) is in shared components at
+                <code>src/views/authentication/authforms/</code>. These are reused by both auth1 and auth2 layouts.
+              </p>
+              <pre class="mt-3"><code class="language-javascript">// src/views/authentication/authforms/AuthLogin.tsx
+import AuthLogin from 'src/views/authentication/authforms/AuthLogin';
+
+const Login = () => {
+  return (
+    &lt;section className="bg-background min-h-screen flex items-center justify-center"&gt;
+      {/* Left branding panel */}
+      &lt;div className="hidden lg:flex lg:w-lg dark"&gt;
+        ...branding content...
+      &lt;/div&gt;
+      {/* Right form panel */}
+      &lt;div className="flex flex-col justify-center p-6 lg:p-10 w-full lg:max-w-sm"&gt;
+        &lt;AuthLogin /&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  );
+};</code></pre>
+            </div>
+          </div>
+
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">Key Difference vs Next.js</h4>
+              <div class="table-responsive mt-3">
+                <table class="table table-striped border align-middle table-bordered">
+                  <thead><tr><th>Next.js</th><th>React JS</th></tr></thead>
+                  <tbody>
+                    <tr><td>Server-side sessions possible</td><td>Client-side only</td></tr>
+                    <tr><td>Can use NextAuth / Auth.js</td><td>Use custom context or a library like <code>@supabase/auth-ui-react</code></td></tr>
+                    <tr><td>Middleware for route protection</td><td>Route guard component / conditional redirect in Router</td></tr>
+                    <tr><td>Auth in <code>app/auth/</code></td><td>Auth in <code>src/views/auth/</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- ============================================================== -->
         <!-- End Of Page Content -->
         <!-- ============================================================== -->
@@ -862,6 +1020,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<span class="hljs-string">"Your SUPABASE_ANON_KEY 
 </body>
 
 </html>
+
 
 
 

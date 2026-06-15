@@ -166,7 +166,34 @@
                                         href="docs-change-log.html"><i
                                             class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
                                 </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -344,7 +371,34 @@
                                             href="docs-change-log.html"><i
                                                 class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a>
                                     </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -502,6 +556,115 @@ fetch(url).then(<span class="hljs-function">(<span class="hljs-params">res</span
                     <!-- End Page wrapper  -->
                     <!-- ============================================================== -->
                 </div>
+                <!-- React JS Section -->
+                <div id="react-section" class="mt-5">
+                  <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+                    <i class="ti ti-brand-react text-primary fs-5"></i> React JS — API Calls
+                  </h4>
+
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">How API Calls Work in React JS</h4>
+                      <p class="card-subtitle mt-2 text-muted lh-base">
+                        The React JS version uses <strong>MSW (Mock Service Worker)</strong> to intercept HTTP requests in the browser.
+                        There are no server-side <code>route.ts</code> files. All API responses are mocked via handlers defined in
+                        <code>src/api/mocks/handlers/</code>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">MSW Setup — <code>src/api/mocks/browser.ts</code></h4>
+                      <p class="card-subtitle mt-2 text-muted lh-base">
+                        MSW is started before the React app renders in <code>src/main.tsx</code>.
+                        The worker intercepts all fetch/XHR requests matching registered handlers.
+                      </p>
+                      <pre class="mt-3"><code class="language-javascript">// src/api/mocks/browser.ts
+import { setupWorker } from 'msw/browser';
+import { mockHandlers } from './handlers/mock-handlers';
+
+export const worker = setupWorker(...mockHandlers);</code></pre>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">Add a New API Handler</h4>
+                      <p class="card-subtitle mt-2 text-muted lh-base">
+                        Create your handler file in <code>src/api/your-feature/</code> using MSW's <code>http</code> helper,
+                        then register it in <code>mock-handlers.ts</code>.
+                      </p>
+                      <pre class="mt-3"><code class="language-javascript">// src/api/products/productsdata.ts
+import { http, HttpResponse } from 'msw';
+
+export const ProductHandlers = [
+  http.get('/api/products', () => {
+    return HttpResponse.json([
+      { id: 1, name: 'Product A', price: 100 },
+      { id: 2, name: 'Product B', price: 200 },
+    ]);
+  }),
+
+  http.post('/api/products', async ({ request }) => {
+    const body = await request.json();
+    return HttpResponse.json({ id: 3, ...body }, { status: 201 });
+  }),
+];</code></pre>
+                      <p class="mt-3 text-muted">Then register in <code>src/api/mocks/handlers/mock-handlers.ts</code>:</p>
+                      <pre class="mt-3"><code class="language-javascript">import { ProductHandlers } from 'src/api/products/productsdata';
+
+export const mockHandlers = [
+  ...ProductHandlers,
+  // other handlers...
+];</code></pre>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">Calling the API from a Component</h4>
+                      <p class="card-subtitle mt-2 text-muted lh-base">
+                        Use standard <code>fetch</code> or <code>axios</code> — MSW intercepts the request automatically.
+                      </p>
+                      <pre class="mt-3"><code class="language-javascript">import { useEffect, useState } from 'react';
+
+export default function ProductList() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
+
+  return (
+    &lt;ul&gt;
+      {products.map(p => &lt;li key={p.id}&gt;{p.name}&lt;/li&gt;)}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">Key Difference vs Next.js</h4>
+                      <div class="table-responsive mt-3">
+                        <table class="table table-striped border align-middle table-bordered">
+                          <thead><tr><th>Next.js</th><th>React JS</th></tr></thead>
+                          <tbody>
+                            <tr><td>Real server API — <code>app/api/**/route.ts</code></td><td>Browser mock — <code>src/api/mocks/</code> via MSW</td></tr>
+                            <tr><td>Runs on Node.js server</td><td>Runs in browser Service Worker</td></tr>
+                            <tr><td>Works in production</td><td>MSW is for development/demo only</td></tr>
+                            <tr><td>Uses <code>NextResponse</code></td><td>Uses <code>HttpResponse</code> from MSW</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- ============================================================== -->
                 <!-- End Of Page Content -->
                 <!-- ============================================================== -->
@@ -553,6 +716,7 @@ fetch(url).then(<span class="hljs-function">(<span class="hljs-params">res</span
 </body>
 
 </html>
+
 
 
 

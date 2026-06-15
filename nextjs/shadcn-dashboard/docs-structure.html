@@ -226,7 +226,34 @@
                       ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                     >
                   </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -447,7 +474,34 @@
                         ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
                       >
                     </li>
-                  <!--Supabase Boilerplate-->
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">SUPABASE BOILERPLATE</span>
                   </li>
@@ -621,6 +675,81 @@
             </div>
           </div>
         </div>
+            <!-- React JS Section -->
+            <div id="react-section" class="mt-5">
+              <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+                <i class="ti ti-brand-react text-primary fs-5"></i> React JS — Project Structure
+              </h4>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Folder Structure</h4>
+                  <p class="card-subtitle mt-2 text-muted lh-base">
+                    The React JS version uses a standard <code>src/</code>-based structure (Vite convention) instead of Next.js <code>app/</code> directory.
+                    There are no server components, API routes, or <code>page.tsx</code> files.
+                  </p>
+                  <pre class="mt-3"><code class="language-bash">ReactJS/main/
+├── src/
+│   ├── api/                  # MSW mock API handlers
+│   │   └── mocks/
+│   │       ├── browser.ts    # MSW worker setup
+│   │       └── handlers/     # Per-feature mock handlers
+│   ├── assets/               # Static images & SVGs
+│   ├── components/           # Shared UI components (shadcn/ui)
+│   │   └── ui/               # Button, Card, Input, etc.
+│   ├── context/              # React context providers
+│   │   ├── CustomizerContext.tsx
+│   │   └── shadcntheme/ThemeContext.tsx
+│   ├── css/                  # Global CSS & theme files
+│   ├── hooks/                # Custom React hooks
+│   ├── layouts/              # App layout wrappers
+│   │   ├── full/FullLayout.tsx
+│   │   └── blank/BlankLayout.tsx
+│   ├── lib/                  # Utility helpers (cn, utils)
+│   ├── routes/
+│   │   └── Router.tsx        # React Router v7 config
+│   ├── types/                # TypeScript interfaces
+│   ├── utils/                # i18n, helpers
+│   ├── views/                # Page components (by feature)
+│   │   ├── apps/
+│   │   ├── auth/
+│   │   ├── dashboards/
+│   │   ├── charts/
+│   │   ├── forms/
+│   │   └── theme-pages/
+│   ├── App.tsx               # Root component
+│   └── main.tsx              # Entry point
+├── index.html                # Vite HTML entry
+├── vite.config.ts
+└── package.json</code></pre>
+                </div>
+              </div>
+
+              <div class="mt-4 card">
+                <div class="card-body">
+                  <h4 class="card-title">Key Differences vs Next.js</h4>
+                  <div class="table-responsive mt-3">
+                    <table class="table table-striped border align-middle table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Next.js</th>
+                          <th>React JS</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><code>app/</code> directory</td><td><code>src/views/</code> for pages</td></tr>
+                        <tr><td><code>app/api/</code> — server API routes</td><td><code>src/api/mocks/</code> — MSW mock handlers</td></tr>
+                        <tr><td><code>app/layout.tsx</code> — root layout</td><td><code>src/layouts/full/FullLayout.tsx</code></td></tr>
+                        <tr><td><code>page.tsx</code> per route</td><td>Component imported in <code>Router.tsx</code></td></tr>
+                        <tr><td>No explicit router config</td><td><code>src/routes/Router.tsx</code> (React Router v7)</td></tr>
+                        <tr><td><code>next.config.ts</code></td><td><code>vite.config.ts</code></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
@@ -650,6 +779,7 @@
     <!-- End JS -->
   </body>
 </html>
+
 
 
 

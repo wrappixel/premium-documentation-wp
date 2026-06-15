@@ -2,57 +2,16 @@
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, ShadcnDashboard admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template"
-    />
-    <meta
-      name="description"
-      content="ShadcnDashboard is powerful and clean admin dashboard template, inpired from Google's Material Design"
-    />
     <meta name="robots" content="noindex,nofollow" />
-    <title>ShadcnDashboard Admin Template by WrapPixel.com</title>
-
-    <!-- Favicon icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="15x15"
-      href="../../styles/dist/images/shadcndashboard/favicon.ico"
-    />
-    <!-- This page css -->
-    <!-- Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="../../styles/assets/simplebar/simplebar/dist/simplebar.css"
-    />
+    <title>React JS Authentication &mdash; shadcndashboard Docs</title>
+    <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/shadcndashboard/favicon.ico" />
+    <link rel="stylesheet" href="../../styles/assets/simplebar/simplebar/dist/simplebar.css" />
     <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../styles/assets/highlights/atom-one-dark.min.css"
-    />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
   </head>
-
   <body>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper" class="docs">
-      <!-- ============================================================== -->
-      <!-- Left Sidebar - style you can find in sidebar.scss  -->
-      <!-- ============================================================== -->
       <!--Desktop view sidebar menu-->
       <aside
         class="left-sidebar pt-4 d-lg-block d-none"
@@ -252,7 +211,7 @@
                       ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                    <a class="nav-link sidebar-link d-flex align-items-center active" href="docs-react-auth.html"
                       ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
                   </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
@@ -500,7 +459,7 @@
                       ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                    <a class="nav-link sidebar-link d-flex align-items-center active" href="docs-react-auth.html"
                       ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
                   </li>                  <!--Supabase Boilerplate-->
                   <li class="nav-small-cap mt-4">
@@ -557,143 +516,282 @@
       <!-- ============================================================== -->
       <!-- ============================================================== -->
       <!-- Page wrapper  -->
-      <!-- ============================================================== -->
-      <div
-        class="page-wrapper pt-0 d-block"
-        data-bs-spy="scroll"
-        data-bs-target="#navbar-example3"
-        data-bs-smooth-scroll="true"
-        tabindex="0"
-      >
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
+      <div class="page-wrapper pt-0 d-block">
         <div class="position-relative d-lg-none">
-          <div
-            class="navbar-header bg-white d-flex align-items-center justify-content-between p-3 fixed-top page-wrapper w-auto"
-          >
-            <!-- ============================================================== -->
-            <!-- Toggle which is visible on mobile only -->
-            <!-- ============================================================== -->
-            <!-- Logo icon -->
-            <a href="index.html">
-              <b class="logo-icon d-lg-none d-block">
-                <!-- Dark Logo icon -->
-                <img
-                  src="../../styles/dist/images/shadcndashboard/lightLogo.svg"
-                  alt="homepage"
-                  class="dark-logo"
-                />
-              </b>
-              <!--End Logo icon -->
-            </a>
-            <div class="d-flex align-items-center">
-              <!---Mobile view canvas button--->
-              <a
-                class="pe-6 text-muted ms-3 d-lg-none d-block"
-                data-bs-toggle="offcanvas"
-                href="#offcanvasExample"
-                role="button"
-                aria-controls="offcanvasExample"
-              >
-                <i class="ti ti-menu-2"></i>
-              </a>
-            </div>
+          <div class="navbar-header bg-white d-flex align-items-center justify-content-between p-3 fixed-top page-wrapper w-auto">
+            <a href="index.html"><b class="logo-icon d-lg-none d-block"><img src="../../styles/dist/images/shadcndashboard/lightLogo.svg" alt="homepage" class="dark-logo" /></b></a>
+            <div class="d-flex align-items-center"><a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><i class="ti ti-menu-2"></i></a></div>
           </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Container fluid  -->
-        <!-- ============================================================== -->
-        <div class="container-fluid mt-4">
-          <div class="mt-5">
-            <!-- ============================================================== -->
-            <!-- Start Page Content -->
-            <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Icons</h4>
+        <div class="container-fluid mt-4"><div class="mt-5">
+            <h4 class="mb-4 pb-2 d-flex align-items-center gap-2">
+              <i class="ti ti-brand-react text-primary fs-5"></i> React JS &mdash; Authentication
+            </h4>
 
+            <!-- Intro -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">1. Lucide Icons</h4>
-                <a href="https://lucide.dev/icons/" class="font-16"
-                  >https://lucide.dev/icons/</a
-                >
-                <pre>                        <code class="language-js py-0 hljs javascript">
-<span class="hljs-keyword">import</span> { Moon, Sun } <span class="hljs-keyword">from</span> <span class="hljs-string">'lucide-react'</span>;
-
-<span class="hljs-comment">// ----------------------------------------------------------------------</span>
-
-<span class="hljs-keyword">const</span> LucidIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">return</span>(
-        &lt;Sun size={24} /&gt;
-        &lt;Moon size={24} /&gt;
-     
-    );
-}
-                                    </code>
-                                </pre>
+                <h4 class="card-title">Authentication</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The React JS version supports multiple authentication methods. By default, authentication is handled
+                  client-side using form-based login. You can switch to <strong>JWT</strong>, <strong>Firebase</strong>,
+                  or <strong>Supabase</strong> by updating the <code>platform</code> value in <code>AuthContext.tsx</code>.
+                </p>
               </div>
             </div>
 
+            <!-- Default auth alert -->
+            <div class="mt-4 alert alert-primary">
+              <h6 class="card-subtitle">By Default, we are using Firebase for auth, if you want to change it to Jwt or Supabase for that follow below steps.</h6>
+            </div>
+
+            <!-- JWT Firebase demo folder -->
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">2. Iconify Icons</h4>
-                <a href="https://iconify.design/" class="font-16"
-                  >https://iconify.design/</a
-                >
-                <pre>                        <code class="language-js py-0 hljs javascript">
-<span class="hljs-keyword">import</span> { Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">'@iconify/react'</span>;
-
-<span class="hljs-comment">// ----------------------------------------------------------------------</span>
-
-<span class="hljs-keyword">const</span> IconifyIcons = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">return</span>(
-        &lt;Icon icon="ic:round-check" width={24} height={24} /&gt;
-        &lt;Icon icon="solar:pen-linear" width={24} height={24}/&gt;
-        &lt;Icon icon="qlementine-icons:menu-dots-16" width={24} height={24} /&gt;
-        &lt;Icon icon="iconamoon:search-light" width={24} height={24} /&gt;
-      
-    );
-}
-                                    </code>
-                                </pre>
+                <h5 class="fw-bold">Select the jwt-firebase Demo folder</h5>
+                <pre class="mt-3"><code class="language-javascript">// /reactjS/firebase
+npm install</code></pre>
               </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Of Page Content -->
-            <!-- ============================================================== -->
-          </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
+
+            <!-- Global App Setup -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">Global App Setup with Authentication &amp; Theme</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  The app entry point wraps the entire app with <code>ThemeProvider</code> and <code>CustomizerContextProvider</code>.
+                  MSW mock workers are started before React renders so all API calls are intercepted from the start.
+                </p>
+                <pre class="mt-3"><code class="language-javascript">// src/main.tsx
+import { Suspense } from 'react';
+import { createRoot } from 'react-dom/client';
+import './css/globals.css';
+import App from './App.tsx';
+import Spinner from './views/spinner/Spinner.tsx';
+import { CustomizerContextProvider } from './context/CustomizerContext.tsx';
+import './utils/i18n';
+import { ThemeProvider } from './context/shadcntheme/ThemeContext.tsx';
+import { AuthProvider } from 'src/guards/auth/AuthContext.tsx';      
+
+createRoot(document.getElementById('root')!).render(
+    &lt;ThemeProvider defaultTheme="system" storageKey="activeMode"&gt;
+      &lt;CustomizerContextProvider&gt;
+        &lt;Suspense fallback={&lt;Spinner /&gt;}&gt;
+         &lt;AuthProvider&gt;
+           &lt;App /&gt;
+         &lt;AuthProvider/&gt;
+        &lt;/Suspense&gt;
+      &lt;/CustomizerContextProvider&gt;
+    &lt;/ThemeProvider&gt;
+);
+
+</code></pre>
+              </div>
+            </div>
+
+           
+
+          
+
+           
+
+            <!-- Switch auth method -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">1. JWT Method</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  To use JWT authentication, update the <code>platform</code> value in your auth context to <code>'JWT'</code>.
+                  Connect <code>handleSubmit</code> in <code>AuthLogin.tsx</code> to your backend JWT endpoint.
+                </p>
+                <pre class="mt-3"><code class="language-javascript">// src/guards/auth/AuthContext.tsx
+const initialState = {
+  isAuthenticated: false,
+  isInitialized: false,
+  user: null,
+  platform: 'JWT',   // &lt;-- change to 'JWT'
+};</code></pre>
+               
+                <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+                <pre class="mt-2"><code class="language-javascript">// -----------------------------------------------------------------------------------------
+// File : src/guards/auth/AuthContext.tsx
+// -----------------------------------------------------------------------------------------
+const initialState: InitialStateType = {
+  platform: 'JWT', // Change platform to JWT for JWT Authentication
+};</code></pre>
+              </div>
+            </div>
+
+            <!-- Firebase Method -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">2. Firebase Method</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  To use Firebase authentication, add your Firebase config to <code>src/guards/firebase/Firebase.tsx</code> 
+                  and set <code>platform: 'Firebase'</code> in the auth context.
+                </p>
+                <pre class="mt-3"><code class="language-javascript">// src/guards/firebase/Firebase.tsx
+const firebaseConfig = {
+  apiKey:            'API_KEY',
+  authDomain:        'AUTH_DOMAIN',
+  projectId:         'PROJECT_ID',
+  storageBucket:     'STORAGE_BUCKET',
+  messagingSenderId: 'SENDER_ID',
+  appId:             'API_ID',
+  measurementId:     'M_ID',
+  databaseURL:       'DATABASE_URL',
+};</code></pre>
+                <h5 class="mt-4 font-medium">Steps to Generate Firebase Key</h5>
+                <ol class="text-muted mt-2 lh-base">
+                  <li>Go to <a href="https://firebase.google.com/" target="_blank">firebase.google.com</a> and open the Console</li>
+                  <li>Click <strong>Add Project</strong>, enter a project name and click <strong>Create Project</strong></li>
+                  <li>In the left panel go to <strong>Build &gt; Authentication</strong></li>
+                  <li>Click <strong>Web Setup</strong> and copy the config object</li>
+                  <li>Paste it into <code>src/guards/firebase/Firebase.tsx</code></li>
+                  <li>Enable <strong>Email/Password</strong> sign-in method in the Authentication tab</li>
+                </ol>
+                <p class="mt-3 text-muted">Reference: <a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a></p>
+
+                <h5 class="mt-4 fw-bold">Folders and Files</h5>
+                <p>Inside that folder you will get this file <span class="bg-light p-1 rounded">src &gt; guards &gt; authGuard &gt; UseAuth</span></p>
+                <pre class="mt-2"><code class="language-javascript">// -----------------------------------------------------------------------------------------
+// File : src/guards/authGuard/UseAuth.tsx
+// -----------------------------------------------------------------------------------------
+import { useContext } from 'react';
+import AuthContext from 'src/app/context/AuthContext';
+
+const useAuth = () => useContext(AuthContext);
+
+export default useAuth;</code></pre>
+
+                <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+                <pre class="mt-2"><code class="language-javascript">// -----------------------------------------------------------------------------------------
+// File : src/guards/auth/AuthContext.tsx
+// -----------------------------------------------------------------------------------------
+const initialState: InitialStateType = {
+  platform: 'Firebase', // Change platform to Firebase for Firebase Authentication
+};</code></pre>
+
+                <h5 class="mt-4 fw-bold">Steps for Generate key</h5>
+                <ul class="font-14 text-muted">
+                  <li class="py-2">Click on <span class="text-primary border-bottom border-primary">"Go to console"</span> displayed on the right side on your firebase account.</li>
+                  <li class="py-2">Then after click on <strong>Add Project</strong>.</li>
+                  <li class="py-2">After the popup menu appears, enter a Project name, select a Country, accept Terms and Conditions, then click <strong>Create Project</strong>.</li>
+                  <li class="py-2">Now the Firebase Admin panel will display.</li>
+                  <li class="py-2">In the left panel, click on <strong>Develop</strong>. Now click on <strong>Authentication</strong> link.</li>
+                  <li class="py-2">Click on the <strong>"Web Setup"</strong> button.</li>
+                  <li class="py-2">Copy the configuration and replace it in your project at <code>src/components/Firebase/firebase.js</code>.</li>
+                  <li class="py-2">Go to the <strong>Sign-in Method</strong> tab. Enable <strong>Email/Password</strong> and <strong>Anonymous</strong> in sign-in providers.</li>
+                  <li class="py-2">Now click on <strong>Database</strong> link from the left panel.</li>
+                  <li class="py-2">Click on the <strong>Create a database</strong> button.</li>
+                  <li class="py-2">In the popup, select <span class="text-primary border-bottom border-primary">"start in locked mode"</span> and click <span class="text-primary border-bottom border-primary">Enable</span>.</li>
+                  <li class="py-2">Now select <strong>Real-time Database</strong>.</li>
+                  <li class="py-2">Click on the <strong>Rules</strong> tab. Change the <span class="text-primary border-bottom border-primary">read and write</span> rules from <span class="text-primary border-bottom border-primary">false</span> to <span class="text-primary border-bottom border-primary">true</span>.</li>
+                </ul>
+                <img src="../../styles/dist/images/shared/firebase.jpg" class="w-100 mt-2" alt="firebase">
+                <div class="mt-4">
+                  <h5 class="card-subtitle">Video: <a href="https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s" target="_blank">https://www.youtube.com/watch?v=PKwu15ldZ7k&amp;t=199s</a></h5>
+                </div>
+
+                <h5 class="mt-4 fw-bold">How to add key into template</h5>
+                <pre class="mt-2"><code class="language-javascript">// -----------------------------------------------------------------------------------------
+// File: src/guards/firebase/Firebase.tsx
+// -----------------------------------------------------------------------------------------
+const firebaseConfig = {
+  apiKey:            'API_KEY',
+  authDomain:        'AUTH_DOMAIN',
+  projectId:         'PROJECT_ID',
+  storageBucket:     'STORAGE_BUCKET',
+  messagingSenderId: 'SENDER_ID',
+  appId:             'API_ID',
+  measurementId:     'M_ID',
+  databaseURL:       'DATABASE_URL',
+};</code></pre>
+              </div>
+            </div>
+
+            <!-- Supabase Method -->
+            <div class="mt-4 card">
+              <div class="card-body">
+                <h4 class="card-title">3. Supabase Method</h4>
+                <p class="card-subtitle mt-2 text-muted lh-base">
+                  To use Supabase auth, install the Supabase client, add your credentials to <code>.env</code>, 
+                  create a <code>supabaseClient.ts</code> file, and set <code>platform: 'Supabase'</code>.
+                </p>
+
+                <h5 class="mt-4 font-medium">Environment File <code>.env</code></h5>
+                <pre class="mt-2"><code class="language-bash">VITE_SUPABASE_URL="YOUR_VITE_SUPABASE_URL"
+VITE_SUPABASE_ANON_KEY="YOUR_VITE_SUPABASE_ANON_KEY"</code></pre>
+
+                <h5 class="mt-4 font-medium">Supabase Client &mdash; <code>src/guards/supabase/supabaseClient.ts</code></h5>
+                <pre class="mt-2"><code class="language-javascript">import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl: string = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey: string = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+export const supabase = createClient(supabaseUrl, supabaseKey);</code></pre>
+
+                <h5 class="mt-4 font-medium">Steps to Generate Supabase Keys</h5>
+                <ol class="text-muted mt-2 lh-base">
+                  <li>Visit <a href="https://supabase.com/" target="_blank">supabase.com</a> and sign up or log in</li>
+                  <li>Click <strong>New Project</strong> on the dashboard</li>
+                  <li>Enter a project name, select a region and click <strong>Create Project</strong></li>
+                  <li>Go to <strong>Authentication</strong> tab — Email/Password is enabled by default</li>
+                  <li>Optionally enable OAuth providers: Google, GitHub, Twitter etc.</li>
+                  <li>Click <strong>API</strong> in the left sidebar</li>
+                  <li>Copy the <strong>Project URL</strong> → paste as <code>VITE_SUPABASE_URL</code></li>
+                  <li>Copy the <strong>Anon Key</strong> → paste as <code>VITE_SUPABASE_ANON_KEY</code></li>
+                  <li>Install the client: <code>npm install @supabase/supabase-js</code></li>
+                  <li>Create the <code>.env</code> file and <code>supabaseClient.ts</code> as shown above</li>
+                </ol>
+
+                <h5 class="mt-4 fw-bold">Platform Configuration</h5>
+                <pre class="mt-2"><code class="language-javascript">// -----------------------------------------------------------------------------------------
+// File : src/guards/auth/AuthContext.tsx
+// -----------------------------------------------------------------------------------------
+const initialState: InitialStateType = {
+  platform: 'Supabase', // Change platform to Supabase for Supabase Authentication
+};</code></pre>
+
+                <h5 class="mt-4 fw-bold">Steps for Generate Supabase Key</h5>
+                <ul class="font-14 text-muted">
+                  <li class="py-2">Go to <span class="text-primary border-bottom border-primary">https://supabase.com/</span></li>
+                  <li class="py-2">Click on <strong>"Sign Up"</strong> or <strong>"Log In"</strong> and complete the process.</li>
+                  <li class="py-2">On the dashboard, click on the <strong>"New Project"</strong> button.</li>
+                  <li class="py-2">Enter Project name, select a Region, then click <strong>Create Project</strong>.</li>
+                  <li class="py-2">Once your project is created, go to the Project Dashboard.</li>
+                  <li class="py-2">In the left panel, click on the <strong>Authentication</strong> tab.</li>
+                  <li class="py-2">By default, Email &amp; Password authentication is enabled.</li>
+                  <li class="py-2">You can also enable OAuth providers like Google, GitHub, Twitter, etc.</li>
+                  <li class="py-2">In the <strong>Settings</strong> tab under Authentication, you can customize email templates for verification and password reset.</li>
+                  <li class="py-2">From the left sidebar, click on <strong>API</strong>.</li>
+                  <li class="py-2"><strong>Project URL</strong>: Copy this URL and use it as <code>VITE_SUPABASE_URL</code>.</li>
+                  <li class="py-2"><strong>Anon Key</strong>: Copy this key and use it as <code>VITE_SUPABASE_ANON_KEY</code>.</li>
+                  <li class="py-2">Install Supabase: <code>npm install @supabase/supabase-js</code></li>
+                  <li class="py-2">Create an <code>.env</code> file to store your keys:
+                    <pre class="mt-2"><code class="language-bash">// this is your .env file
+VITE_SUPABASE_URL="Your Url"
+VITE_SUPABASE_ANON_KEY="Your SUPABASE_ANON_KEY Key"</code></pre>
+                  </li>
+                  <li class="py-2"><img src="../../styles/dist/images/shared/supabase (1).png" class="w-100 mt-2" alt="supabase"></li>
+                  <li class="py-2">Create the <code>supabaseClient.ts</code> file:
+                    <pre class="mt-2"><code class="language-javascript">import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl: string | any = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey: string | any = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+export const supabase = createClient(supabaseUrl, supabaseKey);</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div></div>
       </div>
-      <!-- ============================================================== -->
-      <!-- End Page wrapper  -->
-      <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- End Page -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
     <script src="../../styles/assets/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
     <script src="../../styles/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- apps -->
     <script src="../../styles/assets/simplebar/simplebar/dist/simplebar.js"></script>
-    <!--Custom JavaScript -->
     <script src="../../styles/dist/js/custom.js"></script>
     <script src="../../styles/assets/highlights/highlight.min.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-    <!-- End JS -->
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
-
-
-
-
-
