@@ -1,0 +1,1167 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="WrapPixel.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, shadcndashboard admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="shadcndashboard is powerful and clean admin dashboard template, inpired from Google's Material Design"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>How to use Shadcn CLI - shadcndashboard Admin Template by WrapPixel.com</title>
+
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="15x15"
+      href="../../styles/dist/images/shadcndashboard/favicon.ico"
+    />
+    <!-- This page css -->
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="../../styles/assets/simplebar/simplebar/dist/simplebar.css"
+    />
+    <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../styles/assets/highlights/atom-one-dark.min.css"
+    />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside
+        class="left-sidebar pt-4 d-lg-block d-none"
+        id="navbar-example3"
+        data-simplebar
+      >
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div
+              class="navbar-brand d-flex align-items-center justify-content-between px-4"
+            >
+              <!-- Logo icon -->
+              <a href="index.html">
+                <b class="logo-icon">
+                  <!-- Dark Logo icon -->
+                  <img
+                    src="../../styles/dist/images/shadcndashboard/lightLogo.svg"
+                    alt="homepage"
+                    class="dark-logo"
+                  />
+                </b>
+                <!--End Logo icon -->
+              </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <ul id="sidebarnav" class="mt-4">
+              <nav class="nav nav-pills flex-column sidebar-nav">
+                <ul class="list-unstyled">
+                  <!--Getting Started-->
+                  <li class="nav-small-cap">
+                    <span class="hide-menu">Getting Started</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="index.html"
+                      ><i class="ti ti-home-2 me-3 fs-4"></i> Introduction</a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-structure.html"
+                      ><i class="ti ti-packages me-3 fs-4"></i> Package
+                      Structure</a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-start.html"
+                      ><i class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                      Start</a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-licenses.html"
+                      ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
+                    >
+                  </li>
+                  <!--Customization-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">Customization</span>
+                  </li>
+                  <li class="sidebar-item position-relative">
+                    <a
+                      class="nav-link sidebar-link has-arrow d-flex align-items-center"
+                      href="javascript:void(0)"
+                      aria-expanded="false"
+                    >
+                      <span class="hide-menu"
+                        ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                        Config
+                      </span>
+                    </a>
+                    <!--sub-menu items-->
+                    <ul
+                      aria-expanded="false"
+                      class="collapse first-level list-unstyled"
+                    >
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-color.html" class="nav-link sub-link"
+                          ><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Color </span></a
+                        >
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-typography.html" class="nav-link sub-link"
+                          ><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Typography </span></a
+                        >
+                      </li>
+                      <li class="sidebar-item mb-0">
+                        <a href="docs-icon.html" class="nav-link sub-link"
+                          ><i class="ti ti-point me-3"></i>
+                          <span class="hide-menu"> Icons </span></a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-setting.html"
+                      ><i class="ti ti-settings me-3 fs-4"></i>Customize Theme
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-logo.html"
+                      ><i class="ti ti-adjustments-horizontal me-3 fs-4"></i
+                      >Change Logo
+                    </a>
+                  </li>
+                  <!--Development-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">DEVELOPMENT</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-multi-language.html"
+                      ><i class="ti ti-text-recognition me-3 fs-4"></i>
+                      Multi Language
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-api-calls.html"
+                      ><i class="ti ti-link me-3 fs-4"></i>
+                      API-Calls
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-auth.html"
+                      ><i class="ti ti-brand-firebase me-3 fs-4"></i>
+                      Authentication
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-ai.html"
+                      ><i class="ti ti-cpu me-3 fs-4"></i>
+                      AI Instructions
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-change-log.html"
+                      ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
+                    >
+                  </li>
+                  <!--React JS-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">REACT JS</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                      ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                      ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                      ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                      ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                      ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                  </li>
+                  <!--Supabase Boilerplate-->
+                  <li class="nav-small-cap mt-4">
+                    <span class="hide-menu">SUPABASE BOILERPLATE</span>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-overview"
+                      ><i class="ti ti-info-circle me-3 fs-4"></i> Overview</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-packages"
+                      ><i class="ti ti-package me-3 fs-4"></i> Required Packages</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step1"
+                      ><i class="ti ti-circle-number-1 me-3 fs-4"></i> Create Supabase Project</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step2"
+                      ><i class="ti ti-circle-number-2 me-3 fs-4"></i> Environment Variables</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step3"
+                      ><i class="ti ti-circle-number-3 me-3 fs-4"></i> Database Clients</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step4"
+                      ><i class="ti ti-circle-number-4 me-3 fs-4"></i> Prisma Schema</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step5"
+                      ><i class="ti ti-circle-number-5 me-3 fs-4"></i> Run Migrations</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step6"
+                      ><i class="ti ti-circle-number-6 me-3 fs-4"></i> Seed the Database</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step7"
+                      ><i class="ti ti-circle-number-7 me-3 fs-4"></i> Demo Mode</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a class="nav-link sidebar-link d-flex align-items-center active" href="docs-shadcn-cli.html"
+                      ><i class="ti ti-command me-3 fs-4"></i> How to use Shadcn CLI</a>
+                  </li>
+                </ul>
+              </nav>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+
+      <!--Mobile view sidebar menu-->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <aside class="left-sidebar pt-4" id="navbar-example3" data-simplebar>
+          <!-- Sidebar scroll-->
+          <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+              <!-- ============================================================== -->
+              <!-- Logo -->
+              <!-- ============================================================== -->
+              <div
+                class="navbar-brand d-flex align-items-center justify-content-between px-4"
+              >
+                <!-- Logo icon -->
+                <a href="index.html">
+                  <b class="logo-icon">
+                    <!-- Dark Logo icon -->
+                    <img
+                      src="../../styles/dist/images/shadcndashboard/lightLogo.svg"
+                      alt="homepage"
+                      class="dark-logo"
+                    />
+                  </b>
+                  <!--End Logo icon -->
+                </a>
+              </div>
+              <!-- ============================================================== -->
+              <!-- End Logo -->
+              <!-- ============================================================== -->
+              <ul id="sidebarnav" class="mt-4">
+                <nav class="nav nav-pills flex-column sidebar-nav">
+                  <ul class="list-unstyled">
+                    <!--Getting Started-->
+                    <li class="nav-small-cap">
+                      <span class="hide-menu">Getting Started</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="index.html"
+                        ><i class="ti ti-home-2 me-3 fs-4"></i> Introduction</a
+                      >
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-structure.html"
+                        ><i class="ti ti-packages me-3 fs-4"></i> Package
+                        Structure</a
+                      >
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-start.html"
+                        ><i class="ti ti-brand-abstract me-3 fs-4"></i> Quick
+                        Start</a
+                      >
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-licenses.html"
+                        ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
+                      >
+                    </li>
+                    <!--Customization-->
+                    <li class="nav-small-cap mt-4">
+                      <span class="hide-menu">Customization</span>
+                    </li>
+                    <li class="sidebar-item position-relative">
+                      <a
+                        class="nav-link sidebar-link has-arrow d-flex align-items-center"
+                        href="javascript:void(0)"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu"
+                          ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
+                          Config
+                        </span>
+                      </a>
+                      <!--sub-menu items-->
+                      <ul
+                        aria-expanded="false"
+                        class="collapse first-level list-unstyled"
+                      >
+                        <li class="sidebar-item mb-0">
+                          <a href="docs-color.html" class="nav-link sub-link"
+                            ><i class="ti ti-point me-3"></i>
+                            <span class="hide-menu"> Color </span></a
+                          >
+                        </li>
+                        <li class="sidebar-item mb-0">
+                          <a
+                            href="docs-typography.html"
+                            class="nav-link sub-link"
+                            ><i class="ti ti-point me-3"></i>
+                            <span class="hide-menu"> Typography </span></a
+                          >
+                        </li>
+                        <li class="sidebar-item mb-0">
+                          <a href="docs-icon.html" class="nav-link sub-link"
+                            ><i class="ti ti-point me-3"></i>
+                            <span class="hide-menu"> Icons </span></a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-setting.html"
+                        ><i class="ti ti-settings me-3 fs-4"></i>Customize Theme
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-logo.html"
+                        ><i class="ti ti-adjustments-horizontal me-3 fs-4"></i
+                        >Change Logo
+                      </a>
+                    </li>
+                    <!--Development-->
+                    <li class="nav-small-cap mt-4">
+                      <span class="hide-menu">DEVELOPMENT</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-routing.html"
+                        ><i class="ti ti-route me-3 fs-4"></i> Routing
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-multi-language.html"
+                        ><i class="ti ti-text-recognition me-3 fs-4"></i> Multi
+                        Language
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-api-calls.html"
+                      >
+                        <i class="ti ti-link me-3 fs-4"></i>
+                        API-Calls
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-auth.html"
+                        ><i class="ti ti-brand-firebase me-3 fs-4"></i>
+                        Authentication
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-change-log.html"
+                        ><i class="ti ti-refresh-dot me-3 fs-4"></i>Changelog</a
+                      >
+                    </li>
+                    <!--React JS-->
+                    <li class="nav-small-cap mt-4">
+                      <span class="hide-menu">REACT JS</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-start.html"
+                        ><i class="ti ti-brand-react me-3 fs-4"></i> Getting Started</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-structure.html"
+                        ><i class="ti ti-folder me-3 fs-4"></i> Project Structure</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-routing.html"
+                        ><i class="ti ti-route me-3 fs-4"></i> Routing</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-logo.html"
+                        ><i class="ti ti-photo me-3 fs-4"></i> Change Logo</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-api.html"
+                        ><i class="ti ti-link me-3 fs-4"></i> API Calls</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-react-auth.html"
+                        ><i class="ti ti-lock me-3 fs-4"></i> Authentication</a>
+                    </li>
+                    <!--Supabase Boilerplate-->
+                    <li class="nav-small-cap mt-4">
+                      <span class="hide-menu">SUPABASE BOILERPLATE</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-overview"
+                        ><i class="ti ti-info-circle me-3 fs-4"></i> Overview</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-packages"
+                        ><i class="ti ti-package me-3 fs-4"></i> Required Packages</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step1"
+                        ><i class="ti ti-circle-number-1 me-3 fs-4"></i> Create Supabase Project</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step2"
+                        ><i class="ti ti-circle-number-2 me-3 fs-4"></i> Environment Variables</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step3"
+                        ><i class="ti ti-circle-number-3 me-3 fs-4"></i> Database Clients</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step4"
+                        ><i class="ti ti-circle-number-4 me-3 fs-4"></i> Prisma Schema</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step5"
+                        ><i class="ti ti-circle-number-5 me-3 fs-4"></i> Run Migrations</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step6"
+                        ><i class="ti ti-circle-number-6 me-3 fs-4"></i> Seed the Database</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center" href="docs-supabase.html#section-step7"
+                        ><i class="ti ti-circle-number-7 me-3 fs-4"></i> Demo Mode</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="nav-link sidebar-link d-flex align-items-center active" href="docs-shadcn-cli.html"
+                        ><i class="ti ti-command me-3 fs-4"></i> How to use Shadcn CLI</a>
+                    </li>
+                  </ul>
+                </nav>
+              </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+          </div>
+          <!-- End Sidebar scroll-->
+        </aside>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div
+        class="page-wrapper pt-0 d-block"
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-example3"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+      >
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <div class="position-relative d-lg-none">
+          <div
+            class="navbar-header bg-white d-flex align-items-center justify-content-between p-3 fixed-top page-wrapper w-auto"
+          >
+            <!-- Logo icon -->
+            <a href="index.html">
+              <b class="logo-icon d-lg-none d-block">
+                <!-- Dark Logo icon -->
+                <img
+                  src="../../styles/dist/images/shadcndashboard/lightLogo.svg"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+              </b>
+              <!--End Logo icon -->
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="pe-6 text-muted ms-3 d-lg-none d-block"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasExample"
+                role="button"
+                aria-controls="offcanvasExample"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid mt-4">
+          <div class="mt-5">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <h4 class="mb-4 pb-2">How to use Shadcn CLI</h4>
+
+            <!-- Intro -->
+            <div class="mt-4">
+              <p class="text-muted fs-4 lh-base">
+                The Shadcn CLI is the primary way to install Shadcn Dashboard components, blocks, into your
+                project. It allows you to add production-ready UI directly into your codebase while preserving full
+                control and customization.
+              </p>
+              <div class="ratio ratio-16x9 mt-4 rounded overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/n6dvjVxy02U" title="How to Use Shadcn Dashboard with CLI"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <!-- Overview -->
+            <div class="mt-5 card" id="overview">
+              <div class="card-body">
+                <h4 class="card-title">Overview</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Shadcn Dashboard CLI is built on top of the official Shadcn UI CLI, so the workflow feels instantly
+                  familiar if you've used Shadcn before. Instead of installing components as opaque NPM packages, the
+                  CLI copies real, readable code directly into your project.
+                </p>
+                <p class="text-muted mt-2 lh-base">
+                  This approach follows the copy-and-paste philosophy of Shadcn UI — giving you complete ownership over
+                  styles, logic, and structure. You can modify, extend, or refactor the generated components without
+                  worrying about breaking upstream dependencies.
+                </p>
+                <p class="text-muted mt-2 lh-base">
+                  For a deeper understanding of the core CLI mechanics, refer to the official
+                  <a href="https://ui.shadcn.com/docs/cli" target="_blank" class="fw-bold text-decoration-underline ms-1">Shadcn UI CLI documentation</a>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Setup -->
+            <div class="mt-4 card" id="setup">
+              <div class="card-body">
+                <h4 class="card-title">Setup</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Before using Shadcn Dashboard with the CLI, you must have Shadcn UI installed and configured in your
+                  project. This includes Tailwind CSS, the required path aliases, and the base configuration files.
+                </p>
+                <p class="text-muted mt-2 lh-base">
+                  If you haven't set this up yet, please follow the below guide.
+                </p>
+
+                <h5 class="fw-semibold mt-4">Using the New "Create Project" Feature</h5>
+                <p class="text-muted mt-2 lh-base">
+                  Shadcn now provides a visual <strong>Create Project</strong> experience that allows you to configure
+                  your setup before generating the CLI command. Instead of manually initializing everything, you can
+                  select your preferred component library, style system, icon library, theme, and more — then copy the
+                  generated command.
+                </p>
+
+                <ol class="mt-3 text-muted lh-lg ps-4">
+                  <li class="mb-2">
+                    Visit <a href="https://ui.shadcn.com/create" target="_blank" class="fw-medium text-decoration-underline">ui.shadcn.com/create</a> and open the configuration panel.
+                  </li>
+                  <li class="mb-3">
+                    Choose your preferred configuration:
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Component Library:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-3"><div class="p-2 border rounded ">Base UI</div></div>
+                        <div class="col-6 col-md-3"><div class="p-2 border rounded">Radix UI</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Visual Style:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-6"><div class="p-3 border rounded "><div class="fw-semibold">Vega</div><div class="small text-muted">The classic shadcn/ui look. Clean, neutral, and familiar.</div></div></div>
+                        <div class="col-6 col-md-6"><div class="p-3 border rounded "><div class="fw-semibold">Maia</div><div class="small text-muted">Soft and rounded, featuring generous spacing and curves.</div></div></div>
+                        <div class="col-6 col-md-6"><div class="p-3 border rounded "><div class="fw-semibold">Nova</div><div class="small text-muted">Reduced padding and margins for compact, data-heavy layouts.</div></div></div>
+                        <div class="col-12 col-md-6"><div class="p-3 border rounded "><div class="fw-semibold">Mira</div><div class="small text-muted">Ultra-compact. Engineered for dense professional interfaces.</div></div></div>
+                        <div class="col-6 col-md-6"><div class="p-3 border rounded "><div class="fw-semibold">Lyra</div><div class="small text-muted">Boxy and sharp. Pairs exceptionally well with mono fonts.</div></div></div>
+
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Base Color:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#737373;"></span>Neutral</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#737373;"></span>Zinc</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#737373;"></span>Slate</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#737373;"></span>Gray</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Theme:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#737373;"></span>Neutral</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#f59e0b;"></span>Amber</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#3b82f6;"></span>Blue</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#06b6d4;"></span>Cyan</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#10b981;"></span>Emerald</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#d946ef;"></span>Fuchsia</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#22c55e;"></span>Green</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#6366f1;"></span>Indigo</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#84cc16;"></span>Lime</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#f97316;"></span>Orange</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded  d-flex align-items-center gap-2"><span class="rounded-circle d-inline-block" style="width:16px;height:16px;background:#ec4899;"></span>Pink</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Icon Library:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded text-nowrap">Lucide</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded text-nowrap">Tabler Icons</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded text-nowrap">Heroicons</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded text-nowrap">Phosphor Icons</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded text-nowrap ">Remix Icon</div></div>
+                     
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Font:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Inter</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Noto Sans</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Nunito Sans</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Figtree</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Radius:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Default</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">None</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Small</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Medium</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Large</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Menu Color:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Default</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Inverted</div></div>
+                      </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                      <p class="text-muted mb-2"><strong>Select your Menu Accent:</strong></p>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Subtle</div></div>
+                        <div class="col-6 col-md-2"><div class="p-2 border rounded ">Bold</div></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-2">Click the <strong>Create Project</strong> button in the top-right corner.</li>
+                  <li class="mb-2">Copy the generated CLI command shown on the screen or use the commands below.</li>
+                </ol>
+
+                <!-- ShadcnCreateCommand Tabs -->
+                <div class="mt-3">
+                  <ul class="nav nav-tabs" id="createCmdTabs" role="tablist">
+                    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ccnpm" type="button">npm</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#ccpnpm" type="button">pnpm</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#ccyarn" type="button">yarn</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#ccbun" type="button">bun</button></li>
+                  </ul>
+                  <div class="tab-content border border-top-0 rounded-bottom p-3 bg-light">
+                    <div class="tab-pane fade show active" id="ccnpm">
+                      <p class="text-muted small mb-2">Run the following command to create a React.js + shadcn/ui project.</p>
+                      <pre class="mb-0"><code class="language-bash">npx shadcn@latest init --preset b0 --base base --template vite</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="ccpnpm">
+                      <p class="text-muted small mb-2">Run the following command to create a React.js + shadcn/ui project.</p>
+                      <pre class="mb-0"><code class="language-bash">pnpm dlx shadcn@latest init --preset b0 --base base --template vite</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="ccyarn">
+                      <p class="text-muted small mb-2">Run the following command to create a React.js + shadcn/ui project.</p>
+                      <pre class="mb-0"><code class="language-bash">yarn dlx shadcn@latest init --preset b0 --base base --template vite</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="ccbun">
+                      <p class="text-muted small mb-2">Run the following command to create a React.js + shadcn/ui project.</p>
+                      <pre class="mb-0"><code class="language-bash">bunx --bun shadcn@latest init --preset b0 --base base --template vite</code></pre>
+                    </div>
+                  </div>
+                </div>
+
+                <ol class="mt-3 text-muted lh-lg ps-4" start="5">
+                  <li>Open your terminal inside your project directory and paste the command to complete the setup.</li>
+                </ol>
+                <p class="text-muted mt-3 lh-base">
+                  Once the command finishes running, your project will be fully configured with Shadcn UI and ready to
+                  use with Shadcn Dashboard.
+                </p>
+              </div>
+            </div>
+
+            <!-- CLI Versions -->
+            <div class="mt-4 card" id="shadcn-cli-versions">
+              <div class="card-body">
+                <h4 class="card-title">CLI Versions</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Shadcn UI provides multiple CLI versions to support different workflows. Shadcn Dashboard works best with
+                  the latest version.
+                </p>
+
+                <div class="mt-4">
+                  <h5 class="fw-semibold d-flex align-items-center gap-2">
+                    Shadcn CLI v3
+                    <span class="badge bg-success-subtle text-success">Recommended</span>
+                  </h5>
+                  <p class="text-muted mt-2 lh-base">
+                    Version 3 introduces namespace-based registries, authentication for private registries, and
+                    AI-assisted setup tools. These improvements make it easier to manage multiple component sources and
+                    automate repetitive setup tasks.
+                  </p>
+                  <p class="text-muted mt-2 lh-base">
+                    Shadcn Dashboard leverages this namespace system to distribute both free and premium components in a
+                    scalable and maintainable way.
+                  </p>
+                </div>
+
+                <!-- Registry Table -->
+                <div class="table-responsive mt-4">
+                  <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Registry</th>
+                        <th>Includes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>@shadcndashboard</code></td>
+                        <td>Free and premium layout blocks, components, and templates</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Configure Shadcn CLI v3 -->
+            <div class="mt-4 card" id="configure-cli">
+              <div class="card-body">
+                <h4 class="card-title">Configure Shadcn CLI v3</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Shadcn CLI v3 supports custom registries through namespaces. By configuring a registry, you can
+                  install both free and premium Shadcn Dashboard components directly into your project.
+                </p>
+
+                <!-- Step 1: components.json -->
+                <h5 class="fw-semibold mt-4">Step 1: Update <code>components.json</code></h5>
+                <p class="text-muted mt-2 lh-base">
+                  Add the <code>@shadcndashboard</code> registry to your <code>components.json</code> file. This tells
+                  the CLI where to fetch components and how to authenticate premium requests.
+                </p>
+
+                <div class="mt-3">
+                  <p class="fw-medium mb-1">Free Access:</p>
+                  <p class="text-muted small mb-2">Access free components without authentication.</p>
+                  <pre><code class="language-json">{
+  "registries": {
+    "@shadcndashboard": {
+      "url": "https://shadcndashboard.com/r/{name}.json"
+    }
+  }
+}</code></pre>
+                </div>
+
+                <div class="mt-4">
+                  <p class="fw-medium mb-1">Premium Access:</p>
+                  <p class="text-muted small mb-2">Unlock premium components with authenticated access.</p>
+                  <pre><code class="language-json">{
+  "registries": {
+    "@shadcndashboard": {
+      "url": "https://shadcndashboard.com/r/{name}.json",
+      "params": {
+        "email": "${EMAIL}",
+        "license_key": "${LICENSE_KEY}"
+      }
+    }
+  }
+}</code></pre>
+                </div>
+
+                <!-- Step 2: Environment Variables -->
+                <h5 class="fw-semibold mt-5">Step 2: Set Environment Variables <span class="text-muted fw-normal fs-6">(Optional)</span></h5>
+                <p class="text-muted mt-2 lh-base">
+                  Premium components require authentication. Store your credentials securely using environment
+                  variables instead of hardcoding them.
+                </p>
+                <pre><code class="language-bash"># .env
+EMAIL={YOUR_EMAIL}
+LICENSE_KEY={YOUR_LICENSE_KEY}</code></pre>
+
+                <!-- Find Credentials -->
+                <h5 class="fw-semibold mt-5" id="find-your-credentials">Find Your Credentials</h5>
+                <p class="text-muted mt-2 lh-base">You'll need the following details to access premium resources:</p>
+                <ol class="text-muted lh-lg ps-4 mt-2">
+                  <li><strong>Email address:</strong> Use the email associated with your Shadcn Dashboard account.</li>
+                  <li><strong>License key:</strong> Available in your <a href="https://shadcndashboard.dev/" class="fw-medium text-decoration-underline">Dashboard</a>.</li>
+                </ol>
+
+                <div class="alert border-start border-warning border-2 bg-warning-subtle text-warning-emphasis mt-3 rounded-end">
+                  <strong>Important:</strong>
+                  <ul class="mt-2 mb-0 ps-3">
+                    <li>Ensure <code>.env</code> is added to your <code>.gitignore</code> to prevent accidental commits of your credentials.</li>
+                    <li>The EMAIL and LICENSE_KEY will automatically be replaced by the CLI.</li>
+                  </ul>
+                </div>
+
+                <div class="alert border-start border-danger border-2 bg-danger-subtle text-danger-emphasis mt-3 rounded-end">
+                  <strong>Security Tip:</strong>
+                  <p class="mb-0 mt-1">Never commit your credentials to a repository. Always use environment variables for CLI v3, or be cautious with URL parameters in CLI v2 commands.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Installing Components & Blocks -->
+            <div class="mt-4 card" id="installing-components">
+              <div class="card-body">
+                <h4 class="card-title">Installing Components &amp; Blocks</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Shadcn Dashboard supports both Shadcn CLI v3 and v2. We recommend using CLI v3 for new projects, but v2
+                  remains supported for legacy setups.
+                </p>
+
+                <!-- CLI v3 -->
+                <div class="mt-4">
+                  <h5 class="fw-semibold d-flex align-items-center gap-2">
+                    Using Shadcn CLI v3
+                    <span class="badge bg-success-subtle text-success">Recommended</span>
+                  </h5>
+                  <p class="text-muted mt-2 lh-base">
+                    CLI v3 introduces namespace-based registries. Once you've configured the
+                    <code>@shadcndashboard</code> registry, you can install both free and premium components using simple
+                    commands.
+                  </p>
+                  <div class="mt-3">
+                    <p class="fw-medium mb-1">Install a component</p>
+                    <pre><code class="language-bash">npx shadcn@latest add @shadcndashboard/button-06</code></pre>
+                  </div>
+                  <div class="mt-3">
+                    <p class="fw-medium mb-1">Install a block</p>
+                    <pre><code class="language-bash">npx shadcn@latest add @shadcndashboard/product-card</code></pre>
+                  </div>
+                  <div class="alert border-start border-warning border-2 bg-warning-subtle text-warning-emphasis mt-3 rounded-end small">
+                    <strong>Tip:</strong> For more blocks and components visit the block page and component page on Shadcn Dashboard.
+                  </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <!-- CLI v2 -->
+                <div class="mt-4">
+                  <h5 class="fw-semibold d-flex align-items-center gap-2">
+                    Using Shadcn CLI v2
+                    <span class="badge bg-secondary-subtle text-secondary">Legacy</span>
+                  </h5>
+                  <p class="text-muted mt-2 lh-base">
+                    CLI v2 does not support namespaces. Components and blocks are installed using direct registry JSON
+                    URLs. Both free and premium content are available through separate endpoints.
+                  </p>
+                  <div class="mt-3">
+                    <p class="fw-medium mb-1">Install free components</p>
+                    <pre><code class="language-bash">npx shadcn@latest add https://shadcndashboard.dev/r/button-01.json</code></pre>
+                  </div>
+                  <div class="mt-3">
+                    <p class="fw-medium mb-1">Install premium components or blocks</p>
+                    <pre><code class="language-bash">npx shadcn@latest add https://shadcndashboard.dev/r/product-card.json</code></pre>
+                    <div class="alert border-start border-warning border-2 bg-warning-subtle text-warning-emphasis mt-3 rounded-end small">
+                      <strong>Important:</strong> Shadcn CLI v3 requires authentication details to be configured in
+                      <code>components.json</code>. Make sure you have added your <strong>email</strong> and
+                      <strong>license key</strong> before installing <strong>premium components or blocks</strong>.
+                    </div>
+                  </div>
+                  <div class="alert bg-light border mt-3 rounded">
+                    <p class="text-muted small mb-0">
+                      <strong>Note:</strong> Premium installs via CLI v2 require valid credentials configured in your
+                      environment variables. CLI v3 is recommended for a smoother and more secure experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Package Managers -->
+            <div class="mt-4 card" id="package-managers">
+              <div class="card-body">
+                <h4 class="card-title">Package Managers</h4>
+                <p class="text-muted mt-2 lh-base">
+                  Install components and blocks using your preferred package manager. The Shadcn CLI works the same
+                  across all managers — choose the one that matches your project setup.
+                </p>
+
+                <ul class="nav nav-tabs mt-4" id="pkgTabs" role="tablist">
+                  <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#pknpm" type="button">npm</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pkpnpm" type="button">pnpm</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pkyarn" type="button">yarn</button></li>
+                  <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pkbun" type="button">bun</button></li>
+                </ul>
+                <div class="tab-content border border-top-0 rounded-bottom p-3 bg-light">
+                  <div class="tab-pane fade show active" id="pknpm">
+                    <p class="text-muted small mb-2">Run the following command to install the selected component directly into your project.</p>
+                    <pre class="mb-0"><code class="language-bash">npx shadcn@latest add @shadcndashboard/button-06</code></pre>
+                  </div>
+                  <div class="tab-pane fade" id="pkpnpm">
+                    <p class="text-muted small mb-2">Run the following command to install the selected component directly into your project.</p>
+                    <pre class="mb-0"><code class="language-bash">pnpm dlx shadcn@latest add @shadcndashboard/button-06</code></pre>
+                  </div>
+                  <div class="tab-pane fade" id="pkyarn">
+                    <p class="text-muted small mb-2">Run the following command to install the selected component directly into your project.</p>
+                    <pre class="mb-0"><code class="language-bash">yarn dlx shadcn@latest add @shadcndashboard/button-06</code></pre>
+                  </div>
+                  <div class="tab-pane fade" id="pkbun">
+                    <p class="text-muted small mb-2">Run the following command to install the selected component directly into your project.</p>
+                    <pre class="mb-0"><code class="language-bash">bunx shadcn@latest add @shadcndashboard/button-06</code></pre>
+                  </div>
+                </div>
+
+                <div class="alert border-start border-warning border-2 bg-warning-subtle text-warning-emphasis mt-3 rounded-end small">
+                  <strong>Tip:</strong> The CLI automatically fetches files from your configured registry in <code>components.json</code>.
+                </div>
+              </div>
+            </div>
+
+            <!-- Advanced Usage -->
+            <div class="mt-4 card" id="advanced-usage">
+              <div class="card-body">
+                <h4 class="card-title d-flex align-items-center gap-2">
+                  <i class="ti ti-sparkles fs-4"></i> Advanced Usage
+                </h4>
+                <p class="text-muted mt-2 lh-base">
+                  The Shadcn CLI supports advanced workflows that help you move faster while maintaining full control
+                  over your codebase.
+                </p>
+
+                <h5 class="fw-semibold mt-4">Installing Multiple Items</h5>
+                <p class="text-muted mt-2 lh-base">
+                  You can install multiple components or blocks in a single command. This is useful when setting up a
+                  new page or feature.
+                </p>
+                <pre class="mt-2"><code class="language-bash">npx shadcn@latest add @shadcndashboard/button-06 @shadcndashboard/product-card</code></pre>
+
+                <h5 class="fw-semibold mt-4">Force Overwriting Existing Files</h5>
+                <p class="text-muted mt-2 lh-base">
+                  If a component already exists, the CLI will prompt before overwriting. You can skip prompts and force
+                  updates using the <code>--overwrite</code> flag.
+                </p>
+                <pre class="mt-2"><code class="language-bash">npx shadcn@latest add @shadcndashboard/button-06 --overwrite</code></pre>
+              </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="mt-4 card" id="troubleshooting">
+              <div class="card-body">
+                <h4 class="card-title d-flex align-items-center gap-2">
+                  <i class="ti ti-alert-triangle fs-4 text-warning"></i> Troubleshooting
+                </h4>
+                <p class="text-muted mt-2 lh-base">
+                  If you encounter issues while installing components, the solutions below should resolve most common
+                  problems.
+                </p>
+
+                <!-- Block Not Found -->
+                <div class="p-4 border rounded mt-4">
+                  <div class="alert border-start border-danger border-2 bg-danger-subtle text-danger-emphasis rounded-end mb-3">
+                    <strong>Block / Component / Theme Not Found</strong>
+                  </div>
+                  <p class="text-muted small">This usually means the requested item name is incorrect or the registry is not configured properly.</p>
+                  <p class="fw-bold mt-3 mb-1">Solution:</p>
+                  <ul class="text-muted small ps-3">
+                    <li>Verify the component or block name in the documentation.</li>
+                    <li>Ensure <code>components.json</code> includes the <code>@shadcndashboard</code> registry.</li>
+                    <li>Check your internet connection.</li>
+                  </ul>
+                </div>
+
+                <!-- Access Denied -->
+                <div class="p-4 border rounded mt-3">
+                  <div class="alert border-start border-danger border-2 bg-danger-subtle text-danger-emphasis rounded-end mb-3">
+                    <strong>Access Denied – Missing Credentials</strong>
+                  </div>
+                  <p class="text-muted small">Premium components require authentication.</p>
+                  <p class="fw-bold mt-3 mb-1">Solution:</p>
+                  <ul class="text-muted small ps-3">
+                    <li>Add <code>EMAIL</code> and <code>LICENSE_KEY</code> to your <code>.env</code> file.</li>
+                    <li>Restart the CLI after updating environment variables.</li>
+                    <li>Ensure you are using <strong>CLI v3</strong>.</li>
+                  </ul>
+                </div>
+
+                <!-- Invalid Credentials -->
+                <div class="p-4 border rounded mt-3">
+                  <div class="alert border-start border-danger border-2 bg-danger-subtle text-danger-emphasis rounded-end mb-3">
+                    <strong>Invalid Credentials</strong>
+                  </div>
+                  <p class="text-muted small">This occurs when provided credentials are incorrect or expired.</p>
+                  <p class="fw-bold mt-3 mb-1">Solution:</p>
+                  <ul class="text-muted small ps-3">
+                    <li>Double-check your email and license key in <code>.env</code>.</li>
+                    <li>Regenerate your license key from the dashboard if needed.</li>
+                    <li>Ensure there are no extra spaces or quotes.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="mt-4 card" id="best-practices">
+              <div class="card-body">
+                <h4 class="card-title">Best Practices</h4>
+                <ul class="text-muted lh-lg ps-4 mt-3">
+                  <li class="mb-2"><strong>Use Shadcn CLI v3</strong> for the simplest setup, namespace support, and secure access to premium registries.</li>
+                  <li class="mb-2"><strong>Keep credentials secure</strong> by storing them in environment variables and ensuring they are not hardcoded or saved in command history.</li>
+                  <li class="mb-2"><strong>Regularly update the Shadcn CLI</strong> to stay up to date with new features, fixes, and improvements.</li>
+                  <li class="mb-2"><strong>Customize components after installation</strong> to ensure they match your project's design system and functional requirements — you fully own the code.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page Content -->
+            <!-- ============================================================== -->
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../styles/assets/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../styles/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <script src="../../styles/assets/simplebar/simplebar/dist/simplebar.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../styles/dist/js/custom.js"></script>
+    <script src="../../styles/assets/highlights/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- End JS -->
+  </body>
+</html>
