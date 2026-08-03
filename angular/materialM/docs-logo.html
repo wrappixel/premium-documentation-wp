@@ -476,23 +476,24 @@
                     <code class="language-js py-0">
 import { Component } from '@angular/core';
 import { CoreService } from 'src/app/services/core.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
 selector: 'app-branding',
-imports: [],
+imports: [RouterModule],
 template: `
-  &lt;a href=&quot;/&quot; class=&quot;logodark&quot;&gt;
+  &lt;a [routerLink]=&quot;['/']&quot; class=&quot;logodark&quot;&gt;
     &lt;img
     src=&quot;./assets/images/logos/dark-logo.svg&quot;
-    class=&quot;align-middle m-2&quot;
+    class=&quot;align-middle m-2 rtl:-scale-x-100&quot;
     alt=&quot;logo&quot;
     /&gt;
   &lt;/a&gt;
 
-  &lt;a href=&quot;/&quot; class=&quot;logolight&quot;&gt;
+  &lt;a [routerLink]=&quot;['/']&quot; class=&quot;logolight&quot;&gt;
     &lt;img
     src=&quot;./assets/images/logos/light-logo.svg&quot;
-    class=&quot;align-middle m-2&quot;
+    class=&quot;align-middle m-2 rtl:-scale-x-100&quot;
     alt=&quot;logo&quot;
     /&gt;
   &lt;/a&gt;

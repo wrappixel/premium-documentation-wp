@@ -475,27 +475,23 @@
                 <pre>
                     <code class="language-js py-0">
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CoreService } from 'src/app/services/core.service';
 
 @Component({
 selector: 'app-branding',
-imports: [],
+standalone: true,
+imports: [RouterModule],
 template: `
-  &lt;a href=&quot;/&quot; class=&quot;logodark&quot;&gt;
-    &lt;img
-    src=&quot;./assets/images/logos/dark-logo.svg&quot;
-    class=&quot;align-middle m-2&quot;
-    alt=&quot;logo&quot;
-    /&gt;
-  &lt;/a&gt;
-
-  &lt;a href=&quot;/&quot; class=&quot;logolight&quot;&gt;
-    &lt;img
-    src=&quot;./assets/images/logos/light-logo.svg&quot;
-    class=&quot;align-middle m-2&quot;
-    alt=&quot;logo&quot;
-    /&gt;
-  &lt;/a&gt;
+  &lt;div class=&quot;branding hidden lg:flex items-center&quot;&gt;
+    &lt;a [routerLink]=&quot;['/']&quot; class=&quot;flex&quot;&gt;
+      &lt;img
+        src=&quot;./assets/images/logos/light-logo.svg&quot;
+        class=&quot;rtl:-scale-x-100 m-2&quot;
+        alt=&quot;logo&quot;
+      /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
 `,
 })
 export class BrandingComponent {

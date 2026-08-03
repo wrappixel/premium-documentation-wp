@@ -456,7 +456,7 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Icons</h3>
+            <h4 class="mb-4 pb-2">Icons</h4>
             <div class="mt-4 card">
                 <div class="card-body">
                     <h4 class="card-title">1. Tabler Icons</h4>
@@ -464,20 +464,25 @@
                     <pre>
                         <code class="language-js py-0">
 // ----------------------------------------------------------------------
-// app.module.ts
+// icon.module.ts
 // ----------------------------------------------------------------------
 
 // icons
-import { TablerIconsModule } from 'angular-tabler-icons';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TablerIconComponent, provideTablerIcons } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 
 @NgModule({
   declarations: [],
   imports: [
-    TablerIconsModule.pick(TablerIcons),
+    TablerIconComponent,
+    CommonModule
   ],
-  exports: [TablerIconsModule],
+  providers: [provideTablerIcons(TablerIcons)],
+  exports: [TablerIconComponent]
 })
+export class IconModule { }
 
 // ----------------------------------------------------------------------
 // usage
