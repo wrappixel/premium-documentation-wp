@@ -492,7 +492,6 @@ import {
   RouterStateSnapshot,
   Router,
 } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -507,17 +506,21 @@ export class AuthGuard implements CanActivate {
     if (localStorage.getItem('username') != null) {
       return true;
     } else {
-      this.routes.navigate(['/authentication/side-login']);
+      this.routes.navigate(['/authentication/login']);
       return false;
     }
   }
 }
 
 // -----------------------------------------------------------------------------------------
-// File : src/app/app-routing.module.ts
+// File : src/app/app.routes.ts
 // -----------------------------------------------------------------------------------------
+import { Routes } from '@angular/router';
+import { BlankComponent } from './layouts/blank/blank.component';
+import { FullComponent } from './layouts/full/full.component';
 import { AuthGuard } from './auth.guard';
-const routes: Routes = [
+
+export const routes: Routes = [
   {
     path: '',
     component: FullComponent,
@@ -531,7 +534,20 @@ const routes: Routes = [
       {
         path: 'starter',
         loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
+          import('./pages/pages.routes').then((m) => m.PagesRoutes),
+      },
+    ],
+  },
+  {
+    path: '',
+    component: BlankComponent,
+    children: [
+      {
+        path: 'authentication',
+        loadChildren: () =>
+          import('./pages/authentication/authentication.routes').then(
+            (m) => m.AuthenticationRoutes
+          ),
       },
     ],
   },

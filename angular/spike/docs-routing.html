@@ -465,14 +465,14 @@
 // File: src/app/app.routes.ts
 // ----------------------------------------------------
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: FullComponent,
     children: [
       {
         path: '',
-        redirectTo: '/landingpage',
+        redirectTo: '/dashboards/dashboard1',
         pathMatch: 'full',
       },
       // new added
@@ -503,6 +503,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Starter',
     iconName: 'aperture',
+    bgcolor: 'primary',
     route: '/starter',
   },
 ]

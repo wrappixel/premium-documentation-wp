@@ -454,7 +454,7 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Typography</h3>
+            <h4 class="mb-4 pb-2">Typography</h4>
             <div class="mt-4 card">
                 <div class="card-body">
                     <h4 class="card-title">Google fonts</h4>
@@ -466,7 +466,7 @@
     &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot; /&gt;
         &lt;link
-        href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap&quot;
+        href=&quot;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap&quot;
         rel=&quot;stylesheet&quot;
         /&gt;
     &lt;/head&gt;
@@ -477,7 +477,7 @@
 &lt;/html&gt;
                         </code>
                     </pre>
-                    <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span class="text-dark font-medium">src/asssets/scss/_variables.scss</span></h5>
+                    <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span class="text-dark font-medium">src/assets/scss/_variables.scss</span></h5>
                     <pre>
                         <code class="language-js py-0">
 // Font URL
@@ -487,7 +487,7 @@ $font-family: 'Plus Jakarta Sans', sans-serif;
                         </code>
                     </pre>
 
-                    <h5 class="card-subtitle mt-4 text-muted">3) Change Font family in : <span class="text-dark font-medium">src/asssets/scss/override-component/_theme.scss</span> and <span class="text-dark font-medium">src/asssets/scss/themecolors/*.scss (all files)</span></h5>
+                    <h5 class="card-subtitle mt-4 text-muted">3) Change Font family in : <span class="text-dark font-medium">src/assets/scss/override-component/_theme.scss</span> and <span class="text-dark font-medium">src/assets/scss/themecolors/*.scss (all files)</span></h5>
                     <pre>
                         <code class="language-js py-0">
 // Font Family
@@ -495,7 +495,7 @@ $font-family: 'Plus Jakarta Sans', sans-serif;
 @include mat.theme(
   (
     color: mat.$azure-palette,
-    typography: "Plus Jakarta Sans",
+    typography: $font-family,
   )
 );
 

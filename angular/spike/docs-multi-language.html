@@ -454,7 +454,7 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Multi Language</h3>
+            <h4 class="mb-4 pb-2">Multi Language</h4>
             <div class="mt-4 card">
                 <div class="card-body">
                     <h4 class="card-title">1. Add content</h4>
@@ -553,7 +553,7 @@ public languages: any[] = [
 constructor(
     private translate: TranslateService
   ) {
-    translate.setDefaultLang('en');
+    translate.use('en');
   }
 
   changeLanguage(lang: any): void {
@@ -563,27 +563,19 @@ constructor(
 
 // ----------------------------------------------------
 // File: src/app/layouts/full/vertical/header/header.component.html
-// ---------------------------------------------------- 
-&lt;button [matMenuTriggerFor]=&quot;flags&quot; mat-icon-button class=&quot;m-r-5&quot;&gt;
-  &lt;img
-    [src]=&quot;selectedLanguage.icon&quot;
-    class=&quot;rounded-circle object-cover icon-20&quot;
-  /&gt;
+// ----------------------------------------------------
+&lt;button [matMenuTriggerFor]=&quot;flags&quot; mat-icon-button class=&quot;hidden! lg:flex! items-center justify-center&quot;&gt;
+  &lt;img [src]=&quot;selectedLanguage.icon&quot; class=&quot;rounded-full object-cover size-5!&quot; /&gt;
 &lt;/button&gt;
-&lt;mat-menu #flags=&quot;matMenu&quot; class=&quot;cardWithShadow&quot;&gt;
-  &lt;button
-    mat-menu-item
-    *ngFor=&quot;let lang of languages&quot;
-    (click)=&quot;changeLanguage(lang)&quot;
-  &gt;
-    &lt;div class=&quot;d-flex align-items-center&quot;&gt;
-      &lt;img
-        [src]=&quot;lang.icon&quot;
-        class=&quot;rounded-circle object-cover m-r-8 icon-20&quot;
-      /&gt;
-      &lt;span class=&quot;mat-subtitle-1 f-s-14&quot;&gt;{{ lang.language }}&lt;/span&gt;
+&lt;mat-menu #flags=&quot;matMenu&quot; class=&quot;cardWithShadow&quot; xPosition=&quot;before&quot;&gt;
+  @for(lang of languages; track lang) {
+  &lt;button mat-menu-item (click)=&quot;changeLanguage(lang)&quot;&gt;
+    &lt;div class=&quot;flex items-center gap-2.5&quot;&gt;
+      &lt;img [src]=&quot;lang.icon&quot; class=&quot;rounded-full object-cover size-5!&quot; /&gt;
+      &lt;span class=&quot;text-sm&quot;&gt;{{ lang.language }}&lt;/span&gt;
     &lt;/div&gt;
   &lt;/button&gt;
+  }
 &lt;/mat-menu&gt;
 </code>
 

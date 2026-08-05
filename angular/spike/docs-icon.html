@@ -456,7 +456,7 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <h4 class="mb-4 pb-2">Icons</h3>
+            <h4 class="mb-4 pb-2">Icons</h4>
             <div class="mt-4 card">
                 <div class="card-body">
                     <h4 class="card-title">1. Tabler Icons</h4>
@@ -464,20 +464,19 @@
                     <pre>
                         <code class="language-js py-0">
 // ----------------------------------------------------------------------
-// app.module.ts
+// app.config.ts
 // ----------------------------------------------------------------------
 
 // icons
-import { TablerIconsModule } from 'angular-tabler-icons';
+import { provideTablerIcons } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 
-@NgModule({
-  declarations: [],
-  imports: [
-    TablerIconsModule.pick(TablerIcons),
+export const appConfig: ApplicationConfig = {
+  providers: [
+    ...
+    provideTablerIcons(TablerIcons),
   ],
-  exports: [TablerIconsModule],
-})
+};
 
 // ----------------------------------------------------------------------
 // usage
@@ -487,7 +486,7 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
 &lt;i-tabler name=&quot;grid-dots&quot; class=&quot;icon-20&quot;&gt;&lt;/i-tabler&gt;
 
                         </code>
-                    </pre> 
+                    </pre>
                 </div>
             </div>
             <!-- ============================================================== -->
