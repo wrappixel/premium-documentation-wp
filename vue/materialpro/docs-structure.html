@@ -338,67 +338,72 @@
               <code class="language-plaintext">
 📦
 ├── 📂 docs                                   > Documentation files
-├── 📂 package                                > Main project directory
-│   ├── 📂 main                               > Core application
-│   │   ├── 📂 public                         > Public assets
-│   │   ├── 📂 src                            > Source files
-│   │   │   ├── 📂 _mockApis                  > Mock API data
-│   │   │   ├── 📂 assets                     > Static assets
-│   │   │   │   ├── 📂 images                 > Image files
-│   │   │   ├── 📂 components                 > Reusable Vue components
-│   │   │   │   ├── 📂 apps                   > Application-related components
-│   │   │   │   ├── 📂 auth                   > Authentication components
-│   │   │   │   ├── 📂 forms                  > Form-related components
-│   │   │   │   ├── 📂 landingpage            > Landing page components
-│   │   │   │   ├── 📂 pages                  > Page-specific components
-│   │   │   │   ├── 📂 shared                 > Shared UI elements
-│   │   │   │   ├── 📂 style-components       > Styled components
-│   │   │   │   ├── 📂 table                  > Table components
-│   │   │   │   ├── 📂 ui-components          > UI elements
-│   │   │   │   ├── 📂 widgets                > Widget components
-│   │   │   ├── 📂 layouts                    > Page layouts
-│   │   │   │   ├── 📂 blank                  > Blank layout
-│   │   │   │   ├── 📂 full                   > Full layout
-│   │   │   ├── 📂 plugins                    > Plugin configurations
-│   │   │   │   ├── 📄 vuetify.ts             > Vuetify configuration
-│   │   │   ├── 📂 router                     > Vue Router setup
-│   │   │   ├── 📂 scss                       > SCSS styling files
-│   │   │   ├── 📂 store                      > Vuex/Pinia store
-│   │   │   │   ├── 📂 apps                   > Store for apps
-│   │   │   │   ├── 📄 auth.ts                > Authentication store
-│   │   │   │   ├── 📄 authUser.ts            > Auth user store
-│   │   │   │   ├── 📄 customizer.ts          > UI customization store
-│   │   │   ├── 📂 theme                      > Theme configuration
-│   │   │   ├── 📂 types                      > TypeScript type definitions
-│   │   │   │   ├── 📂 apps                   > App-related types
-│   │   │   │   ├── 📂 components             > Component-related types
-│   │   │   │   ├── 📂 landingpage            > Landing page types
-│   │   │   │   ├── 📂 themeTypes             > Theme-related types
-│   │   │   ├── 📂 utils                      > Utility functions
-│   │   │   │   ├── 📂 helpers                > Helper functions
-│   │   │   │   ├── 📂 locals                 > Localization files
-│   │   │   │   ├── 📄 axios.ts               > Axios setup for API calls
-│   │   │   ├── 📂 views                      > Main application views/pages
-│   │   │   │   ├── 📂 apps                   > Application views
-│   │   │   │   ├── 📂 authentication         > Authentication views
-│   │   │   │   ├── 📂 charts                 > Charts and graphs
-│   │   │   │   ├── 📂 dashboard              > Dashboard views
-│   │   │   │   ├── 📂 forms                  > Forms views
-│   │   │   │   ├── 📂 pages                  > General pages
-│   │   │   │   ├── 📂 style-animation        > Animations
-│   │   │   │   ├── 📂 tables                 > Tables views
-│   │   │   │   ├── 📂 ui-elements            > UI elements
-│   │   │   │   ├── 📂 widgets                > Widget views
-│   │   │   ├── 📄 App.vue                    > Root Vue component
-│   │   │   ├── 📄 config.ts                  > Configuration file
-│   │   │   ├── 📄 main.ts                    > Main entry file
-│   ├── 📄 package.json                       > Project dependencies and scripts
-│   ├── 📄 vite.config.ts                     > Vite configuration
-├── 📂 dark                                   > Dark theme settings
-├── 📂 horizontal                             > Horizontal layout
-├── 📂 minisidebar                            > Mini sidebar layout
-├── 📂 rtl                                    > Right-to-left layout
-├── 📂 starterkit                             > Starter kit for customization
+├── 📂 packages
+│   ├── 📂 vue3                               > Main project directory
+│   │   ├── 📂 main                           > Core application
+│   │   │   ├── 📂 public                     > Public assets
+│   │   │   ├── 📂 src                        > Source files
+│   │   │   │   ├── 📂 _mockApis              > Mock API data
+│   │   │   │   ├── 📂 assets                 > Static assets
+│   │   │   │   │   ├── 📂 images             > Image files
+│   │   │   │   ├── 📂 components             > Reusable Vue components
+│   │   │   │   │   ├── 📂 apps               > Application-related components
+│   │   │   │   │   ├── 📂 auth               > Authentication components
+│   │   │   │   │   ├── 📂 dashboards         > Dashboard widgets/components
+│   │   │   │   │   ├── 📂 forms              > Form-related components
+│   │   │   │   │   ├── 📂 frontpages         > Front/landing page components
+│   │   │   │   │   ├── 📂 pages              > Page-specific components
+│   │   │   │   │   ├── 📂 shared             > Shared UI elements
+│   │   │   │   │   ├── 📂 style-components   > Styled components
+│   │   │   │   │   ├── 📂 table              > Table components
+│   │   │   │   │   ├── 📂 ui-components      > UI elements
+│   │   │   │   │   ├── 📂 widgets            > Widget components
+│   │   │   │   ├── 📂 layouts                > Page layouts
+│   │   │   │   │   ├── 📂 blank              > Blank layout
+│   │   │   │   │   ├── 📂 full                > Full layout
+│   │   │   │   ├── 📂 plugins                > Plugin configurations
+│   │   │   │   │   ├── 📄 vuetify.ts         > Vuetify configuration
+│   │   │   │   ├── 📂 router                 > Vue Router setup
+│   │   │   │   ├── 📂 scss                   > SCSS styling files
+│   │   │   │   ├── 📂 stores                 > Pinia stores
+│   │   │   │   │   ├── 📂 apps               > Store for apps
+│   │   │   │   │   ├── 📄 auth.ts            > Authentication store
+│   │   │   │   │   ├── 📄 authUser.ts        > Auth user store
+│   │   │   │   │   ├── 📄 customizer.ts      > UI customization store
+│   │   │   │   ├── 📂 theme                  > Theme configuration
+│   │   │   │   ├── 📂 types                  > TypeScript type definitions
+│   │   │   │   │   ├── 📂 apps               > App-related types
+│   │   │   │   │   ├── 📂 components         > Component-related types
+│   │   │   │   │   ├── 📂 customers          > Customer-related types
+│   │   │   │   │   ├── 📂 landingpage        > Landing page types
+│   │   │   │   │   ├── 📂 themeTypes         > Theme-related types
+│   │   │   │   ├── 📂 utils                  > Utility functions
+│   │   │   │   │   ├── 📂 helpers            > Helper functions
+│   │   │   │   │   ├── 📂 locales            > Localization files
+│   │   │   │   │   ├── 📄 axios.ts           > Axios setup for API calls
+│   │   │   │   ├── 📂 views                  > Main application views/pages
+│   │   │   │   │   ├── 📂 apps               > Application views
+│   │   │   │   │   ├── 📂 authentication     > Authentication views
+│   │   │   │   │   ├── 📂 charts             > Charts and graphs
+│   │   │   │   │   ├── 📂 dashboards         > Dashboard views
+│   │   │   │   │   ├── 📂 forms              > Forms views
+│   │   │   │   │   ├── 📂 icons              > Icon views
+│   │   │   │   │   ├── 📂 pages              > General pages
+│   │   │   │   │   ├── 📂 style-animation    > Animations
+│   │   │   │   │   ├── 📂 tables             > Tables views
+│   │   │   │   │   ├── 📂 ui-elements        > UI elements
+│   │   │   │   │   ├── 📂 widgets            > Widget views
+│   │   │   │   ├── 📄 App.vue                > Root Vue component
+│   │   │   │   ├── 📄 config.ts              > Configuration file
+│   │   │   │   ├── 📄 main.ts                > Main entry file
+│   │   │   ├── 📄 package.json               > Project dependencies and scripts
+│   │   │   ├── 📄 vite.config.ts             > Vite configuration
+│   │   ├── 📂 dark                           > Dark theme settings
+│   │   ├── 📂 horizontal                     > Horizontal layout
+│   │   ├── 📂 minisidebar                    > Mini sidebar layout
+│   │   ├── 📂 rtl                            > Right-to-left layout
+│   │   ├── 📂 starterkit                     > Starter kit for customization
+├── 📂 figma-file                             > Figma design files
 
                               </code>
             </pre>
