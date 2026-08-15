@@ -330,12 +330,12 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Typography</h3>
+          <h4 class="mb-4 pb-2">Typography</h4>
             <div class="mt-4 card">
               <div class="card-body">
-                <h4 class="card-title">Google fonts</h4>
-                <h5 class="card-subtitle mt-2 text-muted">1) Change the google fonts link as per your choice : <span
-                    class="text-dark font-medium">/index.html</span></h5>
+                <h4 class="card-title">Google Fonts</h4>
+                <h5 class="card-subtitle mt-2 text-muted">1) Change the Google Fonts link in the main package file: <span
+                    class="text-dark font-medium">packages/main/index.html</span></h5>
                 <pre>
                   <code class="language-html py-0 hljs xml">
 &lt;link
@@ -344,10 +344,12 @@
 /&gt;
                       </code>
                   </pre>
-                <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span
-                    class="text-dark font-medium">src/scss/_variables.scss</span></h5>
-                <pre>                        <code class="language-js py-0 hljs javascript">
+                <h5 class="card-subtitle mt-4 text-muted">2) Update the font family in: <span
+                    class="text-dark font-medium">packages/main/src/scss/_variables.scss</span></h5>
+                <pre>
+                  <code class="language-scss py-0 hljs scss">
 $body-font-family: "Inter", sans-serif !default;
+$heading-font-family: $body-font-family !default;
                       </code>
                   </pre>
 
