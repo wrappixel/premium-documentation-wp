@@ -193,7 +193,7 @@
                     <span class="hide-menu">Getting Started</span>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="index.html"><i   
                         class="ti ti-home-2 me-3 fs-4"></i> Introduction</a>
                   </li>
                   <li class="sidebar-item">
@@ -357,14 +357,14 @@ fakeBackend();
 // -----------------------------------------------------------------------------------------
 router.beforeEach(async (to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ['/auth/login1'];
+  const publicPages = ['/auth/login'];
   const authRequired = !publicPages.includes(to.path);
   const auth: any = useAuthStore();
 
   if (to.matched.some((record) => record.meta.requiresAuth)) {
       if (authRequired && !auth.user) {
           auth.returnUrl = to.fullPath;
-          return next('/auth/login1');
+          return next('/auth/login');
       } else next();
   } else {
       next();

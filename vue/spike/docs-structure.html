@@ -338,7 +338,7 @@
               <code class="language-plaintext">
 📦
 ├── 📂 docs                                   > Documentation files
-├── 📂 package                                > Main project directory
+├── 📂 packages                               > Main project directory
 │   ├── 📂 main                               > Core application
 │   │   ├── 📂 public                         > Public assets
 │   │   ├── 📂 src                            > Source files
@@ -348,9 +348,12 @@
 │   │   │   ├── 📂 components                 > Reusable Vue components
 │   │   │   │   ├── 📂 apps                   > Application-related components
 │   │   │   │   ├── 📂 auth                   > Authentication components
+│   │   │   │   ├── 📂 dashboards             > Dashboard components
 │   │   │   │   ├── 📂 forms                  > Form-related components
+│   │   │   │   ├── 📂 frontpages             > Frontpage components
 │   │   │   │   ├── 📂 landingpage            > Landing page components
 │   │   │   │   ├── 📂 pages                  > Page-specific components
+│   │   │   │   ├── 📂 school-pages           > School pages components
 │   │   │   │   ├── 📂 shared                 > Shared UI elements
 │   │   │   │   ├── 📂 style-components       > Styled components
 │   │   │   │   ├── 📂 table                  > Table components
@@ -363,8 +366,9 @@
 │   │   │   │   ├── 📄 vuetify.ts             > Vuetify configuration
 │   │   │   ├── 📂 router                     > Vue Router setup
 │   │   │   ├── 📂 scss                       > SCSS styling files
-│   │   │   ├── 📂 store                      > Vuex/Pinia store
+│   │   │   ├── 📂 stores                     > Pinia store
 │   │   │   │   ├── 📂 apps                   > Store for apps
+│   │   │   │   ├── 📂 school-pages           > Store for school pages
 │   │   │   │   ├── 📄 auth.ts                > Authentication store
 │   │   │   │   ├── 📄 authUser.ts            > Auth user store
 │   │   │   │   ├── 📄 customizer.ts          > UI customization store
@@ -372,11 +376,13 @@
 │   │   │   ├── 📂 types                      > TypeScript type definitions
 │   │   │   │   ├── 📂 apps                   > App-related types
 │   │   │   │   ├── 📂 components             > Component-related types
-│   │   │   │   ├── 📂 landingpage            > Landing page types
-│   │   │   │   ├── 📂 themeTypes             > Theme-related types
+│   │   │   │   ├── 📂 customers              > Customer-related types
+│   │   │   │   ├── 📂 landingpage             > Landing page types
+│   │   │   │   ├── 📂 themeTypes              > Theme-related types
+│   │   │   │   ├── 📄 HeaderTypes.ts          > Header-related types
 │   │   │   ├── 📂 utils                      > Utility functions
 │   │   │   │   ├── 📂 helpers                > Helper functions
-│   │   │   │   ├── 📂 locals                 > Localization files
+│   │   │   │   ├── 📂 locales                > Localization files
 │   │   │   │   ├── 📄 axios.ts               > Axios setup for API calls
 │   │   │   ├── 📂 views                      > Main application views/pages
 │   │   │   │   ├── 📂 apps                   > Application views
@@ -384,7 +390,9 @@
 │   │   │   │   ├── 📂 charts                 > Charts and graphs
 │   │   │   │   ├── 📂 dashboard              > Dashboard views
 │   │   │   │   ├── 📂 forms                  > Forms views
+│   │   │   │   ├── 📂 icons                  > Icon views
 │   │   │   │   ├── 📂 pages                  > General pages
+│   │   │   │   ├── 📂 school-pages           > School pages views
 │   │   │   │   ├── 📂 style-animation        > Animations
 │   │   │   │   ├── 📂 tables                 > Tables views
 │   │   │   │   ├── 📂 ui-elements            > UI elements
@@ -394,11 +402,12 @@
 │   │   │   ├── 📄 main.ts                    > Main entry file
 │   ├── 📄 package.json                       > Project dependencies and scripts
 │   ├── 📄 vite.config.ts                     > Vite configuration
-├── 📂 dark                                   > Dark theme settings
-├── 📂 horizontal                             > Horizontal layout
-├── 📂 minisidebar                            > Mini sidebar layout
-├── 📂 rtl                                    > Right-to-left layout
-├── 📂 starterkit                             > Starter kit for customization
+│   ├── 📂 dark                               > Dark theme demo
+│   ├── 📂 horizontal                         > Horizontal layout demo
+│   ├── 📂 minisidebar                        > Mini sidebar layout demo
+│   ├── 📂 rtl                                > Right-to-left layout demo
+│   ├── 📂 starterkit                         > Starter kit for customization
+├── 📂 figma-file                             > Figma design source
 
                               </code>
             </pre>
