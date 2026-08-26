@@ -322,66 +322,74 @@
             <h4 class="font-weight-medium">Spike Nuxtjs Dashboard</h4>
             <pre class="">
              <code class="language-plaintext">
-📦  
-├── 📂 docs                                  > Documentation for the theme  
+📦
+├── 📂 docs                                  > Documentation for the theme
+├── 📂 figma                                 > Figma design files for the theme
 ├── 📂 packages
-│   ├── 📂 main                              > Main demo package  
-│   │   ├── 📂 app                           
-│   │   │   ├── 📂 _mockapis                 > Mock API data for testing  
-│   │   │   ├── 📂 assets                    > All assets used in the theme  
-│   │   │   │   ├── 📂 scss                   > stylesheets for theme styling  
+│   ├── 📂 main                              > Main demo package
+│   │   ├── 📂 app
+│   │   │   ├── 📂 _mockApis                 > Mock API data for testing
+│   │   │   ├── 📂 assets                    > All assets used in the theme
+│   │   │   │   ├── 📂 scss                   > stylesheets for theme styling
 │   │   │   ├── 📂 components                  > App components
 │   │   │   │   ├── 📂 apps                    > All app components
 │   │   │   │   ├── 📂 auth                    > Auth component
 │   │   │   │   ├── 📂 dashboards              > All dashboard components
 │   │   │   │   ├── 📂 forms                   > All form components
+│   │   │   │   ├── 📂 frontpages               > Front page components
+│   │   │   │   ├── 📂 landingpage              > Landing page components
 │   │   │   │   ├── 📂 lc                      > header/footer components
 │   │   │   │   ├── 📂 pages                   > All page components
+│   │   │   │   ├── 📂 school-pages             > School page components
 │   │   │   │   ├── 📂 shared                  > Common components used across the theme
-│   │   │   │   ├── 📂 tables                  > All table components
+│   │   │   │   ├── 📂 style-components          > Style components
+│   │   │   │   ├── 📂 table                   > All table components
 │   │   │   │   ├── 📂 ui-components           > All UI components
 │   │   │   │   ├── 📂 widgets                 > All widget components
 │   │   │   ├── 📂 layouts
 │   │   │   │   ├── 📄 blank.vue               > Blank layout for auth pages
 │   │   │   │   ├── 📄 default.vue             > Default layout for inner pages
-│   │   │   ├── 📂 lib                   
 │   │   │   ├── 📂 pages                         > All pages components
-│   │   │   │   ├── 📂 apps                      > App-related pages  
-│   │   │   │   ├── 📂 auth                      > Authentication pages  
-│   │   │   │   ├── 📂 charts                    > Chart pages for data visualization  
-│   │   │   │   ├── 📂 dashboard                 > Dashboard pages  
-│   │   │   │   ├── 📂 forms                     > Form-related pages  
-│   │   │   │   ├── 📂 theme-pages               > Theme customization pages  
-│   │   │   │   ├── 📂 tables                    > Table-related pages  
-│   │   │   │   ├── 📂 ui-components             > UI components demo pages  
-│   │   │   │   ├── 📂 widgets                   > Widget pages  
-│   │   │   │   ├── 📄 index.vue                 > Main entry page for routing  
-│   │   │   ├── 📂 plugins                       > Additional plugins used in the theme  
-│   │   │   │   ├── 📄 vuetify.ts                > Plugin configuration  
+│   │   │   │   ├── 📂 apps                      > App-related pages
+│   │   │   │   ├── 📂 auth                      > Authentication pages
+│   │   │   │   ├── 📂 charts                    > Chart pages for data visualization
+│   │   │   │   ├── 📂 dashboards                 > Dashboard pages
+│   │   │   │   ├── 📂 datatables                 > Data table pages
+│   │   │   │   ├── 📂 forms                     > Form-related pages
+│   │   │   │   ├── 📂 front-pages                > Front pages
+│   │   │   │   ├── 📂 icons                      > Icon pages
+│   │   │   │   ├── 📂 school-pages               > School pages
+│   │   │   │   ├── 📂 theme-pages               > Theme customization pages
+│   │   │   │   ├── 📂 tables                    > Table-related pages
+│   │   │   │   ├── 📂 ui-components             > UI components demo pages
+│   │   │   │   ├── 📂 widgets                   > Widget pages
+│   │   │   │   ├── 📄 index.vue                 > Main entry page for routing
+│   │   │   ├── 📂 plugins                       > Additional plugins used in the theme
+│   │   │   │   ├── 📄 vuetify.ts                > Plugin configuration
 │   │   │   │   ├── 📄 vue-apex-charts.client.ts > For apexchart configuration
-│   │   │   ├── 📂 store                         > Store for managing app state  
-│   │   │   │   ├── 📂 apps                      > Store modules for apps  
-│   │   │   │   ├── 📄 customizer.ts             > Theme and layout customizations 
-    │   │   ├── 📄 app.vue                       > Root Vue app component  
-    │   │   ├── 📄 app.config.ts                 > Configuration settings for the app  
-│   │   │   ├── 📂 theme                         > Theme colors  
-        │   │   ├── 📄 DarkTheme.ts              > Dark theme colors  
-        │   │   ├── 📄 LightTheme.ts             > Light theme colors        
-│   │   ├── 📂 modules                          > All reusable components  
-│   │   ├── 📂 public                           > Template images  
-│   │   │   ├── 📂 images                       > All images   
-│   │   ├── 📂 server                         
-│   │   ├── 📂 shared                        > Additional plugins used in the theme  
-│   │   │   ├── 📂 types                     > Define TypeScript types  
-│   │   │   ├── 📂 utils                     > Utility functions and helpers 
-│   │   ├── 📄 nuxt.config.ts                > Nuxt.js configuration file  
-│   │   ├── 📄 package.json                  > Project dependencies and scripts  
-│   │   ├── 📄 tsconfig.json                 > TypeScript configuration  
-│   ├── 📂 dark                              > Dark mode demo  
-│   ├── 📂 horizontal                        > Horizontal layout demo  
-│   ├── 📂 minisidebar                       > Mini sidebar layout demo  
-│   ├── 📂 rtl                               > Right-to-left (RTL) layout demo  
-│   ├── 📂 starterkit                        > Starter template with basic features  
+│   │   │   ├── 📂 stores                        > Store for managing app state
+│   │   │   │   ├── 📂 apps                      > Store modules for apps
+│   │   │   │   ├── 📂 school-pages               > Store modules for school pages
+│   │   │   │   ├── 📄 customizer.ts             > Theme and layout customizations
+    │   │   ├── 📄 app.vue                       > Root Vue app component
+    │   │   ├── 📄 app.config.ts                 > Configuration settings for the app
+│   │   │   ├── 📂 theme                         > Theme colors
+        │   │   ├── 📄 DarkTheme.ts              > Dark theme colors
+        │   │   ├── 📄 LightTheme.ts             > Light theme colors
+│   │   ├── 📂 modules                          > Nuxt module configuration
+│   │   ├── 📂 public                           > Template images
+│   │   │   ├── 📂 images                       > All images
+│   │   ├── 📂 shared                        > Additional plugins used in the theme
+│   │   │   ├── 📂 types                     > Define TypeScript types
+│   │   │   ├── 📂 utils                     > Utility functions and helpers
+│   │   ├── 📄 nuxt.config.ts                > Nuxt.js configuration file
+│   │   ├── 📄 package.json                  > Project dependencies and scripts
+│   │   ├── 📄 tsconfig.json                 > TypeScript configuration
+│   ├── 📂 dark                              > Dark mode demo
+│   ├── 📂 horizontal                        > Horizontal layout demo
+│   ├── 📂 minisidebar                       > Mini sidebar layout demo
+│   ├── 📂 rtl                               > Right-to-left (RTL) layout demo
+│   ├── 📂 starterkit                        > Starter template with basic features
                
                
                               </code>

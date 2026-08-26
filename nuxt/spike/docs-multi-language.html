@@ -323,7 +323,7 @@
                 <pre>
                         <code class="language-js py-0 ">
 // ----------------------------------------------------
-// File: utils/locales/ar.json  
+// File: shared/utils/locales/ar.json
 // ----------------------------------------------------  
 
 {
@@ -335,7 +335,7 @@
 </code>
 <code class="language-js py-0 mt-4">
 // ----------------------------------------------------
-// File: utils/locales/zh.json
+// File: shared/utils/locales/zh.json
 // ----------------------------------------------------  
   
 {
@@ -347,7 +347,7 @@
 </code>
 <code class="language-js py-0 mt-4">
 // ----------------------------------------------------
-// File: utils/locales/en.json
+// File: shared/utils/locales/en.json
 // ----------------------------------------------------  
   
 {
@@ -359,7 +359,7 @@
 </code>
 <code class="language-js py-0 mt-4">
 // ----------------------------------------------------
-// File: utils/locales/fr.json
+// File: shared/utils/locales/fr.json
 // ---------------------------------------------------- 
 
 {
@@ -377,8 +377,8 @@
                 <pre class="mt-4">
 <code class="language-js py-0">
 // ----------------------------------------------------
-// File: components/lc/full/vertical-header/languageDD.vue
-// ---------------------------------------------------- 
+// File: app/components/lc/Full/vertical-header/LanguageDD.vue
+// ----------------------------------------------------
 
 &lt;script setup lang="ts"&gt;
   import { ref } from 'vue';
@@ -389,14 +389,14 @@
   import flag4 from '/images/flag/icon-flag-fr.svg';
 &lt;/script&gt;
   &lt;template&gt;
-      &lt;v-menu :close-on-content-click="false" location="bottom"&gt;
+      &lt;v-menu :close-on-content-click="false" location="bottom" class="language_dropdown"&gt;
         &lt;template v-slot:activator="{ props }"&gt;
-          &lt;v-btn icon variant="text" color="primary" class="custom-hover-primary" size="small" v-bind="props"&gt;
+          &lt;v-btn icon class="custom-hover-primary" size="small" v-bind="props"&gt;
             &lt;v-avatar size="22"&gt;
-                &lt;img v-if="$i18n.locale === 'en'" :src="flag1" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'fr'" :src="flag4" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'ro'" :src="flag2" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'zh'" :src="flag3" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'en'" :src="flag1" :alt="$i18n.locale" width="24" height="24" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'fr'" :src="flag4" :alt="$i18n.locale" width="24" height="24" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'ro'" :src="flag2" :alt="$i18n.locale" width="24" height="24" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'zh'" :src="flag3" :alt="$i18n.locale" width="24" height="24" class="obj-cover" /&gt;
             &lt;/v-avatar&gt;
           &lt;/v-btn&gt;
         &lt;/template&gt;
@@ -415,9 +415,9 @@
                     &lt;img :src="item.avatar" :alt="item.avatar" width="22" height="22" class="obj-cover" /&gt;
                   &lt;/v-avatar>
                 &lt;/template>
-                &lt;v-list-item-title class="text-subtitle-1 font-weight-regular"&gt;
+                &lt;v-list-item-title class="text-label-large font-weight-regular"&gt;
                     {{ item.title }}
-                    &lt;span class="text-disabled text-subtitle-1 pl-2"&gt;({{ item.subtext }})&lt;/span&gt;
+                    &lt;span class="text-disabled text-label-large pl-2"&gt;({{ item.subtext }})&lt;/span&gt;
                 &lt;/v-list-item-title&gt;
             &lt;/v-list-item&gt;
           &lt;/v-list&gt;
