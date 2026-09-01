@@ -327,7 +327,7 @@
               <h4 class="card-title">Change light Logo</h4>
               <h5 class="card-subtitle mt-2 text-muted mb-4">
                 To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoLight.vue</span>
+                <span class="text-dark font-medium">packages/main/app/components/lc/Full/logo/LogoLight.vue</span>
               </h5>
               <div class="border-2 border-start border-primary bg-light rounded p-3">
                 Put the logo image into the /images/logos folder.
@@ -335,9 +335,7 @@
               <pre>
                     <code class="language-js py-0">
 &lt;script setup lang=&quot;ts&quot;>
-import { RouterLink } from 'vue-router';
 import LightLogo from '/images/logos/light-logo.svg';
-
 &lt;/script&gt;
   &lt;template&gt;
       &lt;div class=&quot;logo lh-normal&quot;&gt;
@@ -355,7 +353,7 @@ import LightLogo from '/images/logos/light-logo.svg';
               <h4 class="card-title">Change Dark Logo</h4>
               <h5 class="card-subtitle mt-2 text-muted mb-4">
                 To change logo :
-                <span class="text-dark font-medium">packages/main/components/lc/Full/logo/LogoDark.vue</span>
+                <span class="text-dark font-medium">packages/main/app/components/lc/Full/logo/LogoDark.vue</span>
               </h5>
               <div class="border-2 border-start border-primary bg-light rounded p-3">
                 Put the logo image into the /images/logos folder.
@@ -363,11 +361,10 @@ import LightLogo from '/images/logos/light-logo.svg';
               <pre>
                     <code class="language-js py-0">
 &lt;script setup lang=&quot;ts&quot;&gt;
-  import { RouterLink } from 'vue-router';
   import DarkLogo from '/images/logos/dark-logo.svg';
 &lt;/script&gt;
 &lt;template&gt;
-    &lt;div class=&quot;logo&quot;&gt;
+    &lt;div class=&quot;logo lh-normal&quot;&gt;
         &lt;NuxtLink to=&quot;/&quot;&gt;
             &lt;img :src=&quot;DarkLogo&quot; alt=&quot;home&quot; /&gt;
         &lt;/NuxtLink&gt;
