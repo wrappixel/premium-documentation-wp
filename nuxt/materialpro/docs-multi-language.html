@@ -327,8 +327,8 @@
 // ----------------------------------------------------  
 
 {
-    "Modern": "عصري",
-    "Contacts":"جهات الاتصال",
+    "Modern": "حديث",
+    "Contact":"اتصال",
     "Chats":"الدردشات"
 }
 
@@ -339,9 +339,9 @@
 // ----------------------------------------------------  
   
 {
-    "Modern": "現代的",
-    "Contacts":"聯繫人",
-    "Chats":"聊天記錄"
+    "Modern": "现代的",
+    "Contact":"接触",
+    "Chats":"聊天记录"
 }
 
 </code>
@@ -352,7 +352,7 @@
   
 {
     "Modern": "Modern",
-    "Contacts":"Contacts",
+    "Contact":"Contact",
     "Chats":"Chats"
 }
 
@@ -364,7 +364,7 @@
 
 {
     "Modern": "Moderne",
-    "Contacts":"Les contacts",
+    "Contact":"a lua legatura",
     "Chats":"Chattes"
 }
                         </code>
@@ -377,53 +377,56 @@
                 <pre class="mt-4">
 <code class="language-js py-0">
 // ----------------------------------------------------
-// File: components/lc/full/vertical-header/languageDD.vue
-// ---------------------------------------------------- 
+// File: components/lc/Full/vertical-header/LanguageDD.vue
+// ----------------------------------------------------
 
 &lt;script setup lang="ts"&gt;
-  import { ref } from 'vue';
-  import { languageDD } from '@/_mockApis/headerData';
-  import flag1 from '/images/flag/icon-flag-en.svg';
-  import flag2 from '/images/flag/icon-flag-ro.svg';
-  import flag3 from '/images/flag/icon-flag-zh.svg';
-  import flag4 from '/images/flag/icon-flag-fr.svg';
+import { ref } from 'vue';
+import { languageDD } from '@/_mockApis/headerData';
+import flag1 from '/images/flag/icon-flag-en.svg';
+import flag2 from '/images/flag/icon-flag-ro.svg';
+import flag3 from '/images/flag/icon-flag-zh.svg';
+import flag4 from '/images/flag/icon-flag-fr.svg';
 &lt;/script&gt;
-  &lt;template&gt;
-      &lt;v-menu :close-on-content-click="false" location="bottom"&gt;
+&lt;template&gt;
+    &lt;!-- ---------------------------------------------- --&gt;
+    &lt;!-- language DD --&gt;
+    &lt;!-- ---------------------------------------------- --&gt;
+    &lt;v-menu open-on-hover open-on-click location="bottom"&gt;
         &lt;template v-slot:activator="{ props }"&gt;
-          &lt;v-btn icon variant="text" color="primary" class="custom-hover-primary" size="small" v-bind="props"&gt;
-            &lt;v-avatar size="22"&gt;
-                &lt;img v-if="$i18n.locale === 'en'" :src="flag1" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'fr'" :src="flag4" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'ro'" :src="flag2" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-                &lt;img v-if="$i18n.locale === 'zh'" :src="flag3" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
-            &lt;/v-avatar&gt;
-          &lt;/v-btn&gt;
+            &lt;v-btn icon variant="text" color="primary" v-bind="props" size="small" class="custom-hover-primary" &gt;
+                &lt;v-avatar  rounded="md" variant="text"&gt;
+                    &lt;img v-if="$i18n.locale === 'en'" :src="flag1" :alt="$i18n.locale" width="22" height="15" class="obj-cover" /&gt;
+                    &lt;img v-if="$i18n.locale === 'fr'" :src="flag4" :alt="$i18n.locale" width="22" height="15" class="obj-cover" /&gt;
+                    &lt;img v-if="$i18n.locale === 'ro'" :src="flag2" :alt="$i18n.locale" width="22" height="15" class="obj-cover" /&gt;
+                    &lt;img v-if="$i18n.locale === 'zh'" :src="flag3" :alt="$i18n.locale" width="22" height="15" class="obj-cover" /&gt;
+                &lt;/v-avatar&gt;
+            &lt;/v-btn&gt;
         &lt;/template&gt;
         &lt;v-sheet rounded="md" width="200" elevation="10"&gt;
-          &lt;v-list class="theme-list"&gt;
-            &lt;v-list-item
-              v-for="(item, index) in languageDD"
-              :key="index"
-              color="primary"
-              :active="$i18n.locale == item.value"
-              class="d-flex align-center"
-              @click="() =&gt; ($i18n.locale = item.value)"
-            &gt;
-                &lt;template v-slot:prepend&gt;
-                  &lt;v-avatar size="22"&gt;
-                    &lt;img :src="item.avatar" :alt="item.avatar" width="22" height="22" class="obj-cover" /&gt;
-                  &lt;/v-avatar>
-                &lt;/template>
-                &lt;v-list-item-title class="text-subtitle-1 font-weight-regular"&gt;
-                    {{ item.title }}
-                    &lt;span class="text-disabled text-subtitle-1 pl-2"&gt;({{ item.subtext }})&lt;/span&gt;
-                &lt;/v-list-item-title&gt;
-            &lt;/v-list-item&gt;
-          &lt;/v-list&gt;
+            &lt;v-list class="theme-list"&gt;
+                &lt;v-list-item
+                    v-for="(item, index) in languageDD"
+                    :key="index"
+                    color="primary"
+                    :active="$i18n.locale == item.value"
+                    class="d-flex align-center"
+                    @click="() =&gt; ($i18n.locale = item.value)"
+                &gt;
+                    &lt;template v-slot:prepend&gt;
+                        &lt;v-avatar  rounded="md"&gt;
+                            &lt;img :src="item.avatar" :alt="item.avatar" width="22" height="15" class="obj-cover" /&gt;
+                        &lt;/v-avatar&gt;
+                    &lt;/template&gt;
+                    &lt;v-list-item-title class="text-title-medium font-weight-regular"&gt;
+                        {{ item.title }}
+                        &lt;span class="text-disabled text-title-medium pl-2"&gt;({{ item.subtext }})&lt;/span&gt;
+                    &lt;/v-list-item-title&gt;
+                &lt;/v-list-item&gt;
+            &lt;/v-list&gt;
         &lt;/v-sheet&gt;
-      &lt;/v-menu&gt;
-  &lt;/template&gt;
+    &lt;/v-menu&gt;
+&lt;/template&gt;
 
 </code>
 
